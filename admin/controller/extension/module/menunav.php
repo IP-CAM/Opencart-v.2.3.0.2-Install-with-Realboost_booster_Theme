@@ -86,7 +86,7 @@ class ControllerExtensionModuleMenunav extends Controller
         } else {
             $data['menunav_override'] = $this->config->get('menunav_override');
         }
-        $data['menunav_override_values'] = $this->model_extension_module_menunav->getTypeText();
+        $data['menunav_override_values'] = $this->model_extension_module_menunav->GetCustomMenuData();
         
 
         $this->load->model('design/layout');
