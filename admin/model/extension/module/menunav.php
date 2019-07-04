@@ -38,10 +38,11 @@ class ModelExtensionModuleMenunav extends Model
         $out = array();
         $ret = $this->preparearray();
         $out = $this->getArrayAtLvL(0,$ret);
-        foreach ($out as $key=>$val){
-            $this->AddChildFrom($ret,$out[$key],1);
-            
-        }
+        if (!empty($ret)){
+            foreach ($out as $key=>$val){
+                $this->AddChildFrom($ret,$out[$key],1);
+                
+            }}
         return $out;
     }
     public function AddChildFrom($from, &$to,$lvl){
@@ -80,7 +81,8 @@ class ModelExtensionModuleMenunav extends Model
         return ($a['link_id'] < $b['link_id']) ? -1 : 1;
     }
     public function getArrayAtLvL($lvl,$arr){
-        return $arr[$lvl];
+        
+        return ($lvl)?$arr[$lvl]:false;
     }
     public function preparearray(){
         $ret = array();

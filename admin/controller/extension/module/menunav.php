@@ -122,13 +122,14 @@ class ControllerExtensionModuleMenunav extends Controller
     {
         $this->db->query("DROP TABLE IF EXISTS `".DB_PREFIX."custom_menu`");
         //CREATE TABLE `boost`.`oc_custom_menu` ( `link_id` INT NOT NULL AUTO_INCREMENT , `link_realpath` VARCHAR(255) NULL , `link_name` VARCHAR(255) NULL , `link_seo` VARCHAR(255) NOT NULL , PRIMARY KEY (`link_id`)) ENGINE = MyISAM;
-        $this->db->query("CREATE TABLE `".DB_PREFIX."custom_menu` 
+        $this->db->query("CREATE TABLE IF NOT EXISTS `".DB_PREFIX."custom_menu` 
                         ( `link_id` INT NOT NULL AUTO_INCREMENT , 
                            `parent_id` INT NOT NULL DEFAULT 0 , 
                            `link_realpath` VARCHAR(255) NULL , 
                            `link_name` VARCHAR(255) NULL , 
-                            `link_seo` VARCHAR(255) NOT NULL , 
-                            PRIMARY KEY (`link_id`)) ENGINE = MyISAM;");
+                           `link_seo` VARCHAR(255) NOT NULL ,
+                           `sort_order` INT NOT NULL DEFAULT 0 ,
+                           PRIMARY KEY (`link_id`)) ENGINE = MyISAM;");
         //получим все значения текущего меню
         
     }
