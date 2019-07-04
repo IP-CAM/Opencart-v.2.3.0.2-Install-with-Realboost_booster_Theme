@@ -68,8 +68,31 @@
 							</select>
 							
 						</div>
-						
+			    	    <table class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                <td class="text-left">                  <a href="http://demo.opencart.my/cmenu2/admin/index.php?route=extension/module/myoccmenu&amp;token=Rj1LF5o4OVM67P8WUdJU7L2hvQWxfGXF&amp;sort=cd.name&amp;order=DESC" class="asc">Name</a>
+                  </td>
+                <td class="text-right">                  <a href="http://demo.opencart.my/cmenu2/admin/index.php?route=extension/module/myoccmenu&amp;token=Rj1LF5o4OVM67P8WUdJU7L2hvQWxfGXF&amp;sort=c.sort_order&amp;order=DESC">Sort Order</a>
+                  </td>
+                <td class="text-right">Status</td>
+                <td class="text-right">Action</td>
+              </tr>
+            </thead>
+            <tbody>
+            <?php foreach ($menunav_custom_data as $k=>$v):?>
+             <tr>
+                <td class="text-left"><?php echo $v['link_name'];?></td>
+                <td class="text-right"><input type="text" name="cmenu[<?php echo $k;?>][sort_order]" value="<?php echo $v['sort_order'];?>" size="4" class="form-control"></td>
+                <td class="text-right">Enabled</td>
+                <td class="text-right"><a href="http://demo.opencart.my/cmenu2/admin/index.php?route=extension/module/myoccmenu/edit&amp;token=Rj1LF5o4OVM67P8WUdJU7L2hvQWxfGXF&amp;cmenu_id=1" data-toggle="tooltip" title="" class="btn btn-primary" data-original-title="Edit"><i class="fa fa-pencil"></i></a></td>
+              </tr>
+            <?php endforeach;?>  
+             
+            </tbody>
+          </table>
 					</div>
+					
 				</form>
 			</div>
 		</div>

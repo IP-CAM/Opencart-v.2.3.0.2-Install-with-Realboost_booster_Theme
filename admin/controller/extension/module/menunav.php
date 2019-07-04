@@ -86,7 +86,8 @@ class ControllerExtensionModuleMenunav extends Controller
         } else {
             $data['menunav_override'] = $this->config->get('menunav_override');
         }
-        $data['menunav_override_values'] = $this->model_extension_module_menunav->GetCustomMenuData();
+        $data['menunav_override_values'] = $this->model_extension_module_menunav->getTypeText();
+        $data['menunav_custom_data']= $this->model_extension_module_menunav->GetCustomMenuData();
         
 
         $this->load->model('design/layout');
@@ -130,6 +131,14 @@ class ControllerExtensionModuleMenunav extends Controller
                            `link_seo` VARCHAR(255) NOT NULL ,
                            `sort_order` INT NOT NULL DEFAULT 0 ,
                            PRIMARY KEY (`link_id`)) ENGINE = MyISAM;");
+        //test demo case 
+        //TODO Delete after
+        $this->db->query("INSERT INTO `".DB_PREFIX."custom_menu` (`link_id`, `parent_id`, `link_realpath`, `link_name`, `link_seo`, `sort_order`) VALUES ('4', '0', 'cust-1', 'cust-1name', 'cust-1seo', '0');");
+        $this->db->query("INSERT INTO `".DB_PREFIX."custom_menu` (`link_id`, `parent_id`, `link_realpath`, `link_name`, `link_seo`, `sort_order`) VALUES ('5', '4', 'cust-1-1', 'cust-1-1name', 'cust-1-1seo', '5');");
+        $this->db->query("INSERT INTO `".DB_PREFIX."custom_menu` (`link_id`, `parent_id`, `link_realpath`, `link_name`, `link_seo`, `sort_order`) VALUES ('6', '4', 'cust-1-2', 'cust-1-2link', 'cust-1-2seo', '0');");
+        $this->db->query("INSERT INTO `".DB_PREFIX."custom_menu` (`link_id`, `parent_id`, `link_realpath`, `link_name`, `link_seo`, `sort_order`) VALUES ('3', '0', 'cust-2', 'cust-2', 'cust-2', '1');");
+        $this->db->query("INSERT INTO `".DB_PREFIX."custom_menu` (`link_id`, `parent_id`, `link_realpath`, `link_name`, `link_seo`, `sort_order`) VALUES ('2', '3', 'cust-2-1', 'cust-2-1name', 'cust-2-2seo', '2');");
+        
         //получим все значения текущего меню
         
     }
