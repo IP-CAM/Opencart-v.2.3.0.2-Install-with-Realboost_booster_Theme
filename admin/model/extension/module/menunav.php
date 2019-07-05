@@ -36,6 +36,7 @@ class ModelExtensionModuleMenunav extends Model
         return  $this->menunav->GetCustomMenuData();
         
     }
+    
    
     
    

@@ -62,10 +62,14 @@ class MenuNav {
 	        foreach ($arr as $k=>$v){
 	            if ($checkElem){
 	                if ($checkElem['link_id']==$v['parent_id']){
+	                    $pname = $checkElem['link_name'];
+	                   $v['parent_name']=($pname)?$pname:'главная';
 	                   $to[]=$v;
 	                   $this->AddChildsToArray($from, $to,$lvl);}
 	            }else{
 	                if ($checkElem === false){
+	                    $pname = $checkElem['link_name'];
+	                    $v['parent_name']=($pname)?$pname:'главная';
 	                    $to[]=$v;
 	                    $this->AddChildsToArray($from, $to,$lvl);
 	                }
@@ -80,7 +84,9 @@ class MenuNav {
 	    
 	
 	}
-	
+	private function findParentName($par_id){
+	  return $this->that->db->query("select link_name from ".DB_PREFIX."custom_menu where link_id =".$par_id." limit 1")->rows[0]['link_name']; 
+	}
 	public function search($array, $key, $value)
 	{
 	    $ret = false;

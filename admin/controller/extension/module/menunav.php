@@ -26,8 +26,11 @@ class ControllerExtensionModuleMenunav extends Controller
 
             $this->model_setting_setting->editSetting('menunav', $this->request->post);
             $this->session->data['success'] = $data['text_success'];
+            if (isset($this->request->post['arr_menu'])&($this->request->post['menunav_status'])){
+                $this->save($this->request->post);}
+            
             $this->response->redirect($this->url->link('extension/module/menunav',
-                'token='.$this->session->data['token'], 'SSL'));
+            'token='.$this->session->data['token'], 'SSL'));
         }
         
         
@@ -88,7 +91,7 @@ class ControllerExtensionModuleMenunav extends Controller
         }
         $data['menunav_override_values'] = $this->model_extension_module_menunav->getTypeText();
         $data['menunav_custom_data']= $this->model_extension_module_menunav->GetCustomMenuData();
-        
+        $data['menunav_maxval']=count($data['menunav_custom_data'])+1;
 
         $this->load->model('design/layout');
         $data['layouts'] = $this->model_design_layout->getLayouts();
@@ -99,7 +102,18 @@ class ControllerExtensionModuleMenunav extends Controller
 
         $this->response->setOutput($this->load->view('extension/module/menunav.tpl', $data));
     }
-
+    
+    public function save($settings){
+        if (isset($settings['arr_menu'])){
+           $this->db->query("delete from `".DB_PREFIX."custom_menu`;");
+           foreach ($settings['arr_menu'] as $v) {
+               $this->db->query("INSERT INTO  `".DB_PREFIX."custom_menu` (`link_id`, `parent_id`, `link_realpath`, `link_name`, `link_seo`, `sort_order`) VALUES ('".$v['link_id']."', '".$v['parent_id']."', '".$v['link_realpath']."', '".$v['link_name']."', '".$v['link_seo']."', '".$v['sort_order']."')");
+               
+           }
+        }
+        
+    }
+    
     /**
      * @return bool
      */
@@ -147,5 +161,8 @@ class ControllerExtensionModuleMenunav extends Controller
     {
         $this->db->query("DROP TABLE `".DB_PREFIX."custom_menu`");
     }
+
+
+
 
 }

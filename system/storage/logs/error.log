@@ -23,3 +23,8 @@
 2019-07-04 12:11:44 - PHP Notice:  Undefined property: MenuNav::$db in C:\wamp64\www\boost\system\library\menunav.php on line 46
 2019-07-04 12:12:57 - PHP Notice:  Undefined property: MenuNav::$db in Unknown on line 0
 2019-07-04 12:13:22 - PHP Notice:  Undefined offset: 0 in Unknown on line 0
+2019-07-04 13:25:42 - PHP Notice:  Undefined property: MenuNav::$db in C:\wamp64\www\boost\system\library\menunav.php on line 86
+2019-07-04 13:26:18 - PHP Notice:  Undefined offset: 0 in C:\wamp64\www\boost\system\library\menunav.php on line 86
+2019-07-04 13:28:10 - PHP Notice:  Undefined offset: 0 in C:\wamp64\www\boost\system\library\menunav.php on line 86
+2019-07-04 13:28:33 - PHP Notice:  Undefined offset: 0 in C:\wamp64\www\boost\system\library\menunav.php on line 88
+2019-07-04 13:28:33 - PHP Notice:  Undefined offset: 0 in C:\wamp64\www\boost\system\library\menunav.php on line 88
