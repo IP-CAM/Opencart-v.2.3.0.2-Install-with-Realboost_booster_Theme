@@ -1,0 +1,13 @@
+2019-07-06 10:20:28 - PHP Notice:  Undefined variable: module_row in C:\wamp64\www\boost\admin\view\template\design\menu_form.tpl on line 144
+2019-07-06 10:20:28 - PHP Notice:  Undefined variable: entry_title in C:\wamp64\www\boost\admin\view\template\design\menu_form.tpl on line 148
+2019-07-06 10:20:28 - PHP Notice:  Undefined variable: placeholder in C:\wamp64\www\boost\admin\view\template\design\menu_form.tpl on line 150
+2019-07-06 10:20:28 - PHP Notice:  Undefined variable: placeholder in C:\wamp64\www\boost\admin\view\template\design\menu_form.tpl on line 150
+2019-07-06 10:20:42 - PHP Notice:  Undefined index: link in C:\wamp64\www\boost\admin\model\design\menu.php on line 4
+2019-07-06 10:20:42 - PHP Notice:  Undefined index: store in C:\wamp64\www\boost\admin\controller\design\menu.php on line 178
+2019-07-06 10:21:28 - PHP Notice:  Undefined index: store in C:\wamp64\www\boost\admin\controller\design\menu.php on line 178
+2019-07-06 10:21:28 - PHP Notice:  Undefined variable: module_row in C:\wamp64\www\boost\admin\view\template\design\menu_form.tpl on line 144
+2019-07-06 10:21:28 - PHP Notice:  Undefined variable: entry_title in C:\wamp64\www\boost\admin\view\template\design\menu_form.tpl on line 148
+2019-07-06 10:21:28 - PHP Notice:  Undefined variable: placeholder in C:\wamp64\www\boost\admin\view\template\design\menu_form.tpl on line 150
+2019-07-06 10:21:28 - PHP Notice:  Undefined variable: placeholder in C:\wamp64\www\boost\admin\view\template\design\menu_form.tpl on line 150
+2019-07-06 10:21:33 - PHP Notice:  Undefined index: store in C:\wamp64\www\boost\admin\controller\design\menu.php on line 178
+2019-07-06 10:22:14 - PHP Notice:  Undefined index: store in C:\wamp64\www\boost\admin\controller\design\menu.php on line 178
