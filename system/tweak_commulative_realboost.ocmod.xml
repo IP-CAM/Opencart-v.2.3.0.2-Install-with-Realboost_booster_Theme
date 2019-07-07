@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+	<name>Tweak for OpenCart 2x booster_shop</name>
+	<code>Tweak for OpenCart 2x booster_shop</code>
+	<version>2.3.0.2</version>
+	<date>02.07.2017</date>
+	<author>klimworkss@gmail.com</author>
+	<link>http://opencart-russia.ru</link>
+
+
+	<file path="admin/view/template/common/header.tpl">
+		<operation>
+			<search><![CDATA[<?php foreach ($links as $link) { ?>]]></search>
+			<add position="before"><![CDATA[
+			]]></add>
+		</operation>
+	</file>
+</modification>

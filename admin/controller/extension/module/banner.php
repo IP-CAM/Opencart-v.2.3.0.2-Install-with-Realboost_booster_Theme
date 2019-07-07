@@ -166,4 +166,8 @@ class ControllerExtensionModuleBanner extends Controller {
 
 		return !$this->error;
 	}
+	
+	public function install(){
+	    $this->db->query("");
+	}
 }

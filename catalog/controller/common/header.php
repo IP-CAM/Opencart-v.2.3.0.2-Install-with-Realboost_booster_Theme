@@ -1,6 +1,7 @@
 <?php
 class ControllerCommonHeader extends Controller {
 	public function index() {
+	    TemplateLoader::initLinks($this,$data);
 		// Analytics
 		$this->load->model('extension/extension');
 

@@ -72,7 +72,8 @@
                   <?php if (isset($banner_images[$language['language_id']])) { ?>
                   <?php foreach ($banner_images[$language['language_id']] as $banner_image) { ?>
                   <tr id="image-row<?php echo $image_row; ?>">
-                    <td class="text-left"><input type="text" name="banner_image[<?php echo $language['language_id']; ?>][<?php echo $image_row; ?>][title]" value="<?php echo $banner_image['title']; ?>" placeholder="<?php echo $entry_title; ?>" class="form-control" />
+                    <td class="text-left"><input type="text" name="banner_image[<?php echo $language['language_id']; ?>][<?php echo $image_row; ?>][title]" value="<?php echo $banner_image['title']; ?>" placeholder="<?php echo $entry_title; ?>" class="form-control" /><br/>
+                    					<input type="text" name="banner_image[<?php echo $language['language_id']; ?>][<?php echo $image_row; ?>][descr]" value="<?php echo $banner_image['descr']; ?>" placeholder="<?php echo $entry_title; ?>" class="form-control" />
                       <?php if (isset($error_banner_image[$language['language_id']][$image_row])) { ?>
                       <div class="text-danger"><?php echo $error_banner_image[$language['language_id']][$image_row]; ?></div>
                       <?php } ?></td>
@@ -105,7 +106,7 @@ var image_row = <?php echo $image_row; ?>;
 
 function addImage(language_id) {
 	html  = '<tr id="image-row' + image_row + '">';
-    html += '  <td class="text-left"><input type="text" name="banner_image[' + language_id + '][' + image_row + '][title]" value="" placeholder="<?php echo $entry_title; ?>" class="form-control" /></td>';	
+    html += '  <td class="text-left"><input type="text" name="banner_image[' + language_id + '][' + image_row + '][title]" value="" placeholder="<?php echo $entry_title; ?>" class="form-control" /><br/><input type="text" name="banner_image[' + language_id + '][' + image_row + '][descr]" value="" placeholder="<?php echo $entry_title; ?>" class="form-control" /></td>';	
 	html += '  <td class="text-left" style="width: 30%;"><input type="text" name="banner_image[' + language_id + '][' + image_row + '][link]" value="" placeholder="<?php echo $entry_link; ?>" class="form-control" /></td>';	
 	html += '  <td class="text-center"><a href="" id="thumb-image' + image_row + '" data-toggle="image" class="img-thumbnail"><img src="<?php echo $placeholder; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" /></a><input type="hidden" name="banner_image[' + language_id + '][' + image_row + '][image]" value="" id="input-image' + image_row + '" /></td>';
 	html += '  <td class="text-right" style="width: 10%;"><input type="text" name="banner_image[' + language_id + '][' + image_row + '][sort_order]" value="" placeholder="<?php echo $entry_sort_order; ?>" class="form-control" /></td>';

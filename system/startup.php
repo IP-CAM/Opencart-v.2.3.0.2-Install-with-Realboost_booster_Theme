@@ -104,7 +104,8 @@ function library($class) {
 
 spl_autoload_register('library');
 spl_autoload_extensions('.php');
-
+//TemplateHelper
+require_once(modification(DIR_SYSTEM . 'library/templateinit.php'));
 // Engine
 require_once(modification(DIR_SYSTEM . 'engine/action.php'));
 require_once(modification(DIR_SYSTEM . 'engine/controller.php'));

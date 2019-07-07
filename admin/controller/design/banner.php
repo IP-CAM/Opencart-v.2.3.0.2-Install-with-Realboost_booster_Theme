@@ -384,7 +384,8 @@ class ControllerDesignBanner extends Controller {
 					'link'       => $banner_image['link'],
 					'image'      => $image,
 					'thumb'      => $this->model_tool_image->resize($thumb, 100, 100),
-					'sort_order' => $banner_image['sort_order']
+					'sort_order' => $banner_image['sort_order'],
+				    'descr' => $banner_image['descr']
 				);
 			}
 		}
@@ -403,14 +404,14 @@ class ControllerDesignBanner extends Controller {
 			$this->error['warning'] = $this->language->get('error_permission');
 		}
 
-		if ((utf8_strlen($this->request->post['name']) < 3) || (utf8_strlen($this->request->post['name']) > 64)) {
+		if ((utf8_strlen($this->request->post['name']) < 3) ) {
 			$this->error['name'] = $this->language->get('error_name');
 		}
 
 		if (isset($this->request->post['banner_image'])) {
 			foreach ($this->request->post['banner_image'] as $language_id => $value) {
 				foreach ($value as $banner_image_id => $banner_image) {
-					if ((utf8_strlen($banner_image['title']) < 2) || (utf8_strlen($banner_image['title']) > 64)) {
+					if ((utf8_strlen($banner_image['title']) < 2) ) {
 						$this->error['banner_image'][$language_id][$banner_image_id] = $this->language->get('error_title');
 					}
 				}

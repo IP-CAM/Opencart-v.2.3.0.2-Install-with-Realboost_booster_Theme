@@ -1,0 +1,115 @@
+* {
+  outline: 0 !important;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+	margin: 0;
+}
+
+ul {
+	padding: 0;
+	list-style: none;
+	margin-bottom: 0;
+}
+
+
+/* Шрифты */
+
+@font-face {
+ font-family: GothamPro;
+ src: url(fonts/GothamPro.ttf);
+}
+@font-face {
+ font-family: GothamPro-light;
+ src: url(fonts/GothamPro-Light.ttf);
+}
+@font-face {
+ font-family: GothamPro-bold;
+ src: url(fonts/GothamPro-Bold.ttf);
+}
+@font-face {
+ font-family: GothamPro-black;
+ src: url(fonts/GothamPro-Black.ttf);
+}
+@font-face {
+ font-family: OpenSans-light;
+ src: url(fonts/OpenSans-Light.ttf);
+}
+@font-face {
+ font-family: OpenSans;
+ src: url(fonts/OpenSans-Regular.ttf);
+}
+@font-face {
+ font-family: OpenSans-bold;
+ src: url(fonts/OpenSans-Bold.ttf);
+}
+
+h1 {
+	font-family: GothamPro;
+	font-size: 55px;
+	color: #fff;
+	-text-transform: uppercase;
+}
+h1 > b {
+	font-family: GothamPro-black;
+}
+
+/* Заголовки h2 */
+
+h2 {
+	font-family: GothamPro;
+	color: #fff;
+	font-size: 55px;
+	margin: 125px 0 100px;
+}
+
+
+
+/* Абзацы */
+
+p {
+	font-family: OpenSans-light;
+	font-size: 18px;
+	color: #fff;
+}
+
+
+/* Кнопки */
+
+a.button {
+	padding: 15px 8px;
+	text-transform: uppercase;
+	color: #fff;
+	background: rgba(194,3,0,1);
+	background: -webkit-linear-gradient(left, rgba(194,3,0,1) 0%, rgba(234,100,10,1) 100%);
+	background: -o-linear-gradient(left, rgba(194,3,0,1) 0%, rgba(234,100,10,1) 100%);
+	background: linear-gradient(to right, rgba(194,3,0,1) 0%, rgba(234,100,10,1) 100%);
+	border-radius: 3px;
+	text-decoration: none;
+	font-family: GothamPro-black;
+	font-size: 17px;
+	display: inline-block;
+	text-align: center;
+}
+a.button:hover {
+	text-decoration: none;
+	background: rgba(194,3,0,1);
+}
+
+
+body {
+font-family: GothamPro, Tahoma;
+background-color: #000;
+}
+
+
+/* Заголовки */
+
+.def-title {
+	font-family: GothamPro;
+	font-size: 30px;
+	-text-transform: uppercase;
+	color: #fff;
+	text-align: center;
+	margin: 100px 0 70px;
+}

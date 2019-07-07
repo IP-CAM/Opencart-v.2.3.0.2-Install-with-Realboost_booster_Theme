@@ -11,3 +11,143 @@
 2019-07-06 10:21:28 - PHP Notice:  Undefined variable: placeholder in C:\wamp64\www\boost\admin\view\template\design\menu_form.tpl on line 150
 2019-07-06 10:21:33 - PHP Notice:  Undefined index: store in C:\wamp64\www\boost\admin\controller\design\menu.php on line 178
 2019-07-06 10:22:14 - PHP Notice:  Undefined index: store in C:\wamp64\www\boost\admin\controller\design\menu.php on line 178
+2019-07-06 12:06:55 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\footer.tpl on line 9
+2019-07-06 12:06:55 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\footer.tpl on line 46
+2019-07-06 12:06:57 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\footer.tpl on line 9
+2019-07-06 12:06:57 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\footer.tpl on line 46
+2019-07-06 12:14:44 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 69
+2019-07-06 12:14:44 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 75
+2019-07-06 12:14:44 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 93
+2019-07-06 12:14:44 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 97
+2019-07-06 12:14:44 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 104
+2019-07-06 12:18:49 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 69
+2019-07-06 12:18:49 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 75
+2019-07-06 12:18:49 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 93
+2019-07-06 12:18:49 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 97
+2019-07-06 12:18:49 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 104
+2019-07-06 12:18:53 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 69
+2019-07-06 12:18:53 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 75
+2019-07-06 12:18:53 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 93
+2019-07-06 12:18:53 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 97
+2019-07-06 12:18:53 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 104
+2019-07-06 12:26:36 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 69
+2019-07-06 12:26:36 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 75
+2019-07-06 12:26:36 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 93
+2019-07-06 12:26:36 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 97
+2019-07-06 12:26:36 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 104
+2019-07-06 12:29:43 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 69
+2019-07-06 12:29:43 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 75
+2019-07-06 12:29:43 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 93
+2019-07-06 12:29:43 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 97
+2019-07-06 12:29:43 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 104
+2019-07-06 12:33:07 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\footer.tpl on line 9
+2019-07-06 12:33:07 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\footer.tpl on line 46
+2019-07-06 12:33:07 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 69
+2019-07-06 12:33:07 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 75
+2019-07-06 12:33:07 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 93
+2019-07-06 12:33:07 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 97
+2019-07-06 12:33:07 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 104
+2019-07-06 12:34:08 - PHP Notice:  Indirect modification of overloaded property ControllerCommonFooter::$data has no effect in C:\wamp64\www\boost\system\library\templateinit.php on line 5
+2019-07-06 12:34:08 - PHP Notice:  Undefined variable: data in C:\wamp64\www\boost\system\library\templateinit.php on line 6
+2019-07-06 12:34:08 - PHP Notice:  Undefined variable: data in C:\wamp64\www\boost\system\library\templateinit.php on line 7
+2019-07-06 12:34:08 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\footer.tpl on line 9
+2019-07-06 12:34:08 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\footer.tpl on line 46
+2019-07-06 12:34:08 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 69
+2019-07-06 12:34:08 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 75
+2019-07-06 12:34:08 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 93
+2019-07-06 12:34:08 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 97
+2019-07-06 12:34:08 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 104
+2019-07-06 12:34:49 - PHP Notice:  Indirect modification of overloaded property ControllerCommonFooter::$data has no effect in C:\wamp64\www\boost\system\library\templateinit.php on line 5
+2019-07-06 12:34:49 - PHP Notice:  Indirect modification of overloaded property ControllerCommonFooter::$data has no effect in C:\wamp64\www\boost\system\library\templateinit.php on line 6
+2019-07-06 12:34:49 - PHP Notice:  Indirect modification of overloaded property ControllerCommonFooter::$data has no effect in C:\wamp64\www\boost\system\library\templateinit.php on line 7
+2019-07-06 12:34:49 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\footer.tpl on line 9
+2019-07-06 12:34:49 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\footer.tpl on line 46
+2019-07-06 12:34:49 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 69
+2019-07-06 12:34:49 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 75
+2019-07-06 12:34:49 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 93
+2019-07-06 12:34:49 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 97
+2019-07-06 12:34:49 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 104
+2019-07-06 12:35:46 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 69
+2019-07-06 12:35:46 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 75
+2019-07-06 12:35:46 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 93
+2019-07-06 12:35:46 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 97
+2019-07-06 12:35:46 - PHP Notice:  Undefined variable: img_path in C:\wamp64\www\boost\catalog\view\theme\default\template\common\header.tpl on line 104
+2019-07-07 17:59:05 - PHP Notice:  Undefined index: descr in C:\wamp64\www\boost\admin\controller\design\banner.php on line 388
+2019-07-07 18:02:42 - PHP Notice:  Undefined index: descr in C:\wamp64\www\boost\admin\controller\design\banner.php on line 388
+2019-07-07 18:04:13 - PHP Notice:  Undefined index: descr in C:\wamp64\www\boost\admin\controller\design\banner.php on line 388
+2019-07-07 18:04:13 - PHP Notice:  Undefined index: descr in C:\wamp64\www\boost\admin\view\template\design\banner_form.tpl on line 76
+2019-07-07 18:04:31 - PHP Notice:  Undefined index: descr in C:\wamp64\www\boost\admin\controller\design\banner.php on line 388
+2019-07-07 18:04:45 - PHP Notice:  Undefined index: descr in C:\wamp64\www\boost\admin\controller\design\banner.php on line 388
+2019-07-07 18:14:02 - PHP Notice:  Undefined index: description in C:\wamp64\www\boost\admin\model\design\banner.php on line 97
+2019-07-07 18:14:10 - PHP Notice:  Undefined index: description in C:\wamp64\www\boost\admin\model\design\banner.php on line 97
+2019-07-07 18:14:18 - PHP Notice:  Undefined index: description in C:\wamp64\www\boost\admin\model\design\banner.php on line 97
+2019-07-07 18:18:33 - PHP Notice:  Undefined index: description in C:\wamp64\www\boost\admin\model\design\banner.php on line 97
+2019-07-07 18:18:42 - PHP Notice:  Undefined index: description in C:\wamp64\www\boost\admin\model\design\banner.php on line 97
+2019-07-07 18:20:02 - PHP Notice:  Undefined index: description in C:\wamp64\www\boost\admin\model\design\banner.php on line 97
+2019-07-07 18:45:27 - PHP Notice:  Undefined index: descr in C:\wamp64\www\boost\admin\model\design\banner.php on line 27
+2019-07-07 19:44:16 - PHP Notice:  Error: Could not load template C:/wamp64/www/boost/catalog/view/theme/default/template/extension/module/bannerdota.tpl! in C:\wamp64\www\boost\system\storage\modification\system\library\template\php.php on line 23
+2019-07-07 19:45:30 - PHP Notice:  Error: Could not load template C:/wamp64/www/boost/catalog/view/theme/default/template/extension/module/bannerdota.tpl! in C:\wamp64\www\boost\system\storage\modification\system\library\template\php.php on line 23
+2019-07-07 19:46:04 - PHP Notice:  Error: Could not load template C:/wamp64/www/boost/catalog/view/theme/default/template/extension/module/bannerdota.tpl! in C:\wamp64\www\boost\system\storage\modification\system\library\template\php.php on line 23
+2019-07-07 19:46:37 - PHP Notice:  Error: Could not load template C:/wamp64/www/boost/catalog/view/theme/default/template/extension/module/bannerdota.tpl! in C:\wamp64\www\boost\system\storage\modification\system\library\template\php.php on line 23
+2019-07-07 19:46:39 - PHP Notice:  Error: Could not load template C:/wamp64/www/boost/catalog/view/theme/default/template/extension/module/bannerdota.tpl! in C:\wamp64\www\boost\system\storage\modification\system\library\template\php.php on line 23
+2019-07-07 19:46:39 - PHP Notice:  Error: Could not load template C:/wamp64/www/boost/catalog/view/theme/default/template/extension/module/bannerdota.tpl! in C:\wamp64\www\boost\system\storage\modification\system\library\template\php.php on line 23
+2019-07-07 19:46:40 - PHP Notice:  Error: Could not load template C:/wamp64/www/boost/catalog/view/theme/default/template/extension/module/bannerdota.tpl! in C:\wamp64\www\boost\system\storage\modification\system\library\template\php.php on line 23
+2019-07-07 19:46:40 - PHP Notice:  Error: Could not load template C:/wamp64/www/boost/catalog/view/theme/default/template/extension/module/bannerdota.tpl! in C:\wamp64\www\boost\system\storage\modification\system\library\template\php.php on line 23
+2019-07-07 19:46:41 - PHP Notice:  Error: Could not load template C:/wamp64/www/boost/catalog/view/theme/default/template/extension/module/bannerdota.tpl! in C:\wamp64\www\boost\system\storage\modification\system\library\template\php.php on line 23
+2019-07-07 19:46:41 - PHP Notice:  Error: Could not load template C:/wamp64/www/boost/catalog/view/theme/default/template/extension/module/bannerdota.tpl! in C:\wamp64\www\boost\system\storage\modification\system\library\template\php.php on line 23
+2019-07-07 19:46:41 - PHP Notice:  Error: Could not load template C:/wamp64/www/boost/catalog/view/theme/default/template/extension/module/bannerdota.tpl! in C:\wamp64\www\boost\system\storage\modification\system\library\template\php.php on line 23
+2019-07-07 19:46:42 - PHP Notice:  Error: Could not load template C:/wamp64/www/boost/catalog/view/theme/default/template/extension/module/bannerdota.tpl! in C:\wamp64\www\boost\system\storage\modification\system\library\template\php.php on line 23
+2019-07-07 19:46:42 - PHP Notice:  Error: Could not load template C:/wamp64/www/boost/catalog/view/theme/default/template/extension/module/bannerdota.tpl! in C:\wamp64\www\boost\system\storage\modification\system\library\template\php.php on line 23
+2019-07-07 19:46:43 - PHP Notice:  Error: Could not load template C:/wamp64/www/boost/catalog/view/theme/default/template/extension/module/bannerdota.tpl! in C:\wamp64\www\boost\system\storage\modification\system\library\template\php.php on line 23
+2019-07-07 19:49:17 - PHP Notice:  Error: Could not load template C:/wamp64/www/boost/catalog/view/theme/default/template/extension/module/banner.tpl! in C:\wamp64\www\boost\system\storage\modification\system\library\template\php.php on line 23
+2019-07-07 19:58:36 - PHP Notice:  Use of undefined constant data - assumed 'data' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 4
+2019-07-07 19:58:36 - PHP Warning:  Illegal string offset 'img_path' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 4
+2019-07-07 19:58:36 - PHP Notice:  Use of undefined constant data - assumed 'data' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 8
+2019-07-07 19:58:36 - PHP Warning:  Illegal string offset 'img_path' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 8
+2019-07-07 19:58:36 - PHP Notice:  Use of undefined constant data - assumed 'data' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 22
+2019-07-07 19:58:36 - PHP Warning:  Illegal string offset 'img_path' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 22
+2019-07-07 19:58:37 - PHP Notice:  Use of undefined constant data - assumed 'data' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 4
+2019-07-07 19:58:37 - PHP Warning:  Illegal string offset 'img_path' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 4
+2019-07-07 19:58:37 - PHP Notice:  Use of undefined constant data - assumed 'data' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 8
+2019-07-07 19:58:37 - PHP Warning:  Illegal string offset 'img_path' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 8
+2019-07-07 19:58:37 - PHP Notice:  Use of undefined constant data - assumed 'data' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 22
+2019-07-07 19:58:37 - PHP Warning:  Illegal string offset 'img_path' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 22
+2019-07-07 19:58:38 - PHP Notice:  Use of undefined constant data - assumed 'data' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 4
+2019-07-07 19:58:38 - PHP Warning:  Illegal string offset 'img_path' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 4
+2019-07-07 19:58:38 - PHP Notice:  Use of undefined constant data - assumed 'data' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 8
+2019-07-07 19:58:38 - PHP Warning:  Illegal string offset 'img_path' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 8
+2019-07-07 19:58:38 - PHP Notice:  Use of undefined constant data - assumed 'data' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 22
+2019-07-07 19:58:38 - PHP Warning:  Illegal string offset 'img_path' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 22
+2019-07-07 19:58:55 - PHP Notice:  Use of undefined constant data - assumed 'data' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 4
+2019-07-07 19:58:55 - PHP Warning:  Illegal string offset 'img_path' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 4
+2019-07-07 19:58:55 - PHP Notice:  Use of undefined constant data - assumed 'data' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 8
+2019-07-07 19:58:55 - PHP Warning:  Illegal string offset 'img_path' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 8
+2019-07-07 19:58:55 - PHP Notice:  Use of undefined constant data - assumed 'data' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 22
+2019-07-07 19:58:55 - PHP Warning:  Illegal string offset 'img_path' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 22
+2019-07-07 19:58:56 - PHP Notice:  Use of undefined constant data - assumed 'data' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 4
+2019-07-07 19:58:56 - PHP Warning:  Illegal string offset 'img_path' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 4
+2019-07-07 19:58:56 - PHP Notice:  Use of undefined constant data - assumed 'data' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 8
+2019-07-07 19:58:56 - PHP Warning:  Illegal string offset 'img_path' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 8
+2019-07-07 19:58:56 - PHP Notice:  Use of undefined constant data - assumed 'data' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 22
+2019-07-07 19:58:56 - PHP Warning:  Illegal string offset 'img_path' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 22
+2019-07-07 19:58:57 - PHP Notice:  Use of undefined constant data - assumed 'data' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 4
+2019-07-07 19:58:57 - PHP Warning:  Illegal string offset 'img_path' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 4
+2019-07-07 19:58:57 - PHP Notice:  Use of undefined constant data - assumed 'data' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 8
+2019-07-07 19:58:57 - PHP Warning:  Illegal string offset 'img_path' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 8
+2019-07-07 19:58:57 - PHP Notice:  Use of undefined constant data - assumed 'data' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 22
+2019-07-07 19:58:57 - PHP Warning:  Illegal string offset 'img_path' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 22
+2019-07-07 20:00:38 - PHP Notice:  Use of undefined constant data - assumed 'data' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 4
+2019-07-07 20:00:38 - PHP Warning:  Illegal string offset 'img_path' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 4
+2019-07-07 20:00:38 - PHP Notice:  Use of undefined constant data - assumed 'data' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 8
+2019-07-07 20:00:38 - PHP Warning:  Illegal string offset 'img_path' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 8
+2019-07-07 20:00:38 - PHP Notice:  Use of undefined constant data - assumed 'data' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 22
+2019-07-07 20:00:38 - PHP Warning:  Illegal string offset 'img_path' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 22
+2019-07-07 20:03:15 - PHP Notice:  Use of undefined constant data - assumed 'data' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 4
+2019-07-07 20:03:15 - PHP Warning:  Illegal string offset 'img_path' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 4
+2019-07-07 20:03:15 - PHP Notice:  Use of undefined constant data - assumed 'data' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 8
+2019-07-07 20:03:15 - PHP Warning:  Illegal string offset 'img_path' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 8
+2019-07-07 20:03:15 - PHP Notice:  Use of undefined constant data - assumed 'data' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 22
+2019-07-07 20:03:15 - PHP Warning:  Illegal string offset 'img_path' in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\banner_dota.tpl on line 22
+2019-07-07 20:31:20 - PHP Notice:  Undefined variable: filename in C:\wamp64\www\boost\catalog\controller\extension\module\banner.php on line 25
+2019-07-07 20:31:20 - PHP Notice:  Undefined variable: filename in C:\wamp64\www\boost\catalog\controller\extension\module\banner.php on line 25
+2019-07-07 20:31:20 - PHP Notice:  Undefined variable: filename in C:\wamp64\www\boost\catalog\controller\extension\module\banner.php on line 25

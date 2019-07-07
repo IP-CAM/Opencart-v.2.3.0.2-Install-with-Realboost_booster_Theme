@@ -1,0 +1,566 @@
+@media (max-width: 1200px) {
+	
+.login a > span,
+.cart a > span {
+	display: none;
+}
+.review-img {
+	width: 100px;
+	height: 100px;
+}
+}
+
+@media (max-width: 992px) {
+
+.login a > span,
+.cart a > span {
+	display: inline-block;
+}
+	.header-menu-container {
+	display: inline-block;
+}
+.burger {
+	display: flex;
+}
+.dws-hide {
+	display: none;
+}
+header {
+	padding: 20px 0;
+}
+.bread-banner h1 {
+	font-size: 42px;
+}
+.task .button {
+	width: auto;
+	font-size: 16px;
+}
+
+.task-title {
+	font-size: 16px;
+}
+
+.icon-dota:before {
+	margin-right: 10px;
+}
+.task-rating {
+	font-size: 16px;
+}
+.task-price {
+	font-size: 16px;
+}
+.infoBoost {
+	text-align: center;
+}
+.security-block_left {
+ margin-right: 20px;
+ /* width: 100px; */
+ min-width: 150px;
+}
+.security-block_left img {
+	max-width: 100px;
+}
+.security-block_title {
+	margin-bottom: 25px;
+}
+
+.review-img {
+	width: 90px;
+	height: 90px;
+}
+.personal-training__title {
+	margin-bottom: 70px;
+}
+.personal-training__descr {
+	margin-bottom: 20px;
+}
+.personal-training .button {
+	margin: 70px auto 0;
+}
+.personal-training {
+	padding: 100px 0;
+}
+
+.guarantee-list_block {
+	margin-top: 100px;
+}
+.guarantee-list__img {
+	margin-bottom: 20px;
+}
+.guarantee-list__title {
+	max-width: inherit;
+	margin-bottom: 50px;
+}
+.guarantee-list__descr {
+	margin-bottom: 30px;
+}
+
+.descr-bc_box.bottom {
+	min-height: inherit;
+}
+.descr-bc_box {
+	padding: 40px 20px;
+}
+.descr-bc_left .descr-bc__title {
+	margin-bottom: 60px;
+}
+.bottom-r {
+	min-height: 615px !important;
+}
+}
+
+@media (max-width: 768px) {
+
+.login a > span,
+.cart a > span {
+	display: none;
+}
+.bread-banner h1 {
+	font-size: 26px;
+}
+.tasks-title {
+	margin: 80px 0;
+}
+.vacancy-descr {
+	margin-bottom: 10px;
+}
+.task {
+	padding: 15px;
+	background-color: #151515;
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+.task-title {
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+.icon-dota:before {
+	margin-right: 20px;
+}
+.task-rating {
+	text-align: center;
+	font-size: 16px;
+}
+.task-price {
+	text-align: center;
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+.task .button {
+	width: 100%;
+}
+
+.def-title,
+.tasks-title {
+	font-size: 20px;
+	margin: 70px 0 50px!important;
+}
+
+.step-title {
+	font-size: 28px;
+}
+
+.step-descr {
+	font-size: 11px;
+	letter-spacing: -1px;
+}
+.whyBoost {
+	padding-bottom: 70px; 
+}
+.infoBoost {
+	padding: 20px;
+}
+
+.infoBoost-title {
+	font-size: 16px;
+}
+
+.infoBoost li {
+	font-size: 14px;
+}
+
+.security-block_left {
+	min-width: 60px;
+}
+
+.security-block_left img{
+	width: 60px;
+}
+
+.security-block_title {
+	font-size: 16px;
+}
+
+.security-block_descr {
+	font-size: 14px;
+}
+.orange {
+	padding: 50px 0 70px;
+}
+p {
+	font-size: 14px;
+}
+
+footer {
+ padding: 30px 0;
+}
+.content {
+	padding-bottom: 70px;
+}
+
+#login h1, #register h1 {
+	font-size: 28px;
+}
+
+#login input, #register input {
+ padding: 10px 25px;
+ font-size: 16px;
+ width: 250px;
+}
+
+#login fieldset button, #register fieldset button {
+ padding: 10px 25px;
+ font-size: 16px;
+ width: 250px;
+ margin: 20px auto 0;
+}
+
+.register {
+ font-size: 16px;
+ margin-top: 10px;
+ width: 250px;
+}
+
+#login, #register {
+ padding: 50px;
+ max-width: 400px;
+}
+
+.mfp-auto-cursor .mfp-content {
+	max-width: 400px!important;
+}
+.dws-menu {
+	display: none;
+}
+
+.login a > span,
+.cart a > span {
+	display: none;
+}
+
+.bread-banner {
+	padding: 20px 0 20px;
+}
+
+.bread-crumbs {
+ margin-top: 15px;
+}
+.bread-crumbs ul li a {
+	font-size: 14px;
+}
+.steps-points {
+	margin-bottom: 100px;
+}
+
+.tasks-title {
+	font-size: 28px;
+}
+.vacancy .icon-dota:before {
+	left: 40px;
+}
+.vacancy-title,
+.vacancy-descr {
+	margin-left: 20px;
+}
+.vacancy-title {
+	margin-bottom: 10px;
+}
+.dws-hide {
+	display: none;
+}
+header {
+	padding: 20px 0;
+}
+.header-menu-container {
+	display: inline-block;
+}
+
+.banner h1 {
+	font-size: 28px;
+	line-height: 30px;
+	margin-bottom: 30px;
+
+}
+.banner p {
+	font-size: 14px;
+	margin-bottom: 30px;
+}
+.banner a {
+	font-size: 14px;
+	padding: 15px 15px!important;
+	width: inherit;
+}
+.banner-background {
+		padding: 70px 0 200px;
+}
+.banner .prev > img, .banner .next > img {
+	width: 100%;
+}
+.login a > img, .cart a > img {
+    margin-right: 0;
+}
+.task a.button {
+	padding: 8px 15px;
+}
+.icon-dota {
+	width: 35px;
+ margin-right: 10px;
+}
+h2,
+.def-title {
+	font-size: 28px!important;
+	text-align: center !important;
+}
+.guarantees .guarantees-block {
+	padding: 15px;
+ margin-bottom: 10px;
+ border-radius: 5px;
+}
+.guarantees .guarantees-block .container-img {
+	margin-bottom: 10px;
+}
+
+.guarantees .guarantees-block .container-img img  {
+	margin: 0 auto;
+}
+.guarantees .guarantees-block p {
+	text-align: center;
+}
+.guarantees {
+	padding-bottom: 70px;
+}
+
+.review-title {
+	margin: 0px 0 50px;
+}
+
+.review-arrow {
+	width: 70px;
+}
+.review-prev, .review-next {
+	width: 25%;
+}
+
+.review-prev img, .review-next img {
+	width: 100%;
+}
+
+.review-img {
+	width: 80px;
+	height: 80px;
+}
+
+.personal-training {
+	padding: 50px 0;
+}
+
+.personal-training__title {
+	font-size: 28px;
+	margin-bottom: 50px;
+}
+
+.personal-training__descr {
+	font-size: 14px;
+	padding: 0 20px;
+}
+
+.personal-training__descr:before {
+	left: 15px;
+}
+
+.personal-training .button {
+	margin: 50px auto 0;
+	font-size: 14px;
+	width: 250px;
+	padding: 15px 20px;
+}
+.checkout-box form {
+	margin: 0 auto;
+}
+.checkout form label {
+	margin: 20px 0 5px;
+	font-size: 14px;
+}
+.checkout form input,
+.checkout form select {
+	font-size: 16px;
+	padding: 12px 20px;
+}
+.checkout button {
+	margin: 35px auto 0;
+	font-size: 14px;
+	width: 250px;
+	padding: 13px 20px;
+}
+.training-advantages {
+	padding: 50px 0 0;
+}
+
+.training-advantages__title {
+	font-size: 28px;
+	margin-bottom: 20px;
+}
+.training-advantages__descr {
+	font-size: 16px;
+	margin-bottom: 30px;
+	min-height: inherit;
+}
+.training-advantages ul > li {
+	font-size: 14px;
+}
+.training-advantages ul {
+	min-height: inherit;
+}
+.training-advantages-box {
+	padding: 25px;
+}
+
+.info-block__title {
+	margin-bottom: 20px;
+}
+.info-block__orange {
+	font-size: 40px;
+}
+.info-block__descr {
+	font-size: 16px;
+}
+.info-block__container {
+	padding: 35px;
+}
+.info-block {
+	padding: 50px 0 50px;
+}
+.checkout-discount {
+	font-size: 18px;
+}
+.checkout-title {
+	font-size: 22px;
+}
+.calculation {
+	margin: 0;
+}
+.guarantee-list_block {
+	margin-top: 100px;
+}
+.guarantee-list__img {
+	margin-bottom: 20px;
+}
+.guarantee-list__title {
+	font-size: 26px;
+	max-width: inherit;
+	margin-bottom: 50px;
+}
+.guarantee-list__descr {
+	font-size: 16px;
+	max-width: inherit;
+	margin-bottom: 30px;
+}
+.guarantee-list ul > li {
+	font-size: 14px;
+}
+.guarantee-list {
+	margin-bottom: 100px;
+}
+.review-descr {
+	font-size: 16px;
+}
+.guarantees-reviews {
+	margin-bottom: 100px;
+}
+
+.boost-rating-checkout form label {
+	margin: 10px 0 0 0;
+}
+
+.boost-rating-checkout textarea {
+	margin-top: 10px;
+}
+
+.checkbox-auth {
+	margin-top: 20px;
+}
+
+.boost-rating-checkout button {
+	margin: 30px auto 0;
+}
+
+.descr-bc-title {
+	font-size: 28px;
+	margin-bottom: 30px;
+}
+.descr-bc_left .descr-bc__title {
+	margin-bottom: 30px;
+}
+
+.descr-bc__descr {
+	font-size: 16px;
+}
+.descr-bc_left,
+.descr-bc_box,
+.descr-bc_box.bottom,
+.bottom-r {
+	min-height: inherit!important;
+}
+.descr-bc_box li {
+	font-size: 14px;
+}
+
+.countdown {
+	margin: 70px 0;
+	padding: 0;
+	background: #000;
+}
+.countdown-title {
+	font-size: 28px;
+	margin-bottom: 30px;
+}
+.countdown-timer {
+	font-size: 20px;
+	margin-bottom: 30px;
+}
+.countdown .button {
+	font-size: 14px;
+	width: 250px;
+}
+.battle-cup-checkout .checkout-title {
+	margin-bottom: 30px;
+}
+.battle-cup-checkout {
+	margin-bottom: 70px;
+}
+.checkout {
+	padding: 50px;
+}
+.calculator {
+	padding: 70px 30px;
+	top: -100px;
+}
+.calculator-title {
+	font-size: 28px;
+}
+.calculator input,
+.calculator-subtitle {
+	font-size: 16px;
+}
+
+.calculator .button {
+	font-size: 14px;
+}
+
+}
+
+
+
+@media (max-width: 480px) {
+
+}
