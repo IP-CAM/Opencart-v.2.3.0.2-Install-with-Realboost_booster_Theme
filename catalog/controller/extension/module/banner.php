@@ -14,7 +14,8 @@ class ControllerExtensionModuleBanner extends Controller {
 
 		$results = $this->model_design_banner->getBanner($setting['banner_id']);
 		
-		$tplname = $setting['name'];
+		$tplname = ($results[0]['suffix'])?$results[0]['suffix']:$setting['name'];
+		
 		$defaultname = $this->config->get('theme_default_directory');
 		foreach ($results as $result) {
 			if (is_file(DIR_IMAGE . $result['image'])) {
