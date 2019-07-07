@@ -2084,7 +2084,7 @@ CREATE TABLE IF NOT EXISTS `oc_product` (
 --
 
 INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `isbn`, `mpn`, `location`, `quantity`, `stock_status_id`, `image`, `manufacturer_id`, `shipping`, `price`, `points`, `tax_class_id`, `date_available`, `weight`, `weight_class_id`, `length`, `width`, `height`, `length_class_id`, `subtract`, `minimum`, `sort_order`, `status`, `viewed`, `date_added`, `date_modified`) VALUES
-(50, 'mmrboost', '', '', '', '', '', '', '', 1, 7, '', 0, 1, '0.0000', 0, 0, '2019-07-06', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 0, '2019-07-06 13:41:04', '2019-07-06 13:41:22');
+(50, 'mmrboostboostboost', '', '', '', '', '', '', '', 1, 7, '', 0, 1, '0.0000', 0, 0, '2019-07-06', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 0, '2019-07-06 13:41:04', '2019-07-06 13:41:22');
 
 -- --------------------------------------------------------
 
@@ -2580,7 +2580,6 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `ser
 (333, 0, 'config', 'config_ftp_password', '', 0),
 (332, 0, 'config', 'config_ftp_username', '', 0),
 (331, 0, 'config', 'config_ftp_port', '21', 0),
-(330, 0, 'config', 'config_ftp_hostname', 'localhost', 0),
 (329, 0, 'config', 'config_icon', 'catalog/cart.png', 0),
 (328, 0, 'config', 'config_logo', 'catalog/logo.png', 0),
 (327, 0, 'config', 'config_captcha_page', '[\"review\",\"return\",\"contact\"]', 1),
