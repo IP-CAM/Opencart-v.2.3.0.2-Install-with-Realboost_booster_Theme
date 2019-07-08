@@ -153,3 +153,4 @@
 2019-07-07 20:31:20 - PHP Notice:  Undefined variable: filename in C:\wamp64\www\boost\catalog\controller\extension\module\banner.php on line 25
 2019-07-07 23:12:59 - PHP Notice:  Undefined index: suffix in C:\wamp64\www\boost\catalog\controller\extension\module\banner.php on line 17
 2019-07-07 23:13:34 - PHP Notice:  Undefined index: suffix in C:\wamp64\www\boost\catalog\controller\extension\module\banner.php on line 17
+2019-07-07 23:54:31 - PHP Notice:  Undefined variable: suffix in C:\wamp64\www\boost\admin\view\template\design\banner_form.tpl on line 40

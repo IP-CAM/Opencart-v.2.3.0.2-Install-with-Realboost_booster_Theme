@@ -344,6 +344,16 @@ class ControllerDesignBanner extends Controller {
 		} else {
 			$data['name'] = '';
 		}
+		
+		if (isset($this->request->post['suffix'])) {
+		    $data['suffix'] = $this->request->post['suffix'];
+		} elseif (!empty($banner_info)) {
+		    $data['suffix'] = $banner_info['suffix'];
+		} else {
+		    $data['suffix'] = '';
+		}
+		
+		
 
 		if (isset($this->request->post['status'])) {
 			$data['status'] = $this->request->post['status'];

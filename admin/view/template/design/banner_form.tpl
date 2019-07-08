@@ -34,6 +34,13 @@
               <?php } ?>
             </div>
           </div>
+           <div class="form-group">
+            <label class="col-sm-2 control-label" for="input-suffix">имя шаблона для обработки</label>
+            <div class="col-sm-10">
+              <input type="text" name="suffix" value="<?php echo $suffix; ?>" placeholder="<?php echo $entry_name; ?>" id="input-suffix" class="form-control" />
+              
+            </div>
+          </div>
           <div class="form-group">
             <label class="col-sm-2 control-label" for="input-status"><?php echo $entry_status; ?></label>
             <div class="col-sm-10">
