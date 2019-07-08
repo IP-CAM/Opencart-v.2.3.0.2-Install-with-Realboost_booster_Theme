@@ -81,11 +81,11 @@ function Export_Database($host,$user,$pass,$name,  $tables=false, $backup_name=f
     //$backup_name = $backup_name ? $backup_name : $name."___(".date('H-i-s')."_".date('d-m-Y').")__rand".rand(1,11111111).".sql";
     $backup_name = $backup_name ? $backup_name : $name.".sql";
     $content = "SET SQL_MODE = \"\";\n\n".$content;
-    header('Content-Type: application/octet-stream');
-    header("Content-Transfer-Encoding: Binary");
-    header("Content-disposition: attachment; filename=\"".$backup_name."\"");
-    file_put_contents("install\opencart.sql", $content);
-	echo "updated install\opencart.sql";
-    echo $content; exit;
+    //header('Content-Type: application/octet-stream');
+    //header("Content-Transfer-Encoding: Binary");
+   // header("Content-disposition: attachment; filename=\"".$backup_name."\"");
+    file_put_contents("install/opencart.sql", $content);
+	echo "updated install/opencart.sql";
+   // echo $content; exit;
 }
 ?>
