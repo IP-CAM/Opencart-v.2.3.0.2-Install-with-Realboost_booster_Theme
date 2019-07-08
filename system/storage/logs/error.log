@@ -154,3 +154,13 @@
 2019-07-07 23:12:59 - PHP Notice:  Undefined index: suffix in C:\wamp64\www\boost\catalog\controller\extension\module\banner.php on line 17
 2019-07-07 23:13:34 - PHP Notice:  Undefined index: suffix in C:\wamp64\www\boost\catalog\controller\extension\module\banner.php on line 17
 2019-07-07 23:54:31 - PHP Notice:  Undefined variable: suffix in C:\wamp64\www\boost\admin\view\template\design\banner_form.tpl on line 40
+2019-07-08 5:02:30 - PHP Notice:  Undefined index: width in C:\wamp64\www\boost\admin\controller\extension\module\slidereview.php on line 159
+2019-07-08 5:02:30 - PHP Notice:  Undefined index: height in C:\wamp64\www\boost\admin\controller\extension\module\slidereview.php on line 163
+2019-07-08 5:03:44 - PHP Notice:  Undefined index: width in C:\wamp64\www\boost\admin\controller\extension\module\slidereview.php on line 122
+2019-07-08 5:03:44 - PHP Notice:  Undefined index: height in C:\wamp64\www\boost\admin\controller\extension\module\slidereview.php on line 130
+2019-07-08 5:04:44 - PHP Notice:  Undefined index: width in C:\wamp64\www\boost\admin\controller\extension\module\slidereview.php on line 122
+2019-07-08 5:04:44 - PHP Notice:  Undefined index: height in C:\wamp64\www\boost\admin\controller\extension\module\slidereview.php on line 130
+2019-07-08 5:05:21 - PHP Notice:  Undefined index: banner_id in C:\wamp64\www\boost\admin\controller\extension\module\slidereview.php on line 110
+2019-07-08 5:05:30 - PHP Notice:  Undefined index: banner_id in C:\wamp64\www\boost\admin\controller\extension\module\slidereview.php on line 110
+2019-07-08 5:18:07 - PHP Notice:  Undefined index: banner_id in C:\wamp64\www\boost\catalog\controller\extension\module\slidereview.php on line 14
+2019-07-08 5:21:28 - PHP Notice:  Undefined index: banner_id in C:\wamp64\www\boost\catalog\controller\extension\module\slidereview.php on line 14
