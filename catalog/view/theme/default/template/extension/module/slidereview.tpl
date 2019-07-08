@@ -14,30 +14,33 @@
 
     <div class="row review-slider">
 		
-	<?php foreach ($banners as $banner) {?>	
+	<?php foreach ($reviews as $review) {?>	
       <div class="col-lg-4">
         <div class="review">
           <div class="review-top">
             <div class="review-img">
-              <img src="<?php  echo $img_path; ?>reviews/1.png" alt="icon-profile">
+              <img src="<?php echo $review['photo']; ?>" alt="icon-profile">
             </div>
 
             <div class="review-profile">
-              <div class="review-name">Name1</div>
-              <div class="review-data">26.03.2015</div>
+              <div class="review-name"><?php echo $review['author']; ?></div>
+              <div class="review-data"><?php echo $review['date']; ?></div>
             </div>
           </div>
 
           <div class="review-bottom">
            <div class="review-descr">
-             Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum...
+             <?php echo $review['text']; ?>
            </div>
           </div>
         </div>
       </div>
 
       
-    </div>
+    
 	<?php }?>
+	
+	
+	</div>
   </div>
 </div>

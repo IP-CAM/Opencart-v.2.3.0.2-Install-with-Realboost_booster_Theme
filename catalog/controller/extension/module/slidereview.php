@@ -11,21 +11,26 @@ class ControllerExtensionModuleSlidereview extends Controller {
 
 		$data['banners'] = array();
 
-		$results = $this->model_design_slidereview->getBanner($setting['banner_id']);
+		
 
-		foreach ($results as $result) {
-			if (is_file(DIR_IMAGE . $result['image'])) {
-				$data['banners'][] = array(
-					'title' => $result['title'],
-					'link'  => $result['link'],
-					'image' => $this->model_tool_image->resize($result['image'], $setting['width'], $setting['height'])
-				);
-			}
-		}
-
+		
 		$data['module'] = $module++;
 		TemplateLoader::initLinks($this, $data);
-
+		$review_total = $this->model_design_slidereview->getTotalReviews();
+		
+		foreach( $this->model_design_slidereview->getReviews() as $val){
+		    $img = $this->model_design_slidereview->LoadUserImg( $val['author']);
+		    $data['reviews'][] = array(
+		        'title'=> $val['name'],
+		        'author'=> $val['author'],
+		        'rating'=> $val['rating'],
+		        'photo'=> $img,
+		        'date'=> $val['date_added'],
+		        'text' => $val['text']
+		    );
+		    
+		    $VCZCSDXVSXZCD=1;
+		}
 		return $this->load->view('extension/module/slidereview', $data);
 	}
 }

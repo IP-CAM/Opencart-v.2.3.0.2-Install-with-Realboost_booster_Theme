@@ -17,5 +17,14 @@
         $data['css_path'] = "catalog/view/theme/$tpl/stylesheet/";
     }
     
+    public static function getNoImage(){
+        return 'image/no_image.png';
+    }
+    /**путь к папке загрузок админки
+     * @return string
+     */
+    public static function getPathToImgFolder(){
+        return 'image/';
+    }
    
 }?>
