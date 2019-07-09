@@ -373,8 +373,12 @@ class ControllerProductCategory extends Controller {
 			$data['content_bottom'] = $this->load->controller('common/content_bottom');
 			$data['footer'] = $this->load->controller('common/footer');
 			$data['header'] = $this->load->controller('common/header');
-
-			$this->response->setOutput($this->load->view('product/category', $data));
+			//$this->load->model($route)
+			TemplateLoader::getLayoutCategoryName($this, $category_id);
+			$res = $this->db->query(''); 
+			$tpl = TemplateLoader::getLayoutCategoryName($this, $category_id);
+			$tpl = ($tpl)?$tpl:'product/category';
+			$this->response->setOutput($this->load->view($tpl, $data));
 		} else {
 			$url = '';
 
@@ -425,7 +429,7 @@ class ControllerProductCategory extends Controller {
 			$data['content_bottom'] = $this->load->controller('common/content_bottom');
 			$data['footer'] = $this->load->controller('common/footer');
 			$data['header'] = $this->load->controller('common/header');
-
+			
 			$this->response->setOutput($this->load->view('error/not_found', $data));
 		}
 	}

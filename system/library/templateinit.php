@@ -26,5 +26,11 @@
     public static function getPathToImgFolder(){
         return 'image/';
     }
-   
+    
+    public static function getLayoutCategoryName($tis, $category_id){
+        $qry = "SELECT route FROM `" . DB_PREFIX . "category_to_layout` occ left join " . DB_PREFIX . "layout_route ocl on occ.layout_id = ocl.layout_id where occ.category_id ='.$category_id.' LIMIT 1";
+        $res = $tis->db->query($qry);
+        return $res->rows[0]['route'];
+    }  
+    
 }?>

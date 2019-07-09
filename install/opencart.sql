@@ -1135,7 +1135,7 @@ CREATE TABLE `oc_layout_module` (
   `position` varchar(14) NOT NULL,
   `sort_order` int(3) NOT NULL,
   PRIMARY KEY (`layout_module_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=97 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=102 DEFAULT CHARSET=utf8;
 
 
 INSERT INTO oc_layout_module VALUES
@@ -1144,11 +1144,12 @@ INSERT INTO oc_layout_module VALUES
 ("20","5","0","column_left","2"),
 ("69","10","affiliate","column_right","1"),
 ("68","6","account","column_right","1"),
-("94","1","html.34","content_top","1"),
-("95","1","slidereview.35","content_top","2"),
+("100","1","html.36","content_top","3"),
+("99","1","slidereview.35","content_top","2"),
 ("72","3","category","column_left","1"),
-("96","1","html.36","content_top","3"),
-("93","1","banner.32","content_top","0");
+("98","1","html.34","content_top","1"),
+("97","1","banner.32","content_top","0"),
+("101","1","html.37","content_top","4");
 
 
 
@@ -1160,14 +1161,14 @@ CREATE TABLE `oc_layout_route` (
   `store_id` int(11) NOT NULL,
   `route` varchar(64) NOT NULL,
   PRIMARY KEY (`layout_route_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=63 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=64 DEFAULT CHARSET=utf8;
 
 
 INSERT INTO oc_layout_route VALUES
 ("38","6","0","account/%"),
 ("17","10","0","affiliate/%"),
 ("44","3","0","product/category"),
-("62","1","0","common/home"),
+("63","1","0","common/home"),
 ("20","2","0","product/product"),
 ("24","11","0","information/information"),
 ("23","7","0","checkout/%"),
@@ -1362,16 +1363,17 @@ CREATE TABLE `oc_module` (
   `code` varchar(32) NOT NULL,
   `setting` text NOT NULL,
   PRIMARY KEY (`module_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=37 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=38 DEFAULT CHARSET=utf8;
 
 
 INSERT INTO oc_module VALUES
 ("29","Home Page","carousel","{\"name\":\"Home Page\",\"banner_id\":\"8\",\"width\":\"130\",\"height\":\"100\",\"status\":\"1\"}"),
 ("28","Home Page","featured","{\"name\":\"Home Page\",\"product\":[\"43\",\"40\",\"42\",\"30\"],\"limit\":\"4\",\"width\":\"200\",\"height\":\"200\",\"status\":\"1\"}"),
-("32","dota","banner","{\"name\":\"dota\",\"banner_id\":\"9\",\"width\":\"500\",\"height\":\"500\",\"status\":\"1\"}"),
+("32","banner-dota","banner","{\"name\":\"banner-dota\",\"banner_id\":\"9\",\"width\":\"500\",\"height\":\"500\",\"status\":\"1\"}"),
 ("34","html-block-mmr-boost","html","{\"name\":\"html-block-mmr-boost\",\"module_description\":{\"1\":{\"title\":\"\",\"description\":\"&lt;!-- calculator --&gt;\\r\\n&lt;div class=&quot;container&quot;&gt;\\r\\n  &lt;div class=&quot;calculator&quot;&gt;\\r\\n    &lt;div class=&quot;calculator-title&quot;&gt;&lt;span&gt;Dota 2&lt;\\/span&gt; mmr boost&lt;\\/div&gt;\\r\\n    \\r\\n      &lt;div class=&quot;row&quot;&gt;\\r\\n\\r\\n        &lt;div class=&quot;offset-lg-4 col-lg-2 col-md-6 col-sm-6 col-6&quot;&gt;\\r\\n          &lt;label class=&quot;calculator-subtitle&quot;&gt;My rank&lt;\\/label&gt;\\r\\n          &lt;input type=&quot;number&quot; id=&quot;from-rank&quot; value=&quot;2000&quot; min=&quot;0&quot; max=&quot;7500&quot; step=&quot;25&quot; required=&quot;&quot;&gt;\\r\\n        &lt;\\/div&gt;\\r\\n\\r\\n        &lt;div class=&quot;col-lg-2  col-md-6 col-sm-6 col-6&quot;&gt;\\r\\n          &lt;label class=&quot;calculator-subtitle&quot;&gt;I want to be&lt;\\/label&gt;\\r\\n          &lt;input type=&quot;number&quot; id=&quot;to-rank&quot; value=&quot;3500&quot; min=&quot;0&quot; max=&quot;7500&quot; step=&quot;25&quot; required=&quot;&quot;&gt;\\r\\n        &lt;\\/div&gt;\\r\\n\\r\\n        &lt;div class=&quot;offset-lg-2 col-lg-8&quot;&gt;\\r\\n          &lt;input type=&quot;text&quot; id=&quot;calculator-slider&quot; name=&quot;my_range&quot; value=&quot;&quot;&gt;\\r\\n        &lt;\\/div&gt;\\r\\n\\r\\n        &lt;div class=&quot;col-lg-12&quot;&gt;\\r\\n          &lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;Add to cart&lt;\\/a&gt;\\r\\n        &lt;\\/div&gt;\\r\\n\\r\\n      &lt;\\/div&gt;\\r\\n    \\r\\n  &lt;\\/div&gt;\\r\\n&lt;\\/div&gt;\\r\\n\"}},\"my_range\":\"\",\"status\":\"1\"}"),
 ("35","слайды из отзыв","slidereview","{\"name\":\"\\u0441\\u043b\\u0430\\u0439\\u0434\\u044b \\u0438\\u0437 \\u043e\\u0442\\u0437\\u044b\\u0432\",\"status\":\"1\"}"),
-("36","html-block-гарантии","html","{\"name\":\"html-block-\\u0433\\u0430\\u0440\\u0430\\u043d\\u0442\\u0438\\u0438\",\"module_description\":{\"1\":{\"title\":\"\\u0413\\u0430\\u0440\\u0430\\u043d\\u0442\\u0438\\u0438\",\"description\":\"&lt;!-- Guarantees --&gt;\\r\\n&lt;div class=&quot;guarantees&quot;&gt;\\r\\n  &lt;div class=&quot;container&quot;&gt;\\r\\n\\r\\n    &lt;div class=&quot;guarantees-title def-title&quot;&gt;\\u0413\\u0430\\u0440\\u0430\\u043d\\u0442\\u0438\\u0438&lt;\\/div&gt;\\r\\n\\r\\n    &lt;div class=&quot;row&quot;&gt;\\r\\n\\r\\n      &lt;div class=&quot;col-lg-4 col-md-6 col-sm-12&quot;&gt;\\r\\n        &lt;div class=&quot;guarantees-block&quot;&gt;\\r\\n          &lt;div class=&quot;container-img&quot;&gt;\\r\\n            &lt;img src=&quot;catalog\\/view\\/theme\\/default\\/img\\/guarantees\\/1.png&quot; alt=&quot;#&quot;&gt;\\r\\n          &lt;\\/div&gt;\\r\\n          &lt;p&gt;\\u041c\\u044b \\u043f\\u0440\\u0438\\u043d\\u0438\\u043c\\u0430\\u0435\\u043c \\u043f\\u043b\\u0430\\u0442\\u0435\\u0436\\u0438 \\u0447\\u0435\\u0440\\u0435\\u0437 Robokassa&lt;\\/p&gt;\\r\\n        &lt;\\/div&gt;\\r\\n      &lt;\\/div&gt;\\r\\n\\r\\n      &lt;div class=&quot;col-lg-4 col-md-6 col-sm-12&quot;&gt;\\r\\n        &lt;div class=&quot;guarantees-block&quot;&gt;\\r\\n          &lt;div class=&quot;container-img&quot;&gt;\\r\\n            &lt;img src=&quot;catalog\\/view\\/theme\\/default\\/img\\/guarantees\\/2.png&quot; alt=&quot;#&quot;&gt;\\r\\n          &lt;\\/div&gt;\\r\\n          &lt;p&gt;\\u041c\\u044b \\u043f\\u0440\\u0438\\u043d\\u0438\\u043c\\u0430\\u0435\\u043c \\u043e\\u043f\\u043b\\u0430\\u0442\\u0443 \\u0431\\u043e\\u043b\\u0435\\u0435 \\u0447\\u0435\\u043c 50 \\u0441\\u043f\\u043e\\u0441\\u043e\\u0431\\u0430\\u043c\\u0438&lt;\\/p&gt;\\r\\n        &lt;\\/div&gt;\\r\\n      &lt;\\/div&gt;\\r\\n\\r\\n      &lt;div class=&quot;col-lg-4 col-md-6 col-sm-12&quot;&gt;\\r\\n        &lt;div class=&quot;guarantees-block&quot;&gt;\\r\\n          &lt;div class=&quot;container-img&quot;&gt;\\r\\n            &lt;img src=&quot;catalog\\/view\\/theme\\/default\\/img\\/guarantees\\/3.png&quot; alt=&quot;#&quot;&gt;\\r\\n          &lt;\\/div&gt;\\r\\n          &lt;p&gt;\\u041c\\u044b \\u0430\\u0442\\u0442\\u0435\\u0441\\u0442\\u043e\\u0432\\u0430\\u043d\\u044b WebMoney&lt;\\/p&gt;\\r\\n        &lt;\\/div&gt;\\r\\n      &lt;\\/div&gt;\\r\\n\\r\\n    &lt;\\/div&gt;\\r\\n\\r\\n  &lt;\\/div&gt;\\r\\n&lt;\\/div&gt;\"}},\"status\":\"1\"}");
+("36","html-block-гарантии","html","{\"name\":\"html-block-\\u0433\\u0430\\u0440\\u0430\\u043d\\u0442\\u0438\\u0438\",\"module_description\":{\"1\":{\"title\":\"\\u0413\\u0430\\u0440\\u0430\\u043d\\u0442\\u0438\\u0438\",\"description\":\"&lt;!-- Guarantees --&gt;\\r\\n&lt;div class=&quot;guarantees&quot;&gt;\\r\\n  &lt;div class=&quot;container&quot;&gt;\\r\\n\\r\\n    &lt;div class=&quot;guarantees-title def-title&quot;&gt;\\u0413\\u0430\\u0440\\u0430\\u043d\\u0442\\u0438\\u0438&lt;\\/div&gt;\\r\\n\\r\\n    &lt;div class=&quot;row&quot;&gt;\\r\\n\\r\\n      &lt;div class=&quot;col-lg-4 col-md-6 col-sm-12&quot;&gt;\\r\\n        &lt;div class=&quot;guarantees-block&quot;&gt;\\r\\n          &lt;div class=&quot;container-img&quot;&gt;\\r\\n            &lt;img src=&quot;catalog\\/view\\/theme\\/default\\/img\\/guarantees\\/1.png&quot; alt=&quot;#&quot;&gt;\\r\\n          &lt;\\/div&gt;\\r\\n          &lt;p&gt;\\u041c\\u044b \\u043f\\u0440\\u0438\\u043d\\u0438\\u043c\\u0430\\u0435\\u043c \\u043f\\u043b\\u0430\\u0442\\u0435\\u0436\\u0438 \\u0447\\u0435\\u0440\\u0435\\u0437 Robokassa&lt;\\/p&gt;\\r\\n        &lt;\\/div&gt;\\r\\n      &lt;\\/div&gt;\\r\\n\\r\\n      &lt;div class=&quot;col-lg-4 col-md-6 col-sm-12&quot;&gt;\\r\\n        &lt;div class=&quot;guarantees-block&quot;&gt;\\r\\n          &lt;div class=&quot;container-img&quot;&gt;\\r\\n            &lt;img src=&quot;catalog\\/view\\/theme\\/default\\/img\\/guarantees\\/2.png&quot; alt=&quot;#&quot;&gt;\\r\\n          &lt;\\/div&gt;\\r\\n          &lt;p&gt;\\u041c\\u044b \\u043f\\u0440\\u0438\\u043d\\u0438\\u043c\\u0430\\u0435\\u043c \\u043e\\u043f\\u043b\\u0430\\u0442\\u0443 \\u0431\\u043e\\u043b\\u0435\\u0435 \\u0447\\u0435\\u043c 50 \\u0441\\u043f\\u043e\\u0441\\u043e\\u0431\\u0430\\u043c\\u0438&lt;\\/p&gt;\\r\\n        &lt;\\/div&gt;\\r\\n      &lt;\\/div&gt;\\r\\n\\r\\n      &lt;div class=&quot;col-lg-4 col-md-6 col-sm-12&quot;&gt;\\r\\n        &lt;div class=&quot;guarantees-block&quot;&gt;\\r\\n          &lt;div class=&quot;container-img&quot;&gt;\\r\\n            &lt;img src=&quot;catalog\\/view\\/theme\\/default\\/img\\/guarantees\\/3.png&quot; alt=&quot;#&quot;&gt;\\r\\n          &lt;\\/div&gt;\\r\\n          &lt;p&gt;\\u041c\\u044b \\u0430\\u0442\\u0442\\u0435\\u0441\\u0442\\u043e\\u0432\\u0430\\u043d\\u044b WebMoney&lt;\\/p&gt;\\r\\n        &lt;\\/div&gt;\\r\\n      &lt;\\/div&gt;\\r\\n\\r\\n    &lt;\\/div&gt;\\r\\n\\r\\n  &lt;\\/div&gt;\\r\\n&lt;\\/div&gt;\"}},\"status\":\"1\"}"),
+("37","html-block-orange-block","html","{\"name\":\"html-block-orange-block\",\"module_description\":{\"1\":{\"title\":\"\",\"description\":\"&lt;!-- Orange-text --&gt;\\r\\n&lt;div class=&quot;orange&quot;&gt;\\r\\n  &lt;div class=&quot;container&quot;&gt;\\r\\n\\r\\n    &lt;p class=&quot;orange-text&quot;&gt;\\r\\n      \\u0412\\u0441\\u0435 \\u043d\\u0430\\u0437\\u0432\\u0430\\u043d\\u0438\\u044f \\u043f\\u0440\\u043e\\u0434\\u0443\\u043a\\u0442\\u043e\\u0432, \\u043a\\u043e\\u043c\\u043f\\u0430\\u043d\\u0438\\u0439, \\u043b\\u043e\\u0433\\u043e\\u0442\\u0438\\u043f\\u044b \\u0438 \\u0442\\u043e\\u0432\\u0430\\u0440\\u043d\\u044b\\u0435 \\u0437\\u043d\\u0430\\u043a\\u0438 \\u044f\\u0432\\u043b\\u044f\\u044e\\u0442\\u0441\\u044f \\u0441\\u043e\\u0431\\u0441\\u0442\\u0432\\u0435\\u043d\\u043d\\u043e\\u0441\\u0442\\u044c\\u044e \\u043a\\u043e\\u0440\\u043f\\u043e\\u0440\\u0430\\u0446\\u0438\\u0439 Valve \\u0438 WarGaming, \\u0430 \\u0442\\u0430\\u043a\\u0436\\u0435\\r\\n      \\u0438\\u0445 \\u043b\\u0438\\u0446\\u0435\\u043d\\u0437\\u0438\\u0430\\u0440\\u043e\\u0432. \\u0414\\u0430\\u043d\\u043d\\u044b\\u0439 \\u0441\\u0430\\u0439\\u0442 \\u0444\\u0443\\u043d\\u043a\\u0446\\u0438\\u043e\\u043d\\u0438\\u0440\\u0443\\u0435\\u0442 \\u043a\\u0430\\u043a \\u0442\\u043e\\u0440\\u0433\\u043e\\u0432\\u0430\\u044f \\u043f\\u043b\\u043e\\u0449\\u0430\\u0434\\u043a\\u0430 \\u0438 \\u043d\\u0435 \\u044f\\u0432\\u043b\\u044f\\u0435\\u0442\\u0441\\u044f \\u0441\\u043e\\u0431\\u0441\\u0442\\u0432\\u0435\\u043d\\u043d\\u0438\\u043a\\u043e\\u043c \\r\\n      \\u043f\\u0440\\u043e\\u0434\\u0430\\u0432\\u0430\\u0435\\u043c\\u044b\\u0445 \\u0442\\u043e\\u0432\\u0430\\u0440\\u043e\\u0432\\/\\u0443\\u0441\\u043b\\u0443\\u0433. \\u0412\\u0441\\u0435 \\u043f\\u0440\\u0430\\u0432\\u0430 \\u043f\\u0440\\u0438\\u043d\\u0430\\u0434\\u043b\\u0435\\u0436\\u0430\\u0442 \\u0438\\u0445 \\u0432\\u043b\\u0430\\u0434\\u0435\\u043b\\u044c\\u0446\\u0430\\u043c. \\r\\n    &lt;\\/p&gt;\\r\\n\\r\\n  &lt;\\/div&gt;\\r\\n&lt;\\/div&gt;\"}},\"status\":\"1\"}");
 
 
 
