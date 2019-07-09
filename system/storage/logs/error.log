@@ -330,3 +330,5 @@
 2019-07-09 2:55:49 - PHP Warning:  mysqli::query(): Empty query in C:\wamp64\www\boost\system\library\db\mysqli.php on line 18
 2019-07-09 2:56:20 - PHP Warning:  mysqli::query(): Empty query in C:\wamp64\www\boost\system\library\db\mysqli.php on line 18
 2019-07-09 3:19:00 - PHP Warning:  mysqli::query(): Empty query in C:\wamp64\www\boost\system\library\db\mysqli.php on line 18
+2019-07-09 3:29:59 - PHP Warning:  mysqli::query(): Empty query in C:\wamp64\www\boost\system\library\db\mysqli.php on line 18
+2019-07-09 3:33:18 - PHP Warning:  mysqli::query(): Empty query in C:\wamp64\www\boost\system\library\db\mysqli.php on line 18
