@@ -474,8 +474,10 @@ class ControllerProductProduct extends Controller {
 			$data['content_bottom'] = $this->load->controller('common/content_bottom');
 			$data['footer'] = $this->load->controller('common/footer');
 			$data['header'] = $this->load->controller('common/header');
-
-			$this->response->setOutput($this->load->view('product/product', $data));
+			$tpl = TemplateLoader::getLayoutProductName($this, $product_id);
+			$tpl = ($tpl)?$tpl:'product/product';
+			//$res = $this->db->query(''); 
+			$this->response->setOutput($this->load->view($tpl, $data));
 		} else {
 			$url = '';
 
