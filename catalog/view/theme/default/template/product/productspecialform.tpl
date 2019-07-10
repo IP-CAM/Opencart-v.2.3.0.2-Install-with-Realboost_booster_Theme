@@ -56,7 +56,20 @@
     <div class="boost-calculator-title">Калькулятор</div>
     <form>
       <div class="row">
-
+		<script>
+		 <?php foreach($options as $option):
+    		 if ($option['name']=='ваш рейтинг'){  ?>	
+    		 	var array_current_mmr = <?php echo  json_encode($option['product_option_value']);?>;
+    		<?php }?>
+    		<?php if ($option['name']=='желаемый рейтинг'){  ?>	
+		 		var array_preferable_mmr = <?php echo  json_encode($option['product_option_value']);?>;
+		 		
+		  <?php }?>
+		<?php endforeach;?>
+		</script>
+		<script>
+		console.log('dddd');
+		</script>
         <div class="offset-lg-3 col-lg-2 offset-md-0 col-md-3">
           <label for="from-rank" class="calculator-subtitle">Текущий ММР</label>
           <input type="number" id="from-rank" value="0" min="0" max="7500" step="100" required="">
@@ -76,31 +89,18 @@
         <div class="boost-calculator-bottom">
           <div class="row">
             <div class="offset-lg-2 col-lg-6">
-              <label class="container">Буст пати ММР <span class="percent">+15%</span>
-                <input type="checkbox" class="party-mmr">
-                <span class="checkmark"></span>
-              </label>
-
-              <label class="container">Выполнить быстрее <span class="percent">+10%</span>
-                <input type="checkbox" class="run-faster">
-                <span class="checkmark"></span>
-              </label>
-
-              <label class="container">Играть на опреленном герое <span class="percent">+5%</span>
-                <input type="checkbox" class="certain-hero">
-                <span class="checkmark"></span>
-              </label>
-
-              <label class="container">Не отключать Steam Guard
-                <input type="checkbox">
-                <span class="checkmark"></span>
-              </label>
-
-              <label class="container">Не играть в определенное время 
-                <input type="checkbox">
-                <span class="checkmark"></span>
-              </label>
-            </div>
+            <?php foreach($options as $option): 
+                if ($option['name']=='boost_opt'):
+                foreach($option['product_option_value']as $val):?>
+            	
+                      <label class="container"><?php echo $val['name'];?><span class="percent"> (<?php echo str_replace('р.',$val['price_prefix'], $val['price']);?>)</span>
+                        <input type="checkbox" class="party-mmr">
+                        <span class="checkmark"></span>
+                      </label>
+                  <?php endforeach; 
+            	 endif;
+			 endforeach;?>
+              
 
             <div class="col-lg-4">
               <div class="price"><span>100</span> руб.</div>
