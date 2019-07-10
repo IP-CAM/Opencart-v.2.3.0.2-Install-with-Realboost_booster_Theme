@@ -6,7 +6,8 @@ class ControllerCheckoutConfirm extends Controller {
 		if ($this->cart->hasShipping()) {
 			// Validate if shipping address has been set.
 			if (!isset($this->session->data['shipping_address'])) {
-				$redirect = $this->url->link('checkout/checkout', '', true);
+			    //catch комментируем, нету адреса доставки
+				//$redirect = $this->url->link('checkout/checkout', '', true);
 			}
 
 			// Validate if shipping method has been set.
@@ -26,7 +27,7 @@ class ControllerCheckoutConfirm extends Controller {
 
 		// Validate if payment method has been set.
 		if (!isset($this->session->data['payment_method'])) {
-			$redirect = $this->url->link('checkout/checkout', '', true);
+		    $redirect = $this->url->link('checkout/checkout', '', true);
 		}
 
 		// Validate cart has products and has stock.

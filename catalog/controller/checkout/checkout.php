@@ -92,7 +92,16 @@ class ControllerCheckoutCheckout extends Controller {
 		$data['content_bottom'] = $this->load->controller('common/content_bottom');
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
-
+		
+		$data['cartisnotempty'] = true;
+		$data['registerr'] = array(
+		    'login' => false,
+		    'telephone' => false,
+		);
+		//переименовываем пути из шаблона в пути опенкарта, через класс помощник
+		
+		$data['content_top'] = TemplateLoader::replace($this,$data['content_top']);
+		$data['content_bottom'] = TemplateLoader::replace($this,$data['content_bottom']);
 		$this->response->setOutput($this->load->view('checkout/checkout', $data));
 	}
 
@@ -142,7 +151,7 @@ class ControllerCheckoutCheckout extends Controller {
 				'required'        => $custom_field['required']
 			);
 		}
-
+    
 		$this->response->addHeader('Content-Type: application/json');
 		$this->response->setOutput(json_encode($json));
 	}

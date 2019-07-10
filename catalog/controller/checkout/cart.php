@@ -283,7 +283,7 @@ class ControllerCheckoutCart extends Controller {
 
 	public function add() {
 		$this->load->language('checkout/cart');
-
+        
 		$json = array();
 
 		if (isset($this->request->post['product_id'])) {
@@ -293,7 +293,9 @@ class ControllerCheckoutCart extends Controller {
 		}
 
 		$this->load->model('catalog/product');
-
+		
+		//$product_id = 50;
+		//$quantity  = 1;
 		$product_info = $this->model_catalog_product->getProduct($product_id);
 
 		if ($product_info) {
@@ -302,7 +304,7 @@ class ControllerCheckoutCart extends Controller {
 			} else {
 				$quantity = $product_info['minimum'] ? $product_info['minimum'] : 1;
 			}
-
+            
 			if (isset($this->request->post['option'])) {
 				$option = array_filter($this->request->post['option']);
 			} else {

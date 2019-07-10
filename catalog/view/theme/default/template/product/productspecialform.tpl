@@ -56,8 +56,7 @@
     <div class="boost-calculator-title">Калькулятор</div>
     <form>
       <div class="row">
-		
-        <div class="offset-lg-3 col-lg-2 offset-md-0 col-md-3">
+		<div class="offset-lg-3 col-lg-2 offset-md-0 col-md-3">
           <label for="from-rank" class="calculator-subtitle">Текущий ММР</label>
           <input type="number" id="from-rank" value="0" min="0" max="7500" step="100" required="">
         </div>
@@ -75,6 +74,7 @@
 
         <div class="boost-calculator-bottom">
           <div class="row">
+            
             <div class="offset-lg-2 col-lg-6">
             <?php foreach($options as $option): 
                 if ($option['name']=='boost_opt'):
@@ -88,17 +88,20 @@
             	 endif;
 			 endforeach;?>
               
-
-            <div class="col-lg-4">
-              <div class="price"><span>100</span> руб.</div>
-              <div class="term">Сроки <span>2-3</span> дня</div>
-            </div>
-
-            <div class="col-lg-12">
-              <a href="#" class="button">Подготовить аккаунт</a>
-            </div>
           </div>
+
+        
+        <div class="col-lg-4">
+          <div class="price"><span>100</span> руб.</div>
+          <div class="term">Сроки <span>2-3</span> дня</div>
         </div>
+
+        <div class="col-lg-12">
+          <a href="#" class="button">Подготовить аккаунт</a>
+        </div>
+        
+        </div>
+
 
     </form>
   </div>
@@ -206,16 +209,22 @@
 
 </div>
  
- 
 <script>
-		 <?php foreach($options as $option):
-    		 if ($option['name']=='ваш рейтинг'){  ?>	
-    		 	var array_current_mmr = <?php echo  json_encode($option['product_option_value']);?>;
-    		<?php }?>
-    		<?php if ($option['name']=='желаемый рейтинг'){  ?>	
-		 		var array_preferable_mmr = <?php echo  json_encode($option['product_option_value']);?>;
-		 		
-		  <?php }?>
-		<?php endforeach;?>
+	  <?php foreach($options as $option):
+		 $opt = array();
+		 foreach ($option['product_option_value'] as $key=>$val){
+			 $opt[$val['name']]=$val;
+			 $opt[$val['name']]['key'] = $key;
+		 }
+   		 if ($option['name']=='ваш рейтинг'){  ?>	
+   		 	var array_current_mmr = <?php echo  str_replace('\u0440.','',json_encode($opt));?>;
+	<?php }?>
+  		<?php if ($option['name']=='желаемый рейтинг'){  ?>	
+			var array_preferable_mmr = <?php echo   str_replace('\u0440.','',json_encode($opt));?>;
+	 		
+	  <?php }?>
+	<?php endforeach;?>
 </script>
+
+
 <?php echo $footer; ?>
