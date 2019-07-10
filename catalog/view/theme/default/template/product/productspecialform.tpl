@@ -56,20 +56,7 @@
     <div class="boost-calculator-title">Калькулятор</div>
     <form>
       <div class="row">
-		<script>
-		 <?php foreach($options as $option):
-    		 if ($option['name']=='ваш рейтинг'){  ?>	
-    		 	var array_current_mmr = <?php echo  json_encode($option['product_option_value']);?>;
-    		<?php }?>
-    		<?php if ($option['name']=='желаемый рейтинг'){  ?>	
-		 		var array_preferable_mmr = <?php echo  json_encode($option['product_option_value']);?>;
-		 		
-		  <?php }?>
-		<?php endforeach;?>
-		</script>
-		<script>
-		console.log('dddd');
-		</script>
+		
         <div class="offset-lg-3 col-lg-2 offset-md-0 col-md-3">
           <label for="from-rank" class="calculator-subtitle">Текущий ММР</label>
           <input type="number" id="from-rank" value="0" min="0" max="7500" step="100" required="">
@@ -220,5 +207,15 @@
 </div>
  
  
-
+<script>
+		 <?php foreach($options as $option):
+    		 if ($option['name']=='ваш рейтинг'){  ?>	
+    		 	var array_current_mmr = <?php echo  json_encode($option['product_option_value']);?>;
+    		<?php }?>
+    		<?php if ($option['name']=='желаемый рейтинг'){  ?>	
+		 		var array_preferable_mmr = <?php echo  json_encode($option['product_option_value']);?>;
+		 		
+		  <?php }?>
+		<?php endforeach;?>
+</script>
 <?php echo $footer; ?>
