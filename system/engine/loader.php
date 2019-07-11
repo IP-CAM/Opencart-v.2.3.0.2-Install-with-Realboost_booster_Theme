@@ -78,13 +78,21 @@ final class Loader {
 		}
 		
 		if (!$output) {
-			$template = new Template($this->registry->get('config')->get('template_type'));
-			
-			foreach ($data as $key => $value) {
-				$template->set($key, $value);
-			}
-		
-			$output = $template->render($route . '.tpl');
+		    if (is_file( DIR_TEMPLATE . $route.'.twig'))
+		    {
+		        $twig=true;
+		        $template = new Template('twig');
+		    }else{
+		        $twig=false;
+		        $template = new Template($this->registry->get('config')->get('template_type'));
+		    }
+		    
+		    
+		    foreach ($data as $key => $value) {
+		        $template->set($key, $value);
+		    }
+		    
+		    $output = $template->render($route . (($twig)?'.twig':'.tpl')); 
 		}
 		
 		// Trigger the post events

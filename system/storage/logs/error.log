@@ -886,3 +886,16 @@
 2019-07-11 1:54:27 - PHP Notice:  Undefined index: order_id in C:\wamp64\www\boost\catalog\controller\extension\payment\robokassa.php on line 12
 2019-07-11 1:54:27 - PHP Notice:  Undefined index: order_id in C:\wamp64\www\boost\catalog\controller\extension\payment\robokassa.php on line 32
 2019-07-11 1:54:29 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
+2019-07-11 4:46:44 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
+2019-07-11 5:00:09 - PHP Notice:  Undefined index: order_id in C:\wamp64\www\boost\catalog\controller\extension\payment\robokassa.php on line 12
+2019-07-11 5:00:09 - PHP Notice:  Undefined index: order_id in C:\wamp64\www\boost\catalog\controller\extension\payment\robokassa.php on line 32
+2019-07-11 5:00:23 - PHP Notice:  Undefined index: order_id in C:\wamp64\www\boost\catalog\controller\extension\payment\robokassa.php on line 12
+2019-07-11 5:00:23 - PHP Notice:  Undefined index: order_id in C:\wamp64\www\boost\catalog\controller\extension\payment\robokassa.php on line 32
+2019-07-11 5:00:24 - PHP Notice:  Undefined index: order_id in C:\wamp64\www\boost\catalog\controller\extension\payment\robokassa.php on line 12
+2019-07-11 5:00:24 - PHP Notice:  Undefined index: order_id in C:\wamp64\www\boost\catalog\controller\extension\payment\robokassa.php on line 32
+2019-07-11 5:03:20 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
+2019-07-11 5:03:26 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
+2019-07-11 5:03:29 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
+2019-07-11 5:03:40 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
+2019-07-11 5:03:48 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
+2019-07-11 5:08:14 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
