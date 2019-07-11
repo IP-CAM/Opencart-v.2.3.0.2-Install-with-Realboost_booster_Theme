@@ -18,7 +18,7 @@ class ControllerExtensionModuleBreadcrumbs extends Controller
         if ($status == 1) {
             // Load model
             $this->load->model('extension/module/breadcrumbs');
-
+            $data=TemplateLoader::$saveddaata;
             $data['text']      = $this->model_extension_module_breadcrumbs->getText();
 
             if (file_exists(DIR_TEMPLATE.$this->config->get('config_template')

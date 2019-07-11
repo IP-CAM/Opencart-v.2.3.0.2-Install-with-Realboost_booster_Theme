@@ -9,7 +9,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title><?php echo $title; ?></title>
+<title><?php echo $title; TemplateLoader::savevar($title, 'title'); ?></title>
 <base href="<?php echo $base; ?>" />
 <?php if ($description) { ?>
 <meta name="description" content="<?php echo $description; ?>" />
@@ -74,7 +74,7 @@
           <ul>
             <li><a href="#">Услуги <img src="<?php echo $img_path; ?>icons/bottom-arrow.png" alt="arrow"></a>
               <ul>
-                <li><a href="boost-rating.html">заказать буст рейтинга</a></li>
+                <li><a href="uslugi/prokachka-mmr">заказать буст рейтинга</a></li>
                 <li><a href="order-calibration.html">Заказать калибровку</a></li>
                 <li><a href="boost-rating.html">Слить Лоу приорити</a></li>
                 <li><a href="battle-cup.html">Победить Battle Cup</a></li>

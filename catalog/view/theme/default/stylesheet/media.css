@@ -107,6 +107,19 @@ header {
 .bottom-r {
 	min-height: 615px !important;
 }
+.calculator-subtitle {
+	font-size: 16px;
+}
+.boost-calculator-bottom {
+	margin-top: 50px;
+}
+.boost-calculator .price {
+	margin-top: 30px;
+}
+.boost-calculator .price,
+.boost-calculator .term {
+	text-align: center;
+}
 }
 
 @media (max-width: 768px) {
@@ -545,7 +558,8 @@ h2,
 	padding: 70px 30px;
 	top: -100px;
 }
-.calculator-title {
+.calculator-title,
+.boost-calculator-title {
 	font-size: 28px;
 }
 .calculator input,
@@ -556,7 +570,39 @@ h2,
 .calculator .button {
 	font-size: 14px;
 }
-
+.boost-calculator {
+	padding: 0 30px;
+}
+.boost-calculator .price,
+.boost-calculator .term {
+	text-align: center;
+}
+.boost-calculator a.button {
+	font-size: 14px;
+	width: 250px;
+}
+.add-mmr {
+	margin-top: 20px;
+}
+.boost-calculator .calculator-subtitle {
+	margin-top: 20px;
+}
+.boost-calculator label.container {
+	font-size: 14px;
+	margin-bottom: 15px;
+}
+.boost-calculator label.container > span.percent {
+	font-size: 14px;
+}
+span.checkmark {
+	width: 20px;
+	height: 20px;
+	margin-top: 2px;
+}
+label.container .checkmark:after {
+	left: 6px;
+	top: 2px;
+}
 }
 
 

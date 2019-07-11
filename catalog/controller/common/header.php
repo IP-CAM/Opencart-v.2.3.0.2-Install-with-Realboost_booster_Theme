@@ -147,7 +147,7 @@ class ControllerCommonHeader extends Controller {
 		} else {
 			$data['class'] = 'common-home';
 		}
-
+		TemplateLoader::savedata($data);
 		return $this->load->view('common/header', $data);
 	}
 }

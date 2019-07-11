@@ -4,7 +4,8 @@
        *класс для помощи  с интеграцией шаблона
        */
       class TemplateLoader{
-    
+        public static $saveddaata;
+        public static $vals= array();
     /**
      * @param Registry $obj -из контроллера - $this
      * @param array $data - собссно сам объект $data
@@ -43,6 +44,16 @@
         $tpl = $obj->config->get('theme_default_directory');
         $val = str_replace(array("\"img/","\"css/","\"js/"), array("\"catalog/view/theme/$tpl/img/","\"catalog/view/theme/$tpl/stylesheet/","\"catalog/view/theme/$tpl/js/"), $val);
         return $val;
+    }
+    
+    public static function savedata($data){
+        self::$saveddaata=$data;
+    }
+    public static function savevar($var,$name){
+        self::$vals[$name] = $var;
+    }
+    public static function getvars($name){
+        return self::$vals[$name];
     }
     
 }?>

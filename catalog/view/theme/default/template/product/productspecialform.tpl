@@ -58,7 +58,7 @@
       <div class="row">
 		<div class="offset-lg-3 col-lg-2 offset-md-0 col-md-3">
           <label for="from-rank" class="calculator-subtitle">Текущий ММР</label>
-          <input type="number" id="from-rank" value="0" min="0" max="7500" step="100" required="">
+          <input type="number" id="from-rank" value="0" min="0" max="7000" step="100" required="">
         </div>
 
         <div class="col-lg-2 col-md-6">
@@ -68,7 +68,7 @@
 
         <div class="col-lg-2 col-md-3">
           <div class="calculator-subtitle">Конечный ММР</div>
-          <input type="number" id="to-rank" value="0" min="0" max="7500" step="100" required="">
+          <input type="number" id="to-rank" value="0" min="0" max="7000" step="100" required="">
         </div>
       </div>
 
@@ -99,7 +99,7 @@
         <div class="col-lg-12">
           <a href="#" class="button">Подготовить аккаунт</a>
         </div>
-        
+
         </div>
 
 
@@ -210,8 +210,8 @@
 </div>
  
 <script>
-	  <?php foreach($options as $option):
-		 $opt = array();
+	 <?php foreach($options as $option):
+		$opt = array();
 		 foreach ($option['product_option_value'] as $key=>$val){
 			 $opt[$val['name']]=$val;
 			 $opt[$val['name']]['key'] = $key;
@@ -220,11 +220,13 @@
    		 	var array_current_mmr = <?php echo  str_replace('\u0440.','',json_encode($opt));?>;
 	<?php }?>
   		<?php if ($option['name']=='желаемый рейтинг'){  ?>	
-			var array_preferable_mmr = <?php echo   str_replace('\u0440.','',json_encode($opt));?>;
+ 		var array_preferable_mmr = <?php echo   str_replace('\u0440.','',json_encode($opt));?>;
 	 		
 	  <?php }?>
 	<?php endforeach;?>
 </script>
-
+<script>
+	console.log('dddd');
+</script> 
 
 <?php echo $footer; ?>
