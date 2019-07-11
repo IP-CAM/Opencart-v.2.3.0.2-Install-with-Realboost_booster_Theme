@@ -26,6 +26,7 @@ class ControllerCommonHeader extends Controller {
 		}
 
 		$data['title'] = $this->document->getTitle();
+		TemplateLoader::setvars($data['title'], 'title');
 
 		$data['base'] = $server;
 		$data['description'] = $this->document->getDescription();
@@ -147,7 +148,7 @@ class ControllerCommonHeader extends Controller {
 		} else {
 			$data['class'] = 'common-home';
 		}
-		TemplateLoader::savedata($data);
+		TemplateLoader::setvars($data,'data');
 		return $this->load->view('common/header', $data);
 	}
 }

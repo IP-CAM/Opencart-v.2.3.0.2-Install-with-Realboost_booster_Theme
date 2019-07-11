@@ -980,3 +980,28 @@
 2019-07-11 18:09:19 - PHP Notice:  Undefined index: title in C:\wamp64\www\boost\system\library\templateinit.php on line 56
 2019-07-11 18:09:19 - PHP Notice:  Undefined variable: breadcrumbs in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\breadcrumbs.tpl on line 7
 2019-07-11 18:09:19 - PHP Warning:  Invalid argument supplied for foreach() in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\breadcrumbs.tpl on line 7
+2019-07-11 18:34:50 - PHP Notice:  Undefined index: title in C:\wamp64\www\boost\system\library\templateinit.php on line 56
+2019-07-11 18:34:50 - PHP Notice:  Undefined variable: breadcrumbs in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\breadcrumbs.tpl on line 7
+2019-07-11 18:34:50 - PHP Warning:  Invalid argument supplied for foreach() in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\breadcrumbs.tpl on line 7
+2019-07-11 18:40:11 - PHP Notice:  Undefined index: data in C:\wamp64\www\boost\system\library\templateinit.php on line 74
+2019-07-11 18:40:38 - PHP Notice:  Undefined index: title in C:\wamp64\www\boost\system\library\templateinit.php on line 74
+2019-07-11 18:40:38 - PHP Notice:  Undefined variable: breadcrumbs in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\breadcrumbs.tpl on line 7
+2019-07-11 18:40:38 - PHP Warning:  Invalid argument supplied for foreach() in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\breadcrumbs.tpl on line 7
+2019-07-11 18:43:35 - PHP Warning:  Illegal string offset 'text' in C:\wamp64\www\boost\catalog\controller\extension\module\breadcrumbs.php on line 22
+2019-07-11 18:43:35 - PHP Warning:  Invalid argument supplied for foreach() in C:\wamp64\www\boost\system\storage\modification\system\engine\loader.php on line 91
+2019-07-11 18:43:36 - PHP Notice:  Undefined variable: breadcrumbs in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\breadcrumbs.tpl on line 7
+2019-07-11 18:43:36 - PHP Warning:  Invalid argument supplied for foreach() in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\breadcrumbs.tpl on line 7
+2019-07-11 18:45:47 - PHP Warning:  Illegal string offset 'text' in C:\wamp64\www\boost\catalog\controller\extension\module\breadcrumbs.php on line 22
+2019-07-11 18:45:49 - PHP Warning:  Invalid argument supplied for foreach() in C:\wamp64\www\boost\system\storage\modification\system\engine\loader.php on line 91
+2019-07-11 18:45:53 - PHP Notice:  Undefined variable: breadcrumbs in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\breadcrumbs.tpl on line 7
+2019-07-11 18:45:53 - PHP Warning:  Invalid argument supplied for foreach() in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\breadcrumbs.tpl on line 7
+2019-07-11 18:46:44 - PHP Warning:  Illegal string offset 'text' in C:\wamp64\www\boost\catalog\controller\extension\module\breadcrumbs.php on line 22
+2019-07-11 18:46:44 - PHP Warning:  Invalid argument supplied for foreach() in C:\wamp64\www\boost\system\storage\modification\system\engine\loader.php on line 91
+2019-07-11 18:46:53 - PHP Notice:  Undefined variable: breadcrumbs in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\breadcrumbs.tpl on line 7
+2019-07-11 18:46:53 - PHP Warning:  Invalid argument supplied for foreach() in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\breadcrumbs.tpl on line 7
+2019-07-11 18:47:45 - PHP Notice:  Undefined variable: breadcrumbs in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\breadcrumbs.tpl on line 7
+2019-07-11 18:47:45 - PHP Warning:  Invalid argument supplied for foreach() in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\breadcrumbs.tpl on line 7
+2019-07-11 18:48:29 - PHP Notice:  Undefined variable: breadcrumbs in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\breadcrumbs.tpl on line 7
+2019-07-11 18:48:29 - PHP Warning:  Invalid argument supplied for foreach() in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\breadcrumbs.tpl on line 7
+2019-07-11 18:50:26 - PHP Notice:  Undefined variable: breadcrumbs in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\breadcrumbs.tpl on line 7
+2019-07-11 18:50:26 - PHP Warning:  Invalid argument supplied for foreach() in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\breadcrumbs.tpl on line 7

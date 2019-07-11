@@ -14,11 +14,14 @@ class ControllerExtensionModuleBreadcrumbs extends Controller
 
     public function index()
     {
+        
         $data = $this->load->language('extension/module/breadcrumbs');
         $this->document->setTitle($data['heading_title']);
 
         $this->load->model('setting/setting');
         $this->load->model('extension/module/breadcrumbs');
+        
+        $this->model_extension_module_breadcrumbs->
 
         if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validate()) {
 

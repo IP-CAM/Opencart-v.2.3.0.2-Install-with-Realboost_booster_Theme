@@ -13,12 +13,19 @@ class ControllerExtensionModuleBreadcrumbs extends Controller
 
     public function index()
     {
+        
+        
+        
+        
+        
+        
+        $data['title'] = $this->document->getTitle();
         $status = $this->config->get('breadcrumbs_status');
 
         if ($status == 1) {
             // Load model
             $this->load->model('extension/module/breadcrumbs');
-            $data=TemplateLoader::$saveddaata;
+            //$data=TemplateLoader::getvars('data');
             $data['text']      = $this->model_extension_module_breadcrumbs->getText();
 
             if (file_exists(DIR_TEMPLATE.$this->config->get('config_template')

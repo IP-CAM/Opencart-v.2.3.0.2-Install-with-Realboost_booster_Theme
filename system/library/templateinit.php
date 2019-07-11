@@ -4,8 +4,10 @@
        *класс для помощи  с интеграцией шаблона
        */
       class TemplateLoader{
-        public static $saveddaata;
-        public static $vals= array();
+        //public static $saveddaata;
+        private static $vals= array();
+   
+    
     /**
      * @param Registry $obj -из контроллера - $this
      * @param array $data - собссно сам объект $data
@@ -46,14 +48,21 @@
         return $val;
     }
     
-    public static function savedata($data){
-        self::$saveddaata=$data;
-    }
-    public static function savevar($var,$name){
+    
+    /**функция сохранения между сессиями
+     * @param unknown $var
+     * @param unknown $name
+     */
+    public static function setvars($var,$name){
         self::$vals[$name] = $var;
     }
+    /**функция сохранения между сессиями
+     * @param unknown $var
+     * @param unknown $name
+     */
     public static function getvars($name){
-        return self::$vals[$name];
+         
+        return (isset(self::$vals[$name])===true)?self::$vals[$name]:'';
     }
     
 }?>

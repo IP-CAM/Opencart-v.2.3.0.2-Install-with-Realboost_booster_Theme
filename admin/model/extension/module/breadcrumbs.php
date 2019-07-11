@@ -10,6 +10,10 @@
 class ModelExtensionModuleBreadcrumbs extends Model
 {
 
+    private $arr= array();
+    public function InitLinks($get){
+        
+    }
     /**
      * @return array
      */
