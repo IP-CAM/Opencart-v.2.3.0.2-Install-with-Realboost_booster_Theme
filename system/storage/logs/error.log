@@ -1726,3 +1726,77 @@
 2019-07-12 9:46:36 - PHP Notice:  Undefined index: third_item_font_color_hover in C:\wamp64\www\boost\catalog\controller\extension\module\ocmegamenu.php on line 427
 2019-07-12 9:46:36 - PHP Notice:  Undefined index: third_item_font_weight_hover in C:\wamp64\www\boost\catalog\controller\extension\module\ocmegamenu.php on line 428
 2019-07-12 9:46:36 - PHP Warning:  mysqli::query(): Empty query in C:\wamp64\www\boost\system\library\db\mysqli.php on line 18
+2019-07-12 16:24:57 - PHP Warning:  mysqli::query(): Empty query in C:\wamp64\www\boost\system\library\db\mysqli.php on line 18
+2019-07-12 16:26:37 - PHP Notice:  unserialize(): Error at offset 1021 of 1024 bytes in C:\wamp64\www\boost\catalog\controller\common\header.php on line 134
+2019-07-12 16:26:39 - PHP Warning:  mysqli::query(): Empty query in C:\wamp64\www\boost\system\library\db\mysqli.php on line 18
+2019-07-12 16:26:52 - PHP Notice:  unserialize(): Error at offset 1021 of 1024 bytes in C:\wamp64\www\boost\catalog\controller\common\header.php on line 134
+2019-07-12 16:28:00 - PHP Warning:  mysqli::query(): Empty query in C:\wamp64\www\boost\system\library\db\mysqli.php on line 18
+2019-07-12 16:28:32 - PHP Warning:  unserialize() expects parameter 2 to be array, bool given in C:\wamp64\www\boost\catalog\controller\common\header.php on line 134
+2019-07-12 16:28:40 - PHP Warning:  mysqli::query(): Empty query in C:\wamp64\www\boost\system\library\db\mysqli.php on line 18
+2019-07-12 16:29:04 - PHP Warning:  unserialize() expects parameter 2 to be array, bool given in C:\wamp64\www\boost\catalog\controller\common\header.php on line 134
+2019-07-12 16:30:01 - PHP Warning:  mysqli::query(): Empty query in C:\wamp64\www\boost\system\library\db\mysqli.php on line 18
+2019-07-12 16:32:22 - PHP Warning:  unserialize() expects parameter 2 to be array, bool given in C:\wamp64\www\boost\catalog\controller\common\header.php on line 135
+2019-07-12 16:32:38 - PHP Warning:  mysqli::query(): Empty query in C:\wamp64\www\boost\system\library\db\mysqli.php on line 18
+2019-07-12 16:32:52 - PHP Warning:  unserialize() expects parameter 2 to be array, bool given in C:\wamp64\www\boost\catalog\controller\common\header.php on line 135
+2019-07-12 16:33:13 - PHP Warning:  mysqli::query(): Empty query in C:\wamp64\www\boost\system\library\db\mysqli.php on line 18
+2019-07-12 16:33:27 - PHP Warning:  unserialize() expects parameter 2 to be array, bool given in C:\wamp64\www\boost\catalog\controller\common\header.php on line 135
+2019-07-12 16:33:44 - PHP Warning:  mysqli::query(): Empty query in C:\wamp64\www\boost\system\library\db\mysqli.php on line 18
+2019-07-12 16:33:58 - PHP Notice:  unserialize(): Error at offset 1021 of 1024 bytes in C:\wamp64\www\boost\catalog\controller\common\header.php on line 135
+2019-07-12 16:38:14 - PHP Warning:  mysqli::query(): Empty query in C:\wamp64\www\boost\system\library\db\mysqli.php on line 18
+2019-07-12 16:46:16 - PHP Notice:  unserialize(): Error at offset 1021 of 1024 bytes in C:\wamp64\www\boost\catalog\controller\common\header.php on line 135
+2019-07-12 16:47:44 - PHP Notice:  unserialize(): Error at offset 1021 of 1024 bytes in C:\wamp64\www\boost\catalog\controller\common\header.php on line 135
+2019-07-12 16:48:14 - PHP Notice:  unserialize(): Error at offset 1021 of 1024 bytes in C:\wamp64\www\boost\catalog\controller\common\header.php on line 135
+2019-07-12 16:49:10 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
+2019-07-12 16:49:13 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
+2019-07-12 16:49:24 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
+2019-07-12 16:49:27 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
+2019-07-12 16:49:29 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
+2019-07-12 16:49:31 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
+2019-07-12 16:52:06 - PHP Notice:  unserialize(): Error at offset 1021 of 1024 bytes in C:\wamp64\www\boost\catalog\controller\common\header.php on line 135
+2019-07-12 16:52:42 - PHP Notice:  unserialize(): Error at offset 1021 of 1024 bytes in C:\wamp64\www\boost\catalog\controller\common\header.php on line 135
+2019-07-12 16:52:46 - PHP Warning:  mysqli::query(): Empty query in C:\wamp64\www\boost\system\library\db\mysqli.php on line 18
+2019-07-12 16:54:31 - PHP Notice:  unserialize(): Error at offset 1021 of 1024 bytes in C:\wamp64\www\boost\catalog\controller\common\header.php on line 135
+2019-07-12 16:54:31 - PHP Warning:  mysqli::query(): Empty query in C:\wamp64\www\boost\system\library\db\mysqli.php on line 18
+2019-07-12 16:54:44 - PHP Notice:  unserialize(): Error at offset 1021 of 1024 bytes in C:\wamp64\www\boost\catalog\controller\common\header.php on line 135
+2019-07-12 16:55:09 - PHP Warning:  mysqli::query(): Empty query in C:\wamp64\www\boost\system\library\db\mysqli.php on line 18
+2019-07-12 16:56:36 - PHP Notice:  unserialize(): Error at offset 1021 of 1024 bytes in C:\wamp64\www\boost\catalog\controller\common\header.php on line 135
+2019-07-12 17:00:08 - PHP Warning:  mysqli::query(): Empty query in C:\wamp64\www\boost\system\library\db\mysqli.php on line 18
+2019-07-12 17:00:19 - PHP Notice:  unserialize(): Error at offset 1021 of 1024 bytes in C:\wamp64\www\boost\catalog\controller\common\header.php on line 135
+2019-07-12 17:00:52 - PHP Warning:  mysqli::query(): Empty query in C:\wamp64\www\boost\system\library\db\mysqli.php on line 18
+2019-07-12 17:02:29 - PHP Notice:  unserialize(): Error at offset 1021 of 1024 bytes in C:\wamp64\www\boost\catalog\controller\common\header.php on line 135
+2019-07-12 17:03:03 - PHP Warning:  mysqli::query(): Empty query in C:\wamp64\www\boost\system\library\db\mysqli.php on line 18
+2019-07-12 17:03:36 - PHP Notice:  unserialize(): Error at offset 1021 of 1024 bytes in C:\wamp64\www\boost\catalog\controller\common\header.php on line 135
+2019-07-12 17:05:13 - PHP Warning:  mysqli::query(): Empty query in C:\wamp64\www\boost\system\library\db\mysqli.php on line 18
+2019-07-12 17:11:22 - PHP Notice:  unserialize(): Error at offset 1021 of 1024 bytes in C:\wamp64\www\boost\catalog\controller\common\header.php on line 135
+2019-07-12 17:11:30 - PHP Notice:  unserialize(): Error at offset 1021 of 1024 bytes in C:\wamp64\www\boost\catalog\controller\common\header.php on line 135
+2019-07-12 17:11:32 - PHP Notice:  unserialize(): Error at offset 1021 of 1024 bytes in C:\wamp64\www\boost\catalog\controller\common\header.php on line 135
+2019-07-12 17:11:33 - PHP Notice:  unserialize(): Error at offset 1021 of 1024 bytes in C:\wamp64\www\boost\catalog\controller\common\header.php on line 135
+2019-07-12 17:12:27 - PHP Notice:  unserialize(): Error at offset 1021 of 1024 bytes in C:\wamp64\www\boost\catalog\controller\common\header.php on line 135
+2019-07-12 17:59:21 - PHP Notice:  unserialize(): Error at offset 1021 of 1024 bytes in C:\wamp64\www\boost\catalog\controller\common\header.php on line 135
+2019-07-12 19:37:54 - PHP Notice:  unserialize(): Error at offset 1021 of 1024 bytes in C:\wamp64\www\boost\catalog\controller\common\header.php on line 135
+2019-07-12 19:38:12 - PHP Notice:  unserialize(): Error at offset 1021 of 1024 bytes in C:\wamp64\www\boost\catalog\controller\common\header.php on line 135
+2019-07-12 19:45:35 - PHP Notice:  unserialize(): Error at offset 1021 of 1024 bytes in C:\wamp64\www\boost\catalog\controller\common\header.php on line 135
+2019-07-12 20:06:25 - PHP Notice:  unserialize(): Error at offset 1021 of 1024 bytes in C:\wamp64\www\boost\catalog\controller\common\header.php on line 135
+2019-07-12 20:13:24 - PHP Warning:  mysqli::query(): Empty query in C:\wamp64\www\boost\system\library\db\mysqli.php on line 18
+2019-07-12 20:13:28 - PHP Notice:  unserialize(): Error at offset 1021 of 1024 bytes in C:\wamp64\www\boost\catalog\controller\common\header.php on line 135
+2019-07-12 20:13:31 - PHP Notice:  unserialize(): Error at offset 1021 of 1024 bytes in C:\wamp64\www\boost\catalog\controller\common\header.php on line 135
+2019-07-12 20:17:04 - PHP Notice:  unserialize(): Error at offset 1021 of 1024 bytes in C:\wamp64\www\boost\catalog\controller\common\header.php on line 135
+2019-07-12 20:17:25 - PHP Notice:  unserialize(): Error at offset 1021 of 1024 bytes in C:\wamp64\www\boost\catalog\controller\common\header.php on line 135
+2019-07-12 20:19:35 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
+2019-07-12 20:19:41 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
+2019-07-12 20:19:51 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
+2019-07-12 20:19:54 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
+2019-07-12 20:19:56 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
+2019-07-12 20:20:37 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
+2019-07-12 20:20:40 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
+2019-07-12 20:22:53 - PHP Notice:  Undefined index: sub_item_position3 in C:\wamp64\www\boost\admin\controller\extension\module\ocmegamenu.php on line 547
+2019-07-12 20:22:53 - PHP Warning:  Invalid argument supplied for foreach() in C:\wamp64\www\boost\admin\controller\extension\module\ocmegamenu.php on line 549
+2019-07-12 20:22:54 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
+2019-07-12 20:23:11 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
+2019-07-12 20:23:27 - PHP Notice:  Undefined index: sub_item_position3 in C:\wamp64\www\boost\admin\controller\extension\module\ocmegamenu.php on line 547
+2019-07-12 20:23:27 - PHP Warning:  Invalid argument supplied for foreach() in C:\wamp64\www\boost\admin\controller\extension\module\ocmegamenu.php on line 549
+2019-07-12 20:23:27 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
+2019-07-12 20:23:33 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
+2019-07-12 20:23:34 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
+2019-07-12 20:23:35 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
+2019-07-12 20:23:36 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5

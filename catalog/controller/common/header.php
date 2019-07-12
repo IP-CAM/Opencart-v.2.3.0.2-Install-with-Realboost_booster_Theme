@@ -129,8 +129,13 @@ class ControllerCommonHeader extends Controller {
 		$data['currency'] = $this->load->controller('common/currency');
 		$data['search'] = $this->load->controller('common/search');
 		$data['cart'] = $this->load->controller('common/cart');
-		$this->load->controller('extension/module/ocmegamenu');
-        $data['menu'] = 'menu here';
+		//TODO:   Тут менюшечко!
+		//загружаем конотроллер
+		//$val = 'a:43:{s:4:"name";s:8:"MainMenu";s:6:"status";s:1:"1";s:4:"menu";s:1:"1";s:6:"effect";s:4:"fade";s:11:"menu_height";s:4:"40px";s:7:"menu_bg";s:6:"000000";s:15:"menu_text_color";s:6:"FFFFFF";s:11:"menu_pd_top";s:3:"0px";s:13:"menu_pd_right";s:3:"0px";s:14:"menu_pd_bottom";s:3:"0px";s:12:"menu_pd_left";s:3:"0px";s:7:"item_bg";s:6:"000000";s:13:"item_bg_hover";s:6:"FFFB53";s:15:"item_font_color";s:6:"FFFFFF";s:14:"item_font_size";s:4:"14px";s:19:"item_font_transform";s:10:"capitalize";s:16:"item_font_weight";s:3:"500";s:21:"item_font_color_hover";s:6:"06D4FF";s:22:"item_font_weight_hover";s:3:"400";s:9:"item_show";s:1:"5";s:12:"mega_menu_bg";s:6:"000000";s:15:"mega_text_color";s:6:"FFFFFF";s:15:"mega_menu_width";s:4:"100%";s:16:"mega_menu_pd_top";s:3:"0px";s:18:"mega_menu_pd_right";s:3:"0px";s:19:"mega_menu_pd_bottom";s:3:"0px";s:17:"mega_menu_pd_left";s:3:"0px";s:14:"second_item_bg";s:6:"000000";s:20:"second_item_bg_hover";s:6:"FFFFFF";s:22:"second_item_font_color";s:6:"FFFFFF";s:21:"second_item_font_size";s:4:"';
+		//$params = unserialize($val);
+		//$dd = $this->load->controller('extension/module/ocmegamenu/menuarray',$params);
+		
+		$data['menu'] = $this->load->controller('extension/module/ocmegamenu/menuarray');
 		// For page specific css
 		if (isset($this->request->get['route'])) {
 			if (isset($this->request->get['product_id'])) {

@@ -72,17 +72,28 @@
       <div class="col-lg-6 my-auto dws-hide">
         <nav class="dws-menu">
           <ul>
-            <li><a href="#">Услуги <img src="<?php echo $img_path; ?>icons/bottom-arrow.png" alt="arrow"></a>
-              <ul>
-                <li><a href="uslugi/prokachka-mmr">заказать буст рейтинга</a></li>
-                <li><a href="uslugi/kalibrovka">Заказать калибровку</a></li>
-                <li><a href="uslugi/prokachka-mmr">Слить Лоу приорити</a></li>
-                <li><a href="uslugi/winbattlecup">Победить Battle Cup</a></li>
-                <li><a href="uslugi/trenirovka">Обучение от бустеров</a></li>
-              </ul>
-            </li>
-            <li><a href="guaranties">Гарантии</a></li>
-            <li><a href="awork">Работа</a></li>
+          	<?php if (isset($menu['items'])){
+          	    foreach ($menu['items'] as $value) {?>
+                    <li><a <?php echo ($value['has_link'])?'href="'.$value['link'].'"':'';?>><?php echo $value['title'];?>   <?php echo (!empty($value['sub_items']))?'<img src="'.$img_path.'icons/bottom-arrow.png" alt="arrow"> ':'';?></a>
+                      <?php if (!empty($value['sub_items'])){?>
+                      <ul>
+                      	<?php foreach($value['sub_items'] as $val){?>
+                      		
+                        	<li><a href="<?php echo $val['link'];?>"><?php echo $val['title'];?></a></li>
+                       		<?php  if(!empty($val['sub_items'])){?>
+                       		    <?php foreach($val['sub_items'] as $val){?>
+                       		    	<li><a href="<?php echo $val['link'];?>"><?php echo $val['title'];?></a></li>
+                       		    <?php }?>
+                       		<?php } ?>
+                        <?php }?>
+                        
+                      </ul>
+                      <?php }?>
+                      
+                    </li>
+            	<?php }
+          	}?>
+           
           </ul>
         </nav>
       </div>
