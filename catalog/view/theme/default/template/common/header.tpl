@@ -75,8 +75,8 @@
             <li><a href="#">Услуги <img src="<?php echo $img_path; ?>icons/bottom-arrow.png" alt="arrow"></a>
               <ul>
                 <li><a href="uslugi/prokachka-mmr">заказать буст рейтинга</a></li>
-                <li><a href="order-calibration.html">Заказать калибровку</a></li>
-                <li><a href="boost-rating.html">Слить Лоу приорити</a></li>
+                <li><a href="uslugi/kalibrovka">Заказать калибровку</a></li>
+                <li><a href="uslugi/prokachka-mmr">Слить Лоу приорити</a></li>
                 <li><a href="battle-cup.html">Победить Battle Cup</a></li>
                 <li><a href="training.html">Обучение от бустеров</a></li>
               </ul>

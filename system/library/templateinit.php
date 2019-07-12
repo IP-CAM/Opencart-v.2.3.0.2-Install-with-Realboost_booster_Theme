@@ -42,6 +42,11 @@
         return $res->rows[0]['route'];
     } 
     
+    /**  заменяет нафиг контент с подстановкой
+     * @param unknown $obj
+     * @param unknown $val
+     * @return mixed
+     */
     public static function replace($obj,$val){
         $tpl = $obj->config->get('theme_default_directory');
         $val = str_replace(array("\"img/","\"css/","\"js/"), array("\"catalog/view/theme/$tpl/img/","\"catalog/view/theme/$tpl/stylesheet/","\"catalog/view/theme/$tpl/js/"), $val);
