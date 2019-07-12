@@ -97,6 +97,15 @@
           </ul>
         </nav>
       </div>
+<script>
+$(document).ready(function () {
+	$('.dws-menu a').each(function () {
+		if (this.href == window.location) {
+			$(this).addClass('active');
+		}
+	});
+});
+</script>
 
       <div class="col-xl-3 col-lg-2 col-md-5 col-sm-3 col-4 my-auto between">
         <div class="login">
