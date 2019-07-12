@@ -525,7 +525,7 @@ CREATE TABLE `oc_currency` (
 
 
 INSERT INTO oc_currency VALUES
-("1","Рубль","RUB","","р.","0","1.00000000","1","2019-07-09 21:48:57");
+("1","Рубль","RUB","","р.","0","1.00000000","1","2019-07-11 20:24:42");
 
 
 
@@ -847,8 +847,6 @@ CREATE TABLE `oc_event` (
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 
-INSERT INTO oc_event VALUES
-("1","voucher","catalog/model/checkout/order/addOrderHistory/after","extension/total/voucher/send","0","0000-00-00 00:00:00");
 
 
 
@@ -859,26 +857,16 @@ CREATE TABLE `oc_extension` (
   `type` varchar(32) NOT NULL,
   `code` varchar(32) NOT NULL,
   PRIMARY KEY (`extension_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=36 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=39 DEFAULT CHARSET=utf8;
 
 
 INSERT INTO oc_extension VALUES
 ("1","payment","cod"),
-("2","total","shipping"),
-("3","total","sub_total"),
-("4","total","tax"),
-("5","total","total"),
 ("6","module","banner"),
 ("7","module","carousel"),
-("8","total","credit"),
-("9","shipping","flat"),
-("10","total","handling"),
-("11","total","low_order_fee"),
-("12","total","coupon"),
+("36","payment","robokassa"),
 ("13","module","category"),
 ("14","module","account"),
-("15","total","reward"),
-("16","total","voucher"),
 ("17","payment","free_checkout"),
 ("18","module","featured"),
 ("33","module","slideshow"),
@@ -983,14 +971,16 @@ CREATE TABLE `oc_information` (
   `sort_order` int(3) NOT NULL DEFAULT '0',
   `status` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`information_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 
 INSERT INTO oc_information VALUES
 ("3","1","3","1"),
 ("4","1","1","1"),
 ("5","0","4","1"),
-("6","1","2","1");
+("6","1","2","1"),
+("7","0","0","1"),
+("10","0","0","1");
 
 
 
@@ -1012,7 +1002,9 @@ INSERT INTO oc_information_description VALUES
 ("4","1","О нас","&lt;p&gt;\n	About Us&lt;/p&gt;","О нас","",""),
 ("5","1","Условия соглашения","&lt;p&gt;\n	Terms &amp;amp; Conditions&lt;/p&gt;","Условия соглашения","",""),
 ("3","1","Политика Безопасности","&lt;p&gt;\n	Privacy Policy&lt;/p&gt;","Политика Безопасности","",""),
-("6","1","Доставка","&lt;p&gt;\n	Delivery Information&lt;/p&gt;","Доставка","","");
+("6","1","Доставка","&lt;p&gt;\n	Delivery Information&lt;/p&gt;","Доставка","",""),
+("7","1","Гарантии","\n&lt;!-- guarantee-list --&gt;\n&lt;div class=&quot;guarantee-list&quot;&gt;\n  &lt;div class=&quot;container&quot;&gt;\n\n    &lt;div class=&quot;guarantee-list_block&quot;&gt;\n      &lt;div class=&quot;row&quot;&gt;\n        &lt;div class=&quot;col-lg-5 my-auto&quot;&gt;\n          &lt;div class=&quot;guarantee-list__img&quot;&gt;\n            &lt;img src=&quot;img/guarantees/1.png&quot; alt=&quot;Robokassa&quot;&gt;\n          &lt;/div&gt;\n\n          &lt;div class=&quot;guarantee-list__title&quot;&gt;\n            Мы принимаем \n            платежи через \n            Robokassa\n          &lt;/div&gt;\n        &lt;/div&gt;\n\n        &lt;div class=&quot;col-lg-7 my-auto&quot;&gt;\n          &lt;div class=&quot;guarantee-list__descr&quot;&gt;\n            Для того, чтобы принимать платежи &lt;br&gt;\n            Robokassa требует от нас:\n          &lt;/div&gt;\n\n          &lt;ul&gt;\n            &lt;li&gt;Предоставить паспортные данные&lt;/li&gt;\n            &lt;li&gt;Завести у ОКЕАН БАНКА карту на свои паспортные данные&lt;/li&gt;\n            &lt;li&gt;Сайт, принимающий платежи, должен пройти проверку&lt;/li&gt;\n            &lt;li&gt;Пройти процедуру идентификации (в соответствии с Федеральными Законами № 161 и 115)&lt;/li&gt;\n          &lt;/ul&gt;\n        &lt;/div&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n\n    &lt;div class=&quot;guarantee-list_block&quot;&gt;\n      &lt;div class=&quot;row&quot;&gt;\n        &lt;div class=&quot;col-lg-5 my-auto&quot;&gt;\n          &lt;div class=&quot;guarantee-list__img&quot;&gt;\n            &lt;img src=&quot;img/guarantees/2.png&quot; alt=&quot;Card&quot;&gt;\n          &lt;/div&gt;\n\n          &lt;div class=&quot;guarantee-list__title&quot;&gt;\n            Мы принимаем \n            оплату более \n            чем 50 \n            способами\n          &lt;/div&gt;\n        &lt;/div&gt;\n\n        &lt;div class=&quot;col-lg-7 my-auto&quot;&gt;\n          &lt;ul&gt;\n            &lt;li&gt;Пластиковые карты и выставление счетов в интернет-банк&lt;/li&gt;\n            &lt;li&gt;Электронные деньги&lt;/li&gt;\n            &lt;li&gt;И многие другие способы&lt;/li&gt;\n          &lt;/ul&gt;\n        &lt;/div&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n\n    &lt;div class=&quot;guarantee-list_block&quot;&gt;\n      &lt;div class=&quot;row&quot;&gt;\n        &lt;div class=&quot;col-lg-5 my-auto&quot;&gt;\n          &lt;div class=&quot;guarantee-list__img&quot;&gt;\n            &lt;img src=&quot;img/guarantees/3.png&quot; alt=&quot;Webmoney&quot;&gt;\n          &lt;/div&gt;\n\n          &lt;div class=&quot;guarantee-list__title&quot;&gt;\n            Мы аттестованы \n            WebMoney\n          &lt;/div&gt;\n        &lt;/div&gt;\n\n        &lt;div class=&quot;col-lg-7 my-auto&quot;&gt;\n          &lt;div class=&quot;guarantee-list__descr&quot;&gt;\n            Аттестат - это знак нашей безупречной работы, высокий \n            BL уровень аттестата означает, что через него \n            прошло много оплат.\n          &lt;/div&gt;\n          &lt;p&gt;\n            Вот список того, что нам необходимо было сделать, \n            чтобы получить аттестат.\n          &lt;/p&gt;\n        &lt;/div&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n\n  &lt;/div&gt;\n&lt;/div&gt;\n\n","гарантии","",""),
+("10","1","Работа","&lt;!-- guarantee-list --&gt;\n&lt;div class=&quot;guarantee-list&quot;&gt;\n  &lt;div class=&quot;container&quot;&gt;\n\n    &lt;div class=&quot;guarantee-list_block&quot;&gt;\n      &lt;div class=&quot;row&quot;&gt;\n        &lt;div class=&quot;col-lg-5 my-auto&quot;&gt;\n          &lt;div class=&quot;guarantee-list__img&quot;&gt;\n            &lt;img src=&quot;img/guarantees/1.png&quot; alt=&quot;Robokassa&quot;&gt;\n          &lt;/div&gt;\n\n          &lt;div class=&quot;guarantee-list__title&quot;&gt;\n            Мы принимаем \n            платежи через \n            Robokassa\n          &lt;/div&gt;\n        &lt;/div&gt;\n\n        &lt;div class=&quot;col-lg-7 my-auto&quot;&gt;\n          &lt;div class=&quot;guarantee-list__descr&quot;&gt;\n            Для того, чтобы принимать платежи &lt;br&gt;\n            Robokassa требует от нас:\n          &lt;/div&gt;\n\n          &lt;ul&gt;\n            &lt;li&gt;Предоставить паспортные данные&lt;/li&gt;\n            &lt;li&gt;Завести у ОКЕАН БАНКА карту на свои паспортные данные&lt;/li&gt;\n            &lt;li&gt;Сайт, принимающий платежи, должен пройти проверку&lt;/li&gt;\n            &lt;li&gt;Пройти процедуру идентификации (в соответствии с Федеральными Законами № 161 и 115)&lt;/li&gt;\n          &lt;/ul&gt;\n        &lt;/div&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n\n    &lt;div class=&quot;guarantee-list_block&quot;&gt;\n      &lt;div class=&quot;row&quot;&gt;\n        &lt;div class=&quot;col-lg-5 my-auto&quot;&gt;\n          &lt;div class=&quot;guarantee-list__img&quot;&gt;\n            &lt;img src=&quot;img/guarantees/2.png&quot; alt=&quot;Card&quot;&gt;\n          &lt;/div&gt;\n\n          &lt;div class=&quot;guarantee-list__title&quot;&gt;\n            Мы принимаем \n            оплату более \n            чем 50 \n            способами\n          &lt;/div&gt;\n        &lt;/div&gt;\n\n        &lt;div class=&quot;col-lg-7 my-auto&quot;&gt;\n          &lt;ul&gt;\n            &lt;li&gt;Пластиковые карты и выставление счетов в интернет-банк&lt;/li&gt;\n            &lt;li&gt;Электронные деньги&lt;/li&gt;\n            &lt;li&gt;И многие другие способы&lt;/li&gt;\n          &lt;/ul&gt;\n        &lt;/div&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n\n    &lt;div class=&quot;guarantee-list_block&quot;&gt;\n      &lt;div class=&quot;row&quot;&gt;\n        &lt;div class=&quot;col-lg-5 my-auto&quot;&gt;\n          &lt;div class=&quot;guarantee-list__img&quot;&gt;\n            &lt;img src=&quot;img/guarantees/3.png&quot; alt=&quot;Webmoney&quot;&gt;\n          &lt;/div&gt;\n\n          &lt;div class=&quot;guarantee-list__title&quot;&gt;\n            Мы аттестованы \n            WebMoney\n          &lt;/div&gt;\n        &lt;/div&gt;\n\n        &lt;div class=&quot;col-lg-7 my-auto&quot;&gt;\n          &lt;div class=&quot;guarantee-list__descr&quot;&gt;\n            Аттестат - это знак нашей безупречной работы, высокий \n            BL уровень аттестата означает, что через него \n            прошло много оплат.\n          &lt;/div&gt;\n          &lt;p&gt;\n            Вот список того, что нам необходимо было сделать, \n            чтобы получить аттестат.\n          &lt;/p&gt;\n        &lt;/div&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n\n  &lt;/div&gt;\n&lt;/div&gt;\n","работа","","");
 
 
 
@@ -1027,7 +1019,9 @@ CREATE TABLE `oc_information_to_layout` (
 
 
 INSERT INTO oc_information_to_layout VALUES
-("5","0","0");
+("5","0","0"),
+("7","0","0"),
+("10","0","0");
 
 
 
@@ -1044,7 +1038,9 @@ INSERT INTO oc_information_to_store VALUES
 ("3","0"),
 ("4","0"),
 ("5","0"),
-("6","0");
+("6","0"),
+("7","0"),
+("10","0");
 
 
 
@@ -1075,7 +1071,7 @@ CREATE TABLE `oc_layout` (
   `layout_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(64) NOT NULL,
   PRIMARY KEY (`layout_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 
 INSERT INTO oc_layout VALUES
@@ -1093,7 +1089,10 @@ INSERT INTO oc_layout VALUES
 ("12","Compare"),
 ("13","Search"),
 ("14","CategoryForm"),
-("15","ProductSpecialForm");
+("15","ProductSpecialForm"),
+("16","Product-OrderCalibration"),
+("17","Product-BattleCup"),
+("18","Product-training");
 
 
 
@@ -1106,7 +1105,7 @@ CREATE TABLE `oc_layout_module` (
   `position` varchar(14) NOT NULL,
   `sort_order` int(3) NOT NULL,
   PRIMARY KEY (`layout_module_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=104 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=128 DEFAULT CHARSET=utf8;
 
 
 INSERT INTO oc_layout_module VALUES
@@ -1115,14 +1114,25 @@ INSERT INTO oc_layout_module VALUES
 ("20","5","0","column_left","2"),
 ("69","10","affiliate","column_right","1"),
 ("68","6","account","column_right","1"),
-("100","1","html.36","content_top","3"),
-("99","1","slidereview.35","content_top","2"),
+("112","1","html.37","content_top","4"),
+("111","1","html.36","content_top","3"),
 ("72","3","category","column_left","1"),
-("98","1","html.34","content_top","1"),
-("97","1","banner.32","content_top","0"),
-("101","1","html.37","content_top","4"),
+("110","1","slidereview.35","content_top","2"),
+("109","1","html.34","content_top","1"),
+("108","1","banner.32","content_top","0"),
 ("102","14","breadcrumbs","content_top","0"),
-("103","15","breadcrumbs","content_top","0");
+("114","15","breadcrumbs","content_top","0"),
+("105","7","breadcrumbs","content_top","0"),
+("106","7","html.39","content_bottom","0"),
+("107","7","html.40","content_bottom","1"),
+("115","15","html.37","content_bottom","0"),
+("121","16","html.37","content_bottom","0"),
+("120","16","breadcrumbs","content_top","0"),
+("123","18","breadcrumbs","content_top","0"),
+("124","18","html.37","content_bottom","0"),
+("125","11","breadcrumbs","content_top","0"),
+("126","11","slidereview.35","content_bottom","0"),
+("127","11","html.37","content_bottom","1");
 
 
 
@@ -1134,17 +1144,17 @@ CREATE TABLE `oc_layout_route` (
   `store_id` int(11) NOT NULL,
   `route` varchar(64) NOT NULL,
   PRIMARY KEY (`layout_route_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=70 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=83 DEFAULT CHARSET=utf8;
 
 
 INSERT INTO oc_layout_route VALUES
 ("38","6","0","account/%"),
 ("17","10","0","affiliate/%"),
 ("44","3","0","product/category"),
-("63","1","0","common/home"),
+("72","1","0","common/home"),
 ("20","2","0","product/product"),
-("24","11","0","information/information"),
-("23","7","0","checkout/%"),
+("82","11","0","information/information"),
+("71","7","0","checkout/%"),
 ("31","8","0","information/contact"),
 ("32","9","0","information/sitemap"),
 ("34","4","0",""),
@@ -1152,7 +1162,10 @@ INSERT INTO oc_layout_route VALUES
 ("52","12","0","product/compare"),
 ("53","13","0","product/search"),
 ("67","14","0","product/categoryform"),
-("69","15","0","product/productspecialform");
+("73","15","0","product/productspecialform"),
+("76","16","0","product/productordercalibration"),
+("78","17","0","product/productbattlecup"),
+("81","18","0","product/producttraining");
 
 
 
@@ -1338,7 +1351,7 @@ CREATE TABLE `oc_module` (
   `code` varchar(32) NOT NULL,
   `setting` text NOT NULL,
   PRIMARY KEY (`module_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=38 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=45 DEFAULT CHARSET=utf8;
 
 
 INSERT INTO oc_module VALUES
@@ -1348,7 +1361,9 @@ INSERT INTO oc_module VALUES
 ("34","html-block-mmr-boost","html","{\"name\":\"html-block-mmr-boost\",\"module_description\":{\"1\":{\"title\":\"\",\"description\":\"&lt;!-- calculator --&gt;\\r\\n&lt;div class=&quot;container&quot;&gt;\\r\\n  &lt;div class=&quot;calculator&quot;&gt;\\r\\n    &lt;div class=&quot;calculator-title&quot;&gt;&lt;span&gt;Dota 2&lt;\\/span&gt; mmr boost&lt;\\/div&gt;\\r\\n    \\r\\n      &lt;div class=&quot;row&quot;&gt;\\r\\n\\r\\n        &lt;div class=&quot;offset-lg-4 col-lg-2 col-md-6 col-sm-6 col-6&quot;&gt;\\r\\n          &lt;label class=&quot;calculator-subtitle&quot;&gt;My rank&lt;\\/label&gt;\\r\\n          &lt;input type=&quot;number&quot; id=&quot;from-rank&quot; value=&quot;2000&quot; min=&quot;0&quot; max=&quot;7500&quot; step=&quot;25&quot; required=&quot;&quot;&gt;\\r\\n        &lt;\\/div&gt;\\r\\n\\r\\n        &lt;div class=&quot;col-lg-2  col-md-6 col-sm-6 col-6&quot;&gt;\\r\\n          &lt;label class=&quot;calculator-subtitle&quot;&gt;I want to be&lt;\\/label&gt;\\r\\n          &lt;input type=&quot;number&quot; id=&quot;to-rank&quot; value=&quot;3500&quot; min=&quot;0&quot; max=&quot;7500&quot; step=&quot;25&quot; required=&quot;&quot;&gt;\\r\\n        &lt;\\/div&gt;\\r\\n\\r\\n        &lt;div class=&quot;offset-lg-2 col-lg-8&quot;&gt;\\r\\n          &lt;input type=&quot;text&quot; id=&quot;calculator-slider&quot; name=&quot;my_range&quot; value=&quot;&quot;&gt;\\r\\n        &lt;\\/div&gt;\\r\\n\\r\\n        &lt;div class=&quot;col-lg-12&quot;&gt;\\r\\n          &lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;Add to cart&lt;\\/a&gt;\\r\\n        &lt;\\/div&gt;\\r\\n\\r\\n      &lt;\\/div&gt;\\r\\n    \\r\\n  &lt;\\/div&gt;\\r\\n&lt;\\/div&gt;\\r\\n\"}},\"my_range\":\"\",\"status\":\"1\"}"),
 ("35","слайды из отзыв","slidereview","{\"name\":\"\\u0441\\u043b\\u0430\\u0439\\u0434\\u044b \\u0438\\u0437 \\u043e\\u0442\\u0437\\u044b\\u0432\",\"status\":\"1\"}"),
 ("36","html-block-гарантии","html","{\"name\":\"html-block-\\u0433\\u0430\\u0440\\u0430\\u043d\\u0442\\u0438\\u0438\",\"module_description\":{\"1\":{\"title\":\"\\u0413\\u0430\\u0440\\u0430\\u043d\\u0442\\u0438\\u0438\",\"description\":\"&lt;!-- Guarantees --&gt;\\r\\n&lt;div class=&quot;guarantees&quot;&gt;\\r\\n  &lt;div class=&quot;container&quot;&gt;\\r\\n\\r\\n    &lt;div class=&quot;guarantees-title def-title&quot;&gt;\\u0413\\u0430\\u0440\\u0430\\u043d\\u0442\\u0438\\u0438&lt;\\/div&gt;\\r\\n\\r\\n    &lt;div class=&quot;row&quot;&gt;\\r\\n\\r\\n      &lt;div class=&quot;col-lg-4 col-md-6 col-sm-12&quot;&gt;\\r\\n        &lt;div class=&quot;guarantees-block&quot;&gt;\\r\\n          &lt;div class=&quot;container-img&quot;&gt;\\r\\n            &lt;img src=&quot;catalog\\/view\\/theme\\/default\\/img\\/guarantees\\/1.png&quot; alt=&quot;#&quot;&gt;\\r\\n          &lt;\\/div&gt;\\r\\n          &lt;p&gt;\\u041c\\u044b \\u043f\\u0440\\u0438\\u043d\\u0438\\u043c\\u0430\\u0435\\u043c \\u043f\\u043b\\u0430\\u0442\\u0435\\u0436\\u0438 \\u0447\\u0435\\u0440\\u0435\\u0437 Robokassa&lt;\\/p&gt;\\r\\n        &lt;\\/div&gt;\\r\\n      &lt;\\/div&gt;\\r\\n\\r\\n      &lt;div class=&quot;col-lg-4 col-md-6 col-sm-12&quot;&gt;\\r\\n        &lt;div class=&quot;guarantees-block&quot;&gt;\\r\\n          &lt;div class=&quot;container-img&quot;&gt;\\r\\n            &lt;img src=&quot;catalog\\/view\\/theme\\/default\\/img\\/guarantees\\/2.png&quot; alt=&quot;#&quot;&gt;\\r\\n          &lt;\\/div&gt;\\r\\n          &lt;p&gt;\\u041c\\u044b \\u043f\\u0440\\u0438\\u043d\\u0438\\u043c\\u0430\\u0435\\u043c \\u043e\\u043f\\u043b\\u0430\\u0442\\u0443 \\u0431\\u043e\\u043b\\u0435\\u0435 \\u0447\\u0435\\u043c 50 \\u0441\\u043f\\u043e\\u0441\\u043e\\u0431\\u0430\\u043c\\u0438&lt;\\/p&gt;\\r\\n        &lt;\\/div&gt;\\r\\n      &lt;\\/div&gt;\\r\\n\\r\\n      &lt;div class=&quot;col-lg-4 col-md-6 col-sm-12&quot;&gt;\\r\\n        &lt;div class=&quot;guarantees-block&quot;&gt;\\r\\n          &lt;div class=&quot;container-img&quot;&gt;\\r\\n            &lt;img src=&quot;catalog\\/view\\/theme\\/default\\/img\\/guarantees\\/3.png&quot; alt=&quot;#&quot;&gt;\\r\\n          &lt;\\/div&gt;\\r\\n          &lt;p&gt;\\u041c\\u044b \\u0430\\u0442\\u0442\\u0435\\u0441\\u0442\\u043e\\u0432\\u0430\\u043d\\u044b WebMoney&lt;\\/p&gt;\\r\\n        &lt;\\/div&gt;\\r\\n      &lt;\\/div&gt;\\r\\n\\r\\n    &lt;\\/div&gt;\\r\\n\\r\\n  &lt;\\/div&gt;\\r\\n&lt;\\/div&gt;\"}},\"status\":\"1\"}"),
-("37","html-block-orange-block","html","{\"name\":\"html-block-orange-block\",\"module_description\":{\"1\":{\"title\":\"\",\"description\":\"&lt;!-- Orange-text --&gt;\\r\\n&lt;div class=&quot;orange&quot;&gt;\\r\\n  &lt;div class=&quot;container&quot;&gt;\\r\\n\\r\\n    &lt;p class=&quot;orange-text&quot;&gt;\\r\\n      \\u0412\\u0441\\u0435 \\u043d\\u0430\\u0437\\u0432\\u0430\\u043d\\u0438\\u044f \\u043f\\u0440\\u043e\\u0434\\u0443\\u043a\\u0442\\u043e\\u0432, \\u043a\\u043e\\u043c\\u043f\\u0430\\u043d\\u0438\\u0439, \\u043b\\u043e\\u0433\\u043e\\u0442\\u0438\\u043f\\u044b \\u0438 \\u0442\\u043e\\u0432\\u0430\\u0440\\u043d\\u044b\\u0435 \\u0437\\u043d\\u0430\\u043a\\u0438 \\u044f\\u0432\\u043b\\u044f\\u044e\\u0442\\u0441\\u044f \\u0441\\u043e\\u0431\\u0441\\u0442\\u0432\\u0435\\u043d\\u043d\\u043e\\u0441\\u0442\\u044c\\u044e \\u043a\\u043e\\u0440\\u043f\\u043e\\u0440\\u0430\\u0446\\u0438\\u0439 Valve \\u0438 WarGaming, \\u0430 \\u0442\\u0430\\u043a\\u0436\\u0435\\r\\n      \\u0438\\u0445 \\u043b\\u0438\\u0446\\u0435\\u043d\\u0437\\u0438\\u0430\\u0440\\u043e\\u0432. \\u0414\\u0430\\u043d\\u043d\\u044b\\u0439 \\u0441\\u0430\\u0439\\u0442 \\u0444\\u0443\\u043d\\u043a\\u0446\\u0438\\u043e\\u043d\\u0438\\u0440\\u0443\\u0435\\u0442 \\u043a\\u0430\\u043a \\u0442\\u043e\\u0440\\u0433\\u043e\\u0432\\u0430\\u044f \\u043f\\u043b\\u043e\\u0449\\u0430\\u0434\\u043a\\u0430 \\u0438 \\u043d\\u0435 \\u044f\\u0432\\u043b\\u044f\\u0435\\u0442\\u0441\\u044f \\u0441\\u043e\\u0431\\u0441\\u0442\\u0432\\u0435\\u043d\\u043d\\u0438\\u043a\\u043e\\u043c \\r\\n      \\u043f\\u0440\\u043e\\u0434\\u0430\\u0432\\u0430\\u0435\\u043c\\u044b\\u0445 \\u0442\\u043e\\u0432\\u0430\\u0440\\u043e\\u0432\\/\\u0443\\u0441\\u043b\\u0443\\u0433. \\u0412\\u0441\\u0435 \\u043f\\u0440\\u0430\\u0432\\u0430 \\u043f\\u0440\\u0438\\u043d\\u0430\\u0434\\u043b\\u0435\\u0436\\u0430\\u0442 \\u0438\\u0445 \\u0432\\u043b\\u0430\\u0434\\u0435\\u043b\\u044c\\u0446\\u0430\\u043c. \\r\\n    &lt;\\/p&gt;\\r\\n\\r\\n  &lt;\\/div&gt;\\r\\n&lt;\\/div&gt;\"}},\"status\":\"1\"}");
+("37","html-block-orange-block","html","{\"name\":\"html-block-orange-block\",\"module_description\":{\"1\":{\"title\":\"\",\"description\":\"&lt;!-- Orange-text --&gt;\\r\\n&lt;div class=&quot;orange&quot;&gt;\\r\\n  &lt;div class=&quot;container&quot;&gt;\\r\\n\\r\\n    &lt;p class=&quot;orange-text&quot;&gt;\\r\\n      \\u0412\\u0441\\u0435 \\u043d\\u0430\\u0437\\u0432\\u0430\\u043d\\u0438\\u044f \\u043f\\u0440\\u043e\\u0434\\u0443\\u043a\\u0442\\u043e\\u0432, \\u043a\\u043e\\u043c\\u043f\\u0430\\u043d\\u0438\\u0439, \\u043b\\u043e\\u0433\\u043e\\u0442\\u0438\\u043f\\u044b \\u0438 \\u0442\\u043e\\u0432\\u0430\\u0440\\u043d\\u044b\\u0435 \\u0437\\u043d\\u0430\\u043a\\u0438 \\u044f\\u0432\\u043b\\u044f\\u044e\\u0442\\u0441\\u044f \\u0441\\u043e\\u0431\\u0441\\u0442\\u0432\\u0435\\u043d\\u043d\\u043e\\u0441\\u0442\\u044c\\u044e \\u043a\\u043e\\u0440\\u043f\\u043e\\u0440\\u0430\\u0446\\u0438\\u0439 Valve \\u0438 WarGaming, \\u0430 \\u0442\\u0430\\u043a\\u0436\\u0435\\r\\n      \\u0438\\u0445 \\u043b\\u0438\\u0446\\u0435\\u043d\\u0437\\u0438\\u0430\\u0440\\u043e\\u0432. \\u0414\\u0430\\u043d\\u043d\\u044b\\u0439 \\u0441\\u0430\\u0439\\u0442 \\u0444\\u0443\\u043d\\u043a\\u0446\\u0438\\u043e\\u043d\\u0438\\u0440\\u0443\\u0435\\u0442 \\u043a\\u0430\\u043a \\u0442\\u043e\\u0440\\u0433\\u043e\\u0432\\u0430\\u044f \\u043f\\u043b\\u043e\\u0449\\u0430\\u0434\\u043a\\u0430 \\u0438 \\u043d\\u0435 \\u044f\\u0432\\u043b\\u044f\\u0435\\u0442\\u0441\\u044f \\u0441\\u043e\\u0431\\u0441\\u0442\\u0432\\u0435\\u043d\\u043d\\u0438\\u043a\\u043e\\u043c \\r\\n      \\u043f\\u0440\\u043e\\u0434\\u0430\\u0432\\u0430\\u0435\\u043c\\u044b\\u0445 \\u0442\\u043e\\u0432\\u0430\\u0440\\u043e\\u0432\\/\\u0443\\u0441\\u043b\\u0443\\u0433. \\u0412\\u0441\\u0435 \\u043f\\u0440\\u0430\\u0432\\u0430 \\u043f\\u0440\\u0438\\u043d\\u0430\\u0434\\u043b\\u0435\\u0436\\u0430\\u0442 \\u0438\\u0445 \\u0432\\u043b\\u0430\\u0434\\u0435\\u043b\\u044c\\u0446\\u0430\\u043c. \\r\\n    &lt;\\/p&gt;\\r\\n\\r\\n  &lt;\\/div&gt;\\r\\n&lt;\\/div&gt;\"}},\"status\":\"1\"}"),
+("39","html-block-why-boost","html","{\"name\":\"html-block-why-boost\",\"module_description\":{\"1\":{\"title\":\"html-block-why-boost\",\"description\":\"\\r\\n&lt;!-- why-boost --&gt;\\r\\n&lt;div class=&quot;whyBoost&quot;&gt;\\r\\n  &lt;div class=&quot;container&quot;&gt;\\r\\n\\r\\n    &lt;div class=&quot;def-title whyBoost-title&quot;&gt;\\u0417\\u0430\\u0447\\u0435\\u043c \\u043d\\u0443\\u0436\\u0435\\u043d &lt;br&gt; \\u0431\\u0443\\u0441\\u0442 \\u0440\\u0435\\u0439\\u0442\\u0438\\u043d\\u0433\\u0430 \\u0432 Dota 2&lt;\\/div&gt;\\r\\n    &lt;div class=&quot;row&quot;&gt;\\r\\n\\r\\n      &lt;div class=&quot;col-lg-4 col-md-6&quot;&gt;\\r\\n        &lt;div class=&quot;infoBoost&quot;&gt;\\r\\n          &lt;div class=&quot;infoBoost-title&quot;&gt;\\u042d\\u0442\\u043e \\u043f\\u043e\\u043c\\u043e\\u0436\\u0435\\u0442 \\u0442\\u0435\\u0431\\u0435&lt;\\/div&gt;\\r\\n\\r\\n          &lt;ul&gt;\\r\\n            &lt;li&gt;\\u0418\\u0433\\u0440\\u0430\\u0442\\u044c \\u0441 \\u0430\\u0434\\u0435\\u043a\\u0432\\u0430\\u0442\\u043d\\u044b\\u043c\\u0438 \\u0441\\u043e\\u044e\\u0437\\u043d\\u0438\\u043a\\u0430\\u043c\\u0438&lt;\\/li&gt;\\r\\n            &lt;li&gt;\\u041f\\u043e\\u0432\\u044b\\u0441\\u0438\\u0442\\u044c \\u0441\\u0442\\u0430\\u0442\\u0438\\u0441\\u0442\\u0438\\u043a\\u0443 \\u0430\\u043a\\u043a\\u0430\\u0443\\u043d\\u0442\\u0430&lt;\\/li&gt;\\r\\n            &lt;li&gt;\\u041f\\u043e\\u043b\\u0443\\u0447\\u0430\\u0442\\u044c \\u0443\\u0434\\u043e\\u0432\\u043e\\u043b\\u044c\\u0441\\u0442\\u0432\\u0438\\u0435 \\u043e\\u0442 \\u0438\\u0433\\u0440\\u044b&lt;\\/li&gt;\\r\\n          &lt;\\/ul&gt;\\r\\n        &lt;\\/div&gt;\\r\\n      &lt;\\/div&gt;\\r\\n\\r\\n      &lt;div class=&quot;col-lg-4 col-md-6&quot;&gt;\\r\\n        &lt;div class=&quot;infoBoost&quot;&gt;\\r\\n          &lt;div class=&quot;infoBoost-title&quot;&gt;\\u042d\\u0442\\u043e \\u0431\\u0435\\u0437\\u043e\\u043f\\u0430\\u0441\\u043d\\u043e&lt;\\/div&gt;\\r\\n\\r\\n          &lt;ul&gt;\\r\\n            &lt;li&gt;\\u0412\\u0441\\u0435 \\u0431\\u0443\\u0441\\u0442\\u0435\\u0440\\u044b \\u043f\\u0440\\u043e\\u0448\\u043b\\u0438 \\u043f\\u0440\\u043e\\u0432\\u0435\\u0440\\u043a\\u0443&lt;\\/li&gt;\\r\\n            &lt;li&gt;\\u0420\\u0430\\u0431\\u043e\\u0442\\u0430\\u0435\\u043c \\u0430\\u043d\\u043e\\u043d\\u0438\\u043c\\u043d\\u043e&lt;\\/li&gt;\\r\\n            &lt;li&gt;\\u0411\\u0430\\u043d \\u043d\\u0435\\u0432\\u043e\\u0437\\u043c\\u043e\\u0436\\u0435\\u043d, \\u0438\\u0441\\u043f\\u043e\\u043b\\u044c\\u0437\\u0443\\u0435\\u043c VPN&lt;\\/li&gt;\\r\\n          &lt;\\/ul&gt;\\r\\n        &lt;\\/div&gt;\\r\\n      &lt;\\/div&gt;\\r\\n\\r\\n      &lt;div class=&quot;col-lg-4 col-md-12&quot;&gt;\\r\\n        &lt;div class=&quot;infoBoost&quot;&gt;\\r\\n          &lt;div class=&quot;infoBoost-title&quot;&gt;\\u041f\\u043e\\u0447\\u0435\\u043c\\u0443 \\u043c\\u044b&lt;\\/div&gt;\\r\\n\\r\\n          &lt;ul&gt;\\r\\n            &lt;li&gt;\\u0420\\u0430\\u0431\\u043e\\u0442\\u0430\\u0435\\u043c \\u0441 2015 \\u0433\\u043e\\u0434\\u0430&lt;\\/li&gt;\\r\\n            &lt;li&gt;\\u041a\\u043e\\u043c\\u0430\\u043d\\u0434\\u0430 \\u0422\\u041e\\u041f-500 \\u0411\\u0443\\u0441\\u0442\\u0435\\u0440\\u043e\\u0432&lt;\\/li&gt;\\r\\n            &lt;li&gt;\\u041e\\u043d\\u043b\\u0430\\u0439\\u043d \\u043a\\u043e\\u043d\\u0442\\u0440\\u043e\\u043b\\u044c \\u0438 \\u0447\\u0430\\u0442 \\u043d\\u0430 \\u0437\\u0430\\u043a\\u0430\\u0437\\u0435&lt;\\/li&gt;\\r\\n          &lt;\\/ul&gt;\\r\\n        &lt;\\/div&gt;\\r\\n      &lt;\\/div&gt;\\r\\n\\r\\n    &lt;\\/div&gt;\\r\\n  &lt;\\/div&gt;\\r\\n&lt;\\/div&gt;\\r\\n\"}},\"status\":\"1\"}"),
+("40","html-block-security","html","{\"name\":\"html-block-security\",\"module_description\":{\"1\":{\"title\":\"html-block-security\",\"description\":\"&lt;!-- security --&gt;\\r\\n&lt;div class=&quot;security&quot;&gt;\\r\\n  &lt;div class=&quot;container&quot;&gt;\\r\\n    &lt;div class=&quot;def-title&quot;&gt;\\u0412\\u0430\\u0448 \\u0430\\u043a\\u043a\\u0430\\u0443\\u043d\\u0442 \\u0432 \\u0431\\u0435\\u0437\\u043e\\u043f\\u0430\\u0441\\u043d\\u043e\\u0441\\u0442\\u0438!&lt;\\/div&gt;\\r\\n    &lt;div class=&quot;row&quot;&gt;\\r\\n\\r\\n      &lt;div class=&quot;col-lg-6 col-md-12&quot;&gt;\\r\\n        &lt;div class=&quot;security-block&quot;&gt;\\r\\n\\r\\n          &lt;div class=&quot;security-block_left&quot;&gt;\\r\\n            &lt;img src=&quot;img\\/icons\\/people.png&quot; alt=&quot;people&quot;&gt;\\r\\n          &lt;\\/div&gt;\\r\\n\\r\\n          &lt;div class=&quot;security-block_right&quot;&gt;\\r\\n            &lt;div class=&quot;security-block_title&quot;&gt;\\u0421\\u0435\\u043c\\u0435\\u0439\\u043d\\u044b\\u0439 \\u043f\\u0440\\u043e\\u0441\\u043c\\u043e\\u0442\\u0440&lt;\\/div&gt;\\r\\n            &lt;div class=&quot;security-block_descr&quot;&gt;\\r\\n              \\u041e\\u0431\\u0435\\u0441\\u043f\\u0435\\u0447\\u0438\\u0432\\u0430\\u0435\\u0442 \\u043e\\u0441\\u043d\\u043e\\u0432\\u043d\\u0443\\u044e \\u0431\\u0435\\u0437\\u043e\\u043f\\u0430\\u0441\\u043d\\u043e\\u0441\\u0442\\u044c\\r\\n              \\u0430\\u043a\\u043a\\u0430\\u0443\\u043d\\u0442\\u0430. \\u041d\\u0435 \\u0438\\u043c\\u0435\\u044f \\u043f\\u0438\\u043d \\u043a\\u043e\\u0434\\u0430 \\u0438 \\u0434\\u043e\\u0441\\u0442\\u0443\\u043f\\u0430 \\u043a\\r\\n              \\u043f\\u043e\\u0447\\u0442\\u0435, \\u043d\\u0438\\u043a\\u0442\\u043e \\u043d\\u0435 \\u0441\\u043c\\u043e\\u0436\\u0435\\u0442 \\u043f\\u043e\\u043b\\u0443\\u0447\\u0438\\u0442\\u044c \\u0434\\u043e\\u0441\\u0442\\u0443\\u043f \\u043a\\r\\n              \\u0438\\u0437\\u043c\\u0435\\u043d\\u0435\\u043d\\u0438\\u044e \\u0434\\u0430\\u043d\\u043d\\u044b\\u0445 \\u0412\\u0430\\u0448\\u0435\\u0433\\u043e \\u0430\\u043a\\u043a\\u0430\\u0443\\u043d\\u0442\\u0430.\\r\\n            &lt;\\/div&gt;\\r\\n          &lt;\\/div&gt;\\r\\n\\r\\n        &lt;\\/div&gt;\\r\\n      &lt;\\/div&gt;\\r\\n\\r\\n      &lt;div class=&quot;col-lg-6 col-md-12&quot;&gt;\\r\\n        &lt;div class=&quot;security-block&quot;&gt;\\r\\n\\r\\n          &lt;div class=&quot;security-block_left&quot;&gt;\\r\\n            &lt;img src=&quot;img\\/icons\\/eye.png&quot; alt=&quot;eye&quot;&gt;\\r\\n          &lt;\\/div&gt;\\r\\n\\r\\n          &lt;div class=&quot;security-block_right&quot;&gt;\\r\\n            &lt;div class=&quot;security-block_title&quot;&gt;\\u041b\\u0435\\u043d\\u0442\\u0430 \\u0430\\u043a\\u0442\\u0438\\u0432\\u043d\\u043e\\u0441\\u0442\\u0438&lt;\\/div&gt;\\r\\n            &lt;div class=&quot;security-block_descr&quot;&gt;\\r\\n              \\u041f\\u043e\\u0437\\u0432\\u043e\\u043b\\u044f\\u0435\\u0442 \\u0441\\u043c\\u043e\\u0442\\u0440\\u0435\\u0442\\u044c \\u0437\\u0430 \\u0432\\u0441\\u0435\\u043c\\u0438 \\u0441\\u043e\\u0431\\u044b\\u0442\\u0438\\u044f\\u043c\\u0438 \\u043d\\u0430\\r\\n              \\u0430\\u043a\\u043a\\u0430\\u0443\\u043d\\u0442\\u0435 \\u0432 \\u0440\\u0435\\u0436\\u0438\\u043c\\u0435 \\u043e\\u043d\\u043b\\u0430\\u0439\\u043d. \\u0412\\u044b \\u043c\\u043e\\u0436\\u0435\\u0442\\u0435 \\u043f\\u043e\\u0441\\u043c\\u043e\\u0442\\u0440\\u0435\\u0442\\u044c\\r\\n              \\u043f\\u043e\\u0431\\u0435\\u0434\\u044b, \\u043f\\u043e\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u044f. \\u042d\\u0442\\u043e \\u0432\\u043e\\u0437\\u043c\\u043e\\u0436\\u043d\\u043e \\u0431\\u043b\\u0430\\u0433\\u043e\\u0434\\u0440\\u044f \\u0442\\u043e\\u043c\\u0443,\\r\\n              \\u0447\\u0442\\u043e \\u043c\\u044b \\u0438\\u0441\\u043f\\u043e\\u043b\\u044c\\u0437\\u0443\\u0435\\u043c CRM \\u0441\\u0438\\u0441\\u0442\\u0435\\u043c\\u0443 \\u0434\\u043b\\u044f \\u0440\\u0430\\u0431\\u043e\\u0442\\u044b \\u0431\\u0443\\u0441\\u0442\\u0435\\u0440\\u043e\\u0432.\\r\\n            &lt;\\/div&gt;\\r\\n          &lt;\\/div&gt;\\r\\n\\r\\n        &lt;\\/div&gt;\\r\\n      &lt;\\/div&gt;\\r\\n\\r\\n    &lt;\\/div&gt;\\r\\n  &lt;\\/div&gt;\\r\\n&lt;\\/div&gt;\\r\\n\\r\\n\"}},\"status\":\"1\"}");
 
 
 
@@ -2002,12 +2017,15 @@ CREATE TABLE `oc_product` (
   `date_added` datetime NOT NULL,
   `date_modified` datetime NOT NULL,
   PRIMARY KEY (`product_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=52 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=57 DEFAULT CHARSET=utf8;
 
 
 INSERT INTO oc_product VALUES
-("50","mmrboost","","","","","","","","1","7","","0","1","0.0000","0","0","2019-07-06","0.00000000","1","0.00000000","0.00000000","0.00000000","1","1","1","1","1","27","2019-07-06 13:41:04","2019-07-10 03:52:38"),
-("51","mmrlowprior","","","","","","","","1","7","","0","1","0.0000","0","0","2019-07-08","0.00000000","1","0.00000000","0.00000000","0.00000000","1","1","1","1","1","0","2019-07-08 22:01:31","2019-07-08 22:04:51");
+("50","mmrboost","","","","","","","","1","7","","0","1","0.0000","0","0","2019-07-06","0.00000000","1","0.00000000","0.00000000","0.00000000","1","1","1","1","1","156","2019-07-06 13:41:04","2019-07-11 14:26:02"),
+("51","mmrlowprior","","","","","","","","1","7","","0","1","0.0000","0","0","2019-07-08","0.00000000","1","0.00000000","0.00000000","0.00000000","1","1","1","1","1","17","2019-07-08 22:01:31","2019-07-08 22:04:51"),
+("52","calibration","","","","","","","","1","7","","0","1","0.0000","0","0","2019-07-12","0.00000000","1","0.00000000","0.00000000","0.00000000","1","1","1","1","1","12","2019-07-12 04:34:24","2019-07-12 04:34:39"),
+("55","тренировка","","","","","","","","1","7","","0","1","0.0000","0","0","2019-07-12","0.00000000","1","0.00000000","0.00000000","0.00000000","1","1","1","1","1","3","2019-07-12 05:41:29","2019-07-12 05:43:05"),
+("54","выиграть кубок","","","","","","","","1","7","","0","1","0.0000","0","0","2019-07-12","0.00000000","1","0.00000000","0.00000000","0.00000000","1","1","1","1","1","3","2019-07-12 05:12:37","2019-07-12 05:13:01");
 
 
 
@@ -2043,7 +2061,10 @@ CREATE TABLE `oc_product_description` (
 
 INSERT INTO oc_product_description VALUES
 ("50","1","Прокачка ММР","","","mmrup","",""),
-("51","1","выход из лоу приора","&lt;p&gt;услуга - выход с лоу приора&lt;/p&gt;","","прокачка, ммр","","");
+("51","1","выход из лоу приора","&lt;p&gt;услуга - выход с лоу приора&lt;/p&gt;","","прокачка, ммр","",""),
+("52","1","Заказать калибровку","","","калибровка дота2","",""),
+("54","1","Выиграть Кубок","","","выиграть кубок","",""),
+("55","1","тренировка","","","тренировка","","");
 
 
 
@@ -2060,11 +2081,11 @@ CREATE TABLE `oc_product_discount` (
   `date_end` date NOT NULL DEFAULT '0000-00-00',
   PRIMARY KEY (`product_discount_id`),
   KEY `product_id` (`product_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=452 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=458 DEFAULT CHARSET=utf8;
 
 
 INSERT INTO oc_product_discount VALUES
-("451","50","1","0","0","0.0000","0000-00-00","0000-00-00");
+("457","50","1","0","0","0.0000","0000-00-00","0000-00-00");
 
 
 
@@ -2108,12 +2129,9 @@ CREATE TABLE `oc_product_option` (
 
 
 INSERT INTO oc_product_option VALUES
-("304","50","18","","1"),
-("303","50","17","","1"),
 ("227","50","13","","1"),
-("297","50","14","","1"),
 ("298","50","15","","0"),
-("302","50","16","","1");
+("297","50","14","","1");
 
 
 
@@ -2138,153 +2156,153 @@ CREATE TABLE `oc_product_option_value` (
 
 
 INSERT INTO oc_product_option_value VALUES
-("165","298","50","15","272","0","0","10.0000","%","0","+","0.00000000","+"),
-("159","298","50","15","270","0","0","10.0000","%","0","+","0.00000000","+"),
-("162","298","50","15","271","0","0","10.0000","%","0","+","0.00000000","+"),
-("163","298","50","15","273","0","0","10.0000","%","0","+","0.00000000","+"),
-("110","297","50","14","81","0","0","3850.0000","+","0","+","0.00000000","+"),
-("104","297","50","14","75","0","0","2650.0000","+","0","+","0.00000000","+"),
-("143","297","50","14","114","0","0","20000.0000","+","0","+","0.00000000","+"),
-("123","297","50","14","94","0","0","7285.0000","+","0","+","0.00000000","+"),
-("117","297","50","14","88","0","0","5575.0000","+","0","+","0.00000000","+"),
-("130","297","50","14","101","0","0","10070.0000","+","0","+","0.00000000","+"),
-("122","297","50","14","93","0","0","6995.0000","+","0","+","0.00000000","+"),
-("150","297","50","14","121","0","0","37625.0000","+","0","+","0.00000000","+"),
-("142","297","50","14","113","0","0","18490.0000","+","0","+","0.00000000","+"),
-("129","297","50","14","100","0","0","9590.0000","+","0","+","0.00000000","+"),
-("90","297","50","14","61","0","0","175.0000","+","0","+","0.00000000","+"),
-("112","297","50","14","83","0","0","4300.0000","+","0","+","0.00000000","+"),
+("131","297","50","14","102","0","0","10550.0000","+","0","+","0.00000000","+"),
 ("103","297","50","14","74","0","0","2465.0000","+","0","+","0.00000000","+"),
 ("125","297","50","14","96","0","0","8015.0000","+","0","+","0.00000000","+"),
-("119","297","50","14","90","0","0","6125.0000","+","0","+","0.00000000","+"),
-("145","297","50","14","116","0","0","23775.0000","+","0","+","0.00000000","+"),
-("132","297","50","14","103","0","0","11030.0000","+","0","+","0.00000000","+"),
-("158","297","50","14","129","0","0","98025.0000","+","0","+","0.00000000","+"),
-("18","297","50","14","60","0","0","0.0000","+","0","+","0.00000000","+"),
-("139","297","50","14","110","0","0","15195.0000","+","0","+","0.00000000","+"),
-("101","297","50","14","72","0","0","2095.0000","+","0","+","0.00000000","+"),
-("120","297","50","14","91","0","0","6415.0000","+","0","+","0.00000000","+"),
-("127","297","50","14","98","0","0","8745.0000","+","0","+","0.00000000","+"),
-("114","297","50","14","85","0","0","4750.0000","+","0","+","0.00000000","+"),
-("140","297","50","14","111","0","0","16170.0000","+","0","+","0.00000000","+"),
-("153","297","50","14","124","0","0","50525.0000","+","0","+","0.00000000","+"),
-("147","297","50","14","118","0","0","28475.0000","+","0","+","0.00000000","+"),
-("134","297","50","14","105","0","0","12085.0000","+","0","+","0.00000000","+"),
-("96","297","50","14","67","0","0","1185.0000","+","0","+","0.00000000","+"),
-("152","297","50","14","123","0","0","45575.0000","+","0","+","0.00000000","+"),
+("154","297","50","14","125","0","0","60025.0000","+","0","+","0.00000000","+"),
+("100","297","50","14","71","0","0","1910.0000","+","0","+","0.00000000","+"),
+("123","297","50","14","94","0","0","7285.0000","+","0","+","0.00000000","+"),
+("92","297","50","14","63","0","0","525.0000","+","0","+","0.00000000","+"),
 ("109","297","50","14","80","0","0","3625.0000","+","0","+","0.00000000","+"),
+("150","297","50","14","121","0","0","37625.0000","+","0","+","0.00000000","+"),
+("136","297","50","14","107","0","0","13235.0000","+","0","+","0.00000000","+"),
+("117","297","50","14","88","0","0","5575.0000","+","0","+","0.00000000","+"),
+("128","297","50","14","99","0","0","9110.0000","+","0","+","0.00000000","+"),
 ("133","297","50","14","104","0","0","11510.0000","+","0","+","0.00000000","+"),
 ("95","297","50","14","66","0","0","1005.0000","+","0","+","0.00000000","+"),
-("126","297","50","14","97","0","0","8380.0000","+","0","+","0.00000000","+"),
-("116","297","50","14","87","0","0","5300.0000","+","0","+","0.00000000","+"),
-("108","297","50","14","79","0","0","3430.0000","+","0","+","0.00000000","+"),
-("155","297","50","14","126","0","0","69525.0000","+","0","+","0.00000000","+"),
-("149","297","50","14","120","0","0","34275.0000","+","0","+","0.00000000","+"),
-("136","297","50","14","107","0","0","13235.0000","+","0","+","0.00000000","+"),
-("98","297","50","14","69","0","0","1545.0000","+","0","+","0.00000000","+"),
-("92","297","50","14","63","0","0","525.0000","+","0","+","0.00000000","+"),
-("111","297","50","14","82","0","0","4075.0000","+","0","+","0.00000000","+"),
-("157","297","50","14","128","0","0","88525.0000","+","0","+","0.00000000","+"),
-("105","297","50","14","76","0","0","2845.0000","+","0","+","0.00000000","+"),
-("124","297","50","14","95","0","0","7650.0000","+","0","+","0.00000000","+"),
-("144","297","50","14","115","0","0","21825.0000","+","0","+","0.00000000","+"),
-("131","297","50","14","102","0","0","10550.0000","+","0","+","0.00000000","+"),
-("118","297","50","14","89","0","0","5850.0000","+","0","+","0.00000000","+"),
-("151","297","50","14","122","0","0","41275.0000","+","0","+","0.00000000","+"),
-("138","297","50","14","109","0","0","14385.0000","+","0","+","0.00000000","+"),
-("100","297","50","14","71","0","0","1910.0000","+","0","+","0.00000000","+"),
-("94","297","50","14","65","0","0","825.0000","+","0","+","0.00000000","+"),
-("113","297","50","14","84","0","0","4525.0000","+","0","+","0.00000000","+"),
-("93","297","50","14","64","0","0","700.0000","+","0","+","0.00000000","+"),
-("107","297","50","14","78","0","0","3235.0000","+","0","+","0.00000000","+"),
 ("99","297","50","14","70","0","0","1725.0000","+","0","+","0.00000000","+"),
+("96","297","50","14","67","0","0","1185.0000","+","0","+","0.00000000","+"),
+("127","297","50","14","98","0","0","8745.0000","+","0","+","0.00000000","+"),
+("152","297","50","14","123","0","0","45575.0000","+","0","+","0.00000000","+"),
+("139","297","50","14","110","0","0","15195.0000","+","0","+","0.00000000","+"),
 ("146","297","50","14","117","0","0","26025.0000","+","0","+","0.00000000","+"),
 ("106","297","50","14","77","0","0","3040.0000","+","0","+","0.00000000","+"),
-("156","297","50","14","127","0","0","79025.0000","+","0","+","0.00000000","+"),
-("89","297","50","14","60","0","0","0.0000","+","0","+","0.00000000","+"),
-("137","297","50","14","108","0","0","13810.0000","+","0","+","0.00000000","+"),
-("102","297","50","14","73","0","0","2280.0000","+","0","+","0.00000000","+"),
+("93","297","50","14","64","0","0","700.0000","+","0","+","0.00000000","+"),
+("143","297","50","14","114","0","0","20000.0000","+","0","+","0.00000000","+"),
+("118","297","50","14","89","0","0","5850.0000","+","0","+","0.00000000","+"),
+("101","297","50","14","72","0","0","2095.0000","+","0","+","0.00000000","+"),
+("124","297","50","14","95","0","0","7650.0000","+","0","+","0.00000000","+"),
+("90","297","50","14","61","0","0","175.0000","+","0","+","0.00000000","+"),
+("112","297","50","14","83","0","0","4300.0000","+","0","+","0.00000000","+"),
+("149","297","50","14","120","0","0","34275.0000","+","0","+","0.00000000","+"),
+("134","297","50","14","105","0","0","12085.0000","+","0","+","0.00000000","+"),
+("144","297","50","14","115","0","0","21825.0000","+","0","+","0.00000000","+"),
+("108","297","50","14","79","0","0","3430.0000","+","0","+","0.00000000","+"),
+("104","297","50","14","75","0","0","2650.0000","+","0","+","0.00000000","+"),
 ("121","297","50","14","92","0","0","6705.0000","+","0","+","0.00000000","+"),
+("155","297","50","14","126","0","0","69525.0000","+","0","+","0.00000000","+"),
+("98","297","50","14","69","0","0","1545.0000","+","0","+","0.00000000","+"),
 ("115","297","50","14","86","0","0","5025.0000","+","0","+","0.00000000","+"),
+("91","297","50","14","62","0","0","350.0000","+","0","+","0.00000000","+"),
+("137","297","50","14","108","0","0","13810.0000","+","0","+","0.00000000","+"),
+("147","297","50","14","118","0","0","28475.0000","+","0","+","0.00000000","+"),
+("132","297","50","14","103","0","0","11030.0000","+","0","+","0.00000000","+"),
 ("141","297","50","14","112","0","0","17330.0000","+","0","+","0.00000000","+"),
-("128","297","50","14","99","0","0","9110.0000","+","0","+","0.00000000","+"),
-("154","297","50","14","125","0","0","60025.0000","+","0","+","0.00000000","+"),
+("107","297","50","14","78","0","0","3235.0000","+","0","+","0.00000000","+"),
+("158","297","50","14","129","0","0","98025.0000","+","0","+","0.00000000","+"),
+("129","297","50","14","100","0","0","9590.0000","+","0","+","0.00000000","+"),
+("119","297","50","14","90","0","0","6125.0000","+","0","+","0.00000000","+"),
+("94","297","50","14","65","0","0","825.0000","+","0","+","0.00000000","+"),
+("113","297","50","14","84","0","0","4525.0000","+","0","+","0.00000000","+"),
+("18","297","50","14","60","0","0","0.0000","+","0","+","0.00000000","+"),
+("142","297","50","14","113","0","0","18490.0000","+","0","+","0.00000000","+"),
+("116","297","50","14","87","0","0","5300.0000","+","0","+","0.00000000","+"),
+("130","297","50","14","101","0","0","10070.0000","+","0","+","0.00000000","+"),
+("157","297","50","14","128","0","0","88525.0000","+","0","+","0.00000000","+"),
+("105","297","50","14","76","0","0","2845.0000","+","0","+","0.00000000","+"),
+("122","297","50","14","93","0","0","6995.0000","+","0","+","0.00000000","+"),
+("97","297","50","14","68","0","0","1365.0000","+","0","+","0.00000000","+"),
+("126","297","50","14","97","0","0","8380.0000","+","0","+","0.00000000","+"),
+("89","297","50","14","60","0","0","0.0000","+","0","+","0.00000000","+"),
+("110","297","50","14","81","0","0","3850.0000","+","0","+","0.00000000","+"),
 ("148","297","50","14","119","0","0","31225.0000","+","0","+","0.00000000","+"),
 ("135","297","50","14","106","0","0","12660.0000","+","0","+","0.00000000","+"),
-("97","297","50","14","68","0","0","1365.0000","+","0","+","0.00000000","+"),
-("91","297","50","14","62","0","0","350.0000","+","0","+","0.00000000","+"),
-("25","227","50","13","206","0","0","-1005.0000","+","0","+","0.00000000","+"),
-("22","227","50","13","203","0","0","-525.0000","+","0","+","0.00000000","+"),
-("46","227","50","13","227","0","0","-5300.0000","%","0","+","0.00000000","+"),
-("83","227","50","13","264","0","0","-50525.0000","+","0","+","0.00000000","+"),
-("77","227","50","13","258","0","0","-28475.0000","+","0","+","0.00000000","+"),
-("26","227","50","13","207","0","0","-1185.0000","+","0","+","0.00000000","+"),
-("23","227","50","13","204","0","0","-700.0000","+","0","+","0.00000000","+"),
-("36","227","50","13","217","0","0","-3040.0000","+","0","+","0.00000000","+"),
-("43","227","50","13","224","0","0","-4525.0000","+","0","+","0.00000000","+"),
-("86","227","50","13","267","0","0","-79025.0000","+","0","+","0.00000000","+"),
-("82","227","50","13","263","0","0","-45575.0000","+","0","+","0.00000000","+"),
-("49","227","50","13","230","0","0","-6125.0000","+","0","+","0.00000000","+"),
+("114","297","50","14","85","0","0","4750.0000","+","0","+","0.00000000","+"),
+("140","297","50","14","111","0","0","16170.0000","+","0","+","0.00000000","+"),
+("102","297","50","14","73","0","0","2280.0000","+","0","+","0.00000000","+"),
+("120","297","50","14","91","0","0","6415.0000","+","0","+","0.00000000","+"),
+("153","297","50","14","124","0","0","50525.0000","+","0","+","0.00000000","+"),
+("156","297","50","14","127","0","0","79025.0000","+","0","+","0.00000000","+"),
+("111","297","50","14","82","0","0","4075.0000","+","0","+","0.00000000","+"),
+("151","297","50","14","122","0","0","41275.0000","+","0","+","0.00000000","+"),
+("138","297","50","14","109","0","0","14385.0000","+","0","+","0.00000000","+"),
+("145","297","50","14","116","0","0","23775.0000","+","0","+","0.00000000","+"),
+("162","298","50","15","271","0","0","10.0000","%","0","+","0.00000000","+"),
+("159","298","50","15","270","0","0","10.0000","%","0","+","0.00000000","+"),
+("165","298","50","15","272","0","0","10.0000","%","0","+","0.00000000","+"),
+("163","298","50","15","273","0","0","10.0000","%","0","+","0.00000000","+"),
 ("20","227","50","13","201","0","0","-175.0000","+","0","+","0.00000000","+"),
+("78","227","50","13","259","0","0","-31225.0000","+","0","+","0.00000000","+"),
+("54","227","50","13","235","0","0","-7650.0000","+","0","+","0.00000000","+"),
+("86","227","50","13","267","0","0","-79025.0000","+","0","+","0.00000000","+"),
 ("73","227","50","13","254","0","0","-20000.0000","+","0","+","0.00000000","+"),
-("51","227","50","13","232","0","0","-6705.0000","+","0","+","0.00000000","+"),
-("85","227","50","13","266","0","0","-69525.0000","+","0","+","0.00000000","+"),
-("84","227","50","13","265","0","0","-60025.0000","+","0","+","0.00000000","+"),
-("55","227","50","13","236","0","0","-8015.0000","+","0","+","0.00000000","+"),
-("65","227","50","13","246","0","0","-12660.0000","+","0","+","0.00000000","+"),
-("88","227","50","13","269","0","0","-98025.0000","+","0","+","0.00000000","+"),
-("35","227","50","13","216","0","0","-2845.0000","+","0","+","0.00000000","+"),
-("57","227","50","13","238","0","0","-8745.0000","+","0","+","0.00000000","+"),
-("38","227","50","13","219","0","0","-3430.0000","+","0","+","0.00000000","+"),
-("69","227","50","13","250","0","0","-15195.0000","+","0","+","0.00000000","+"),
-("68","227","50","13","249","0","0","-14385.0000","+","0","+","0.00000000","+");
-INSERT INTO oc_product_option_value VALUES
-("81","227","50","13","262","0","0","-41275.0000","+","0","+","0.00000000","+"),
-("53","227","50","13","234","0","0","-7285.0000","+","0","+","0.00000000","+"),
-("60","227","50","13","241","0","0","-10070.0000","+","0","+","0.00000000","+"),
-("17","227","50","13","200","0","0","0.0000","-","0","+","0.00000000","+"),
-("24","227","50","13","205","0","0","-825.0000","+","0","+","0.00000000","+"),
-("41","227","50","13","222","0","0","-4075.0000","+","0","+","0.00000000","+"),
-("59","227","50","13","240","0","0","-9590.0000","+","0","+","0.00000000","+"),
-("29","227","50","13","210","0","0","-1725.0000","+","0","+","0.00000000","+"),
-("52","227","50","13","233","0","0","-6995.0000","+","0","+","0.00000000","+"),
-("80","227","50","13","261","0","0","-37625.0000","+","0","+","0.00000000","+"),
-("33","227","50","13","214","0","0","-2465.0000","+","0","+","0.00000000","+"),
-("40","227","50","13","221","0","0","-3850.0000","+","0","+","0.00000000","+"),
+("83","227","50","13","264","0","0","-50525.0000","+","0","+","0.00000000","+"),
+("19","227","50","13","200","0","0","0.0000","+","0","+","0.00000000","+"),
+("25","227","50","13","206","0","0","-1005.0000","+","0","+","0.00000000","+"),
 ("21","227","50","13","202","0","0","-350.0000","+","0","+","0.00000000","+"),
 ("32","227","50","13","213","0","0","-2280.0000","+","0","+","0.00000000","+"),
-("62","227","50","13","243","0","0","-11030.0000","+","0","+","0.00000000","+"),
-("19","227","50","13","200","0","0","0.0000","+","0","+","0.00000000","+"),
-("75","227","50","13","256","0","0","-23775.0000","+","0","+","0.00000000","+"),
-("44","227","50","13","225","0","0","-4750.0000","+","0","+","0.00000000","+"),
-("42","227","50","13","223","0","0","-4300.0000","+","0","+","0.00000000","+"),
-("27","227","50","13","208","0","0","-1365.0000","+","0","+","0.00000000","+"),
-("34","227","50","13","215","0","0","-2650.0000","+","0","+","0.00000000","+"),
-("78","227","50","13","259","0","0","-31225.0000","+","0","+","0.00000000","+"),
-("72","227","50","13","253","0","0","-18490.0000","+","0","+","0.00000000","+"),
-("48","227","50","13","229","0","0","-5850.0000","+","0","+","0.00000000","+"),
-("61","227","50","13","242","0","0","-10550.0000","+","0","+","0.00000000","+"),
-("64","227","50","13","245","0","0","-12085.0000","+","0","+","0.00000000","+"),
-("47","227","50","13","228","0","0","-5575.0000","+","0","+","0.00000000","+"),
-("76","227","50","13","257","0","0","-26025.0000","+","0","+","0.00000000","+"),
-("56","227","50","13","237","0","0","-8380.0000","+","0","+","0.00000000","+"),
-("71","227","50","13","252","0","0","-17330.0000","+","0","+","0.00000000","+"),
-("70","227","50","13","251","0","0","-16170.0000","+","0","+","0.00000000","+"),
-("67","227","50","13","248","0","0","-13810.0000","+","0","+","0.00000000","+"),
-("37","227","50","13","218","0","0","-3235.0000","+","0","+","0.00000000","+"),
-("79","227","50","13","260","0","0","-34275.0000","+","0","+","0.00000000","+"),
-("63","227","50","13","244","0","0","-11510.0000","+","0","+","0.00000000","+"),
-("74","227","50","13","255","0","0","-21825.0000","+","0","+","0.00000000","+"),
-("39","227","50","13","220","0","0","-3625.0000","+","0","+","0.00000000","+"),
-("30","227","50","13","211","0","0","-1910.0000","+","0","+","0.00000000","+"),
-("31","227","50","13","212","0","0","-2095.0000","+","0","+","0.00000000","+"),
-("45","227","50","13","226","0","0","-5025.0000","+","0","+","0.00000000","+"),
+("77","227","50","13","258","0","0","-28475.0000","+","0","+","0.00000000","+"),
+("59","227","50","13","240","0","0","-9590.0000","+","0","+","0.00000000","+"),
 ("66","227","50","13","247","0","0","-13235.0000","+","0","+","0.00000000","+"),
-("54","227","50","13","235","0","0","-7650.0000","+","0","+","0.00000000","+"),
+("81","227","50","13","262","0","0","-41275.0000","+","0","+","0.00000000","+"),
+("17","227","50","13","200","0","0","0.0000","-","0","+","0.00000000","+"),
+("30","227","50","13","211","0","0","-1910.0000","+","0","+","0.00000000","+"),
+("38","227","50","13","219","0","0","-3430.0000","+","0","+","0.00000000","+"),
+("24","227","50","13","205","0","0","-825.0000","+","0","+","0.00000000","+"),
+("88","227","50","13","269","0","0","-98025.0000","+","0","+","0.00000000","+"),
+("67","227","50","13","248","0","0","-13810.0000","+","0","+","0.00000000","+"),
+("56","227","50","13","237","0","0","-8380.0000","+","0","+","0.00000000","+"),
+("84","227","50","13","265","0","0","-60025.0000","+","0","+","0.00000000","+"),
+("72","227","50","13","253","0","0","-18490.0000","+","0","+","0.00000000","+"),
+("64","227","50","13","245","0","0","-12085.0000","+","0","+","0.00000000","+"),
+("46","227","50","13","227","0","0","-5300.0000","%","0","+","0.00000000","+");
+INSERT INTO oc_product_option_value VALUES
+("27","227","50","13","208","0","0","-1365.0000","+","0","+","0.00000000","+"),
+("82","227","50","13","263","0","0","-45575.0000","+","0","+","0.00000000","+"),
+("75","227","50","13","256","0","0","-23775.0000","+","0","+","0.00000000","+"),
+("36","227","50","13","217","0","0","-3040.0000","+","0","+","0.00000000","+"),
+("60","227","50","13","241","0","0","-10070.0000","+","0","+","0.00000000","+"),
+("34","227","50","13","215","0","0","-2650.0000","+","0","+","0.00000000","+"),
+("22","227","50","13","203","0","0","-525.0000","+","0","+","0.00000000","+"),
+("33","227","50","13","214","0","0","-2465.0000","+","0","+","0.00000000","+"),
+("40","227","50","13","221","0","0","-3850.0000","+","0","+","0.00000000","+"),
+("87","227","50","13","268","0","0","-88525.0000","+","0","+","0.00000000","+"),
+("29","227","50","13","210","0","0","-1725.0000","+","0","+","0.00000000","+"),
+("31","227","50","13","212","0","0","-2095.0000","+","0","+","0.00000000","+"),
+("50","227","50","13","231","0","0","-6415.0000","+","0","+","0.00000000","+"),
+("74","227","50","13","255","0","0","-21825.0000","+","0","+","0.00000000","+"),
+("53","227","50","13","234","0","0","-7285.0000","+","0","+","0.00000000","+"),
+("69","227","50","13","250","0","0","-15195.0000","+","0","+","0.00000000","+"),
+("37","227","50","13","218","0","0","-3235.0000","+","0","+","0.00000000","+"),
+("55","227","50","13","236","0","0","-8015.0000","+","0","+","0.00000000","+"),
+("35","227","50","13","216","0","0","-2845.0000","+","0","+","0.00000000","+"),
+("71","227","50","13","252","0","0","-17330.0000","+","0","+","0.00000000","+"),
+("51","227","50","13","232","0","0","-6705.0000","+","0","+","0.00000000","+"),
+("47","227","50","13","228","0","0","-5575.0000","+","0","+","0.00000000","+"),
+("49","227","50","13","230","0","0","-6125.0000","+","0","+","0.00000000","+"),
+("48","227","50","13","229","0","0","-5850.0000","+","0","+","0.00000000","+"),
+("43","227","50","13","224","0","0","-4525.0000","+","0","+","0.00000000","+"),
+("80","227","50","13","261","0","0","-37625.0000","+","0","+","0.00000000","+"),
+("44","227","50","13","225","0","0","-4750.0000","+","0","+","0.00000000","+"),
+("26","227","50","13","207","0","0","-1185.0000","+","0","+","0.00000000","+"),
+("23","227","50","13","204","0","0","-700.0000","+","0","+","0.00000000","+"),
+("62","227","50","13","243","0","0","-11030.0000","+","0","+","0.00000000","+"),
+("42","227","50","13","223","0","0","-4300.0000","+","0","+","0.00000000","+"),
+("52","227","50","13","233","0","0","-6995.0000","+","0","+","0.00000000","+"),
+("63","227","50","13","244","0","0","-11510.0000","+","0","+","0.00000000","+"),
+("41","227","50","13","222","0","0","-4075.0000","+","0","+","0.00000000","+"),
 ("58","227","50","13","239","0","0","-9110.0000","+","0","+","0.00000000","+"),
 ("28","227","50","13","209","0","0","-1545.0000","+","0","+","0.00000000","+"),
-("87","227","50","13","268","0","0","-88525.0000","+","0","+","0.00000000","+"),
-("50","227","50","13","231","0","0","-6415.0000","+","0","+","0.00000000","+");
+("45","227","50","13","226","0","0","-5025.0000","+","0","+","0.00000000","+"),
+("39","227","50","13","220","0","0","-3625.0000","+","0","+","0.00000000","+"),
+("68","227","50","13","249","0","0","-14385.0000","+","0","+","0.00000000","+"),
+("70","227","50","13","251","0","0","-16170.0000","+","0","+","0.00000000","+"),
+("79","227","50","13","260","0","0","-34275.0000","+","0","+","0.00000000","+"),
+("57","227","50","13","238","0","0","-8745.0000","+","0","+","0.00000000","+"),
+("76","227","50","13","257","0","0","-26025.0000","+","0","+","0.00000000","+"),
+("65","227","50","13","246","0","0","-12660.0000","+","0","+","0.00000000","+"),
+("61","227","50","13","242","0","0","-10550.0000","+","0","+","0.00000000","+"),
+("85","227","50","13","266","0","0","-69525.0000","+","0","+","0.00000000","+");
 
 
 
@@ -2359,7 +2377,9 @@ INSERT INTO oc_product_to_category VALUES
 ("50","59"),
 ("50","62"),
 ("51","59"),
-("51","62");
+("51","62"),
+("52","59"),
+("55","59");
 
 
 
@@ -2387,7 +2407,10 @@ CREATE TABLE `oc_product_to_layout` (
 
 INSERT INTO oc_product_to_layout VALUES
 ("50","0","15"),
-("51","0","0");
+("51","0","0"),
+("52","0","16"),
+("55","0","18"),
+("54","0","17");
 
 
 
@@ -2402,7 +2425,10 @@ CREATE TABLE `oc_product_to_store` (
 
 INSERT INTO oc_product_to_store VALUES
 ("50","0"),
-("51","0");
+("51","0"),
+("52","0"),
+("54","0"),
+("55","0");
 
 
 
@@ -2573,85 +2599,71 @@ CREATE TABLE `oc_setting` (
   `value` text NOT NULL,
   `serialized` tinyint(1) NOT NULL,
   PRIMARY KEY (`setting_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=363 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=501 DEFAULT CHARSET=utf8;
 
 
 INSERT INTO oc_setting VALUES
-("348","0","config","config_compression","0","0"),
-("349","0","config","config_secure","0","0"),
-("350","0","config","config_password","1","0"),
-("351","0","config","config_shared","0","0"),
-("352","0","config","config_encryption","5cKBww3hD8SxePqCXqG3qVGEelC3XHFhYmyH7cVXzgwVfGWbwdARsy2Qvonv5tMirS5xCtagASkh1qYcNZjyZSADGb3g2IWI4PcuYeb1fHvyEljaa4ccWpqgj7wFNFjH6vC3RnJbVqfGF28Jpj2u95s8fmislxtL3HtW2eMv5qbNRqdRHztX0jtprR1iioayjjVIa78vvIP2ycvTyVLNV0KUVJPTB4dbO2AGzE56Iw8nVRiXrNCim2GXwUrHL0357etwJY74ch49f3Z8OcB5X2JgL5Csj228uQn6KcCol2mkTu6jJm37WYxVaNJhDco1YPd4xHmmw4PXQY1l1a5rN8NTOaMHuqwZbVJ9CvhMBKxT4Pvj9iZFtd5wZDmjY1jeXWyWXTjFAEwkBxWUZYglrFTKk8xPw0u4OsXoiEpYm4mEqSC6rD3dAtuL2IIggiUfQS0Ae6uwwUhfoTYCQ7CB0AG47haZg1mEvOv4eAQuehw4UJbbpqRmuejlXEF498ASUMLznrnzXiSp5WAD6gXbFeh0JcLMrCEP2qjwVxJsItf0khHSTAQFhqJbgvAQ8IEGKx5UPpQrPPHERJSQIiQKR5gyTgWjNxcrYcl3vm3MGeuYvf1sdKZhCFMQifGMaGqGnmmEGqyBn5vZbSQEcTpjGpeISceu3FoAT5arUsyrsiOwpt3ekhTxnthIuxClluxXtT7KYsRyQM25SY3f6SksEUqWozXlg1zuwOvSGdB0AzlMTennumb8N5xlXR3e2tjWGASnrLKAW4jb5CoiTt4OaqGAULLFyzdVxLqQ4U2xnyDFMQr5chbg9sAlUv2G8VGC2ayj6NtLWPQFwtR2bXgbWkQFVR1iEOO7T0oEhSJY4E8OJ4bbBAtO10PGGBwtCoobOklYVnwIDMBnSPbvYSROpo0vajvKCtt46aXSN8b13ZR1VIVMjGcbNWz22fDsOLNeKm8lBZpiSxBlE8tLqCMcIqzU8cONIho4YPcUATivi4BmJznADiOnzIcPcBZhcQZV","0"),
-("353","0","config","config_file_max_size","300000","0"),
-("354","0","config","config_file_ext_allowed","zip\ntxt\npng\njpe\njpeg\njpg\ngif\nbmp\nico\ntiff\ntif\nsvg\nsvgz\nzip\nrar\nmsi\ncab\nmp3\nqt\nmov\npdf\npsd\nai\neps\nps\ndoc","0"),
-("355","0","config","config_file_mime_allowed","text/plain\nimage/png\nimage/jpeg\nimage/gif\nimage/bmp\nimage/tiff\nimage/svg+xml\napplication/zip\n&quot;application/zip&quot;\napplication/x-zip\n&quot;application/x-zip&quot;\napplication/x-zip-compressed\n&quot;application/x-zip-compressed&quot;\napplication/rar\n&quot;application/rar&quot;\napplication/x-rar\n&quot;application/x-rar&quot;\napplication/x-rar-compressed\n&quot;application/x-rar-compressed&quot;\napplication/octet-stream\n&quot;application/octet-stream&quot;\naudio/mpeg\nvideo/quicktime\napplication/pdf","0"),
-("4","0","voucher","voucher_sort_order","8","0"),
-("5","0","voucher","voucher_status","1","0"),
-("356","0","config","config_error_display","1","0"),
-("357","0","config","config_error_log","1","0"),
-("347","0","config","config_robots","abot\ndbot\nebot\nhbot\nkbot\nlbot\nmbot\nnbot\nobot\npbot\nrbot\nsbot\ntbot\nvbot\nybot\nzbot\nbot.\nbot/\n_bot\n.bot\n/bot\n-bot\n:bot\n(bot\ncrawl\nslurp\nspider\nseek\naccoona\nacoon\nadressendeutschland\nah-ha.com\nahoy\naltavista\nananzi\nanthill\nappie\narachnophilia\narale\naraneo\naranha\narchitext\naretha\narks\nasterias\natlocal\natn\natomz\naugurfind\nbackrub\nbannana_bot\nbaypup\nbdfetch\nbig brother\nbiglotron\nbjaaland\nblackwidow\nblaiz\nblog\nblo.\nbloodhound\nboitho\nbooch\nbradley\nbutterfly\ncalif\ncassandra\nccubee\ncfetch\ncharlotte\nchurl\ncienciaficcion\ncmc\ncollective\ncomagent\ncombine\ncomputingsite\ncsci\ncurl\ncusco\ndaumoa\ndeepindex\ndelorie\ndepspid\ndeweb\ndie blinde kuh\ndigger\nditto\ndmoz\ndocomo\ndownload express\ndtaagent\ndwcp\nebiness\nebingbong\ne-collector\nejupiter\nemacs-w3 search engine\nesther\nevliya celebi\nezresult\nfalcon\nfelix ide\nferret\nfetchrover\nfido\nfindlinks\nfireball\nfish search\nfouineur\nfunnelweb\ngazz\ngcreep\ngenieknows\ngetterroboplus\ngeturl\nglx\ngoforit\ngolem\ngrabber\ngrapnel\ngralon\ngriffon\ngromit\ngrub\ngulliver\nhamahakki\nharvest\nhavindex\nhelix\nheritrix\nhku www octopus\nhomerweb\nhtdig\nhtml index\nhtml_analyzer\nhtmlgobble\nhubater\nhyper-decontextualizer\nia_archiver\nibm_planetwide\nichiro\niconsurf\niltrovatore\nimage.kapsi.net\nimagelock\nincywincy\nindexer\ninfobee\ninformant\ningrid\ninktomisearch.com\ninspector web\nintelliagent\ninternet shinchakubin\nip3000\niron33\nisraeli-search\nivia\njack\njakarta\njavabee\njetbot\njumpstation\nkatipo\nkdd-explorer\nkilroy\nknowledge\nkototoi\nkretrieve\nlabelgrabber\nlachesis\nlarbin\nlegs\nlibwww\nlinkalarm\nlink validator\nlinkscan\nlockon\nlwp\nlycos\nmagpie\nmantraagent\nmapoftheinternet\nmarvin/\nmattie\nmediafox\nmediapartners\nmercator\nmerzscope\nmicrosoft url control\nminirank\nmiva\nmj12\nmnogosearch\nmoget\nmonster\nmoose\nmotor\nmultitext\nmuncher\nmuscatferret\nmwd.search\nmyweb\nnajdi\nnameprotect\nnationaldirectory\nnazilla\nncsa beta\nnec-meshexplorer\nnederland.zoek\nnetcarta webmap engine\nnetmechanic\nnetresearchserver\nnetscoop\nnewscan-online\nnhse\nnokia6682/\nnomad\nnoyona\nnutch\nnzexplorer\nobjectssearch\noccam\nomni\nopen text\nopenfind\nopenintelligencedata\norb search\nosis-project\npack rat\npageboy\npagebull\npage_verifier\npanscient\nparasite\npartnersite\npatric\npear.\npegasus\nperegrinator\npgp key agent\nphantom\nphpdig\npicosearch\npiltdownman\npimptrain\npinpoint\npioneer\npiranha\nplumtreewebaccessor\npogodak\npoirot\npompos\npoppelsdorf\npoppi\npopular iconoclast\npsycheclone\npublisher\npython\nrambler\nraven search\nroach\nroad runner\nroadhouse\nrobbie\nrobofox\nrobozilla\nrules\nsalty\nsbider\nscooter\nscoutjet\nscrubby\nsearch.\nsearchprocess\nsemanticdiscovery\nsenrigan\nsg-scout\nshai\'hulud\nshark\nshopwiki\nsidewinder\nsift\nsilk\nsimmany\nsite searcher\nsite valet\nsitetech-rover\nskymob.com\nsleek\nsmartwit\nsna-\nsnappy\nsnooper\nsohu\nspeedfind\nsphere\nsphider\nspinner\nspyder\nsteeler/\nsuke\nsuntek\nsupersnooper\nsurfnomore\nsven\nsygol\nszukacz\ntach black widow\ntarantula\ntempleton\n/teoma\nt-h-u-n-d-e-r-s-t-o-n-e\ntheophrastus\ntitan\ntitin\ntkwww\ntoutatis\nt-rex\ntutorgig\ntwiceler\ntwisted\nucsd\nudmsearch\nurl check\nupdated\nvagabondo\nvalkyrie\nverticrawl\nvictoria\nvision-search\nvolcano\nvoyager/\nvoyager-hc\nw3c_validator\nw3m2\nw3mir\nwalker\nwallpaper\nwanderer\nwauuu\nwavefire\nweb core\nweb hopper\nweb wombat\nwebbandit\nwebcatcher\nwebcopy\nwebfoot\nweblayers\nweblinker\nweblog monitor\nwebmirror\nwebmonkey\nwebquest\nwebreaper\nwebsitepulse\nwebsnarf\nwebstolperer\nwebvac\nwebwalk\nwebwatch\nwebwombat\nwebzinger\nwhizbang\nwhowhere\nwild ferret\nworldlight\nwwwc\nwwwster\nxenu\nxget\nxift\nxirq\nyandex\nyanga\nyeti\nyodao\nzao\nzippp\nzyborg","0"),
-("345","0","config","config_maintenance","0","0"),
-("346","0","config","config_seo_url","1","0"),
-("344","0","config","config_mail_alert_email","","0"),
-("343","0","config","config_mail_alert","[\"order\"]","1"),
-("340","0","config","config_mail_smtp_password","","0"),
-("341","0","config","config_mail_smtp_port","25","0"),
-("342","0","config","config_mail_smtp_timeout","5","0"),
-("339","0","config","config_mail_smtp_username","","0"),
-("338","0","config","config_mail_smtp_hostname","","0"),
-("337","0","config","config_mail_parameter","","0"),
-("336","0","config","config_mail_protocol","mail","0"),
-("335","0","config","config_ftp_status","0","0"),
-("334","0","config","config_ftp_root","","0"),
-("333","0","config","config_ftp_password","","0"),
-("332","0","config","config_ftp_username","","0"),
-("331","0","config","config_ftp_port","21","0"),
-("330","0","config","config_ftp_hostname","localhost","0"),
-("329","0","config","config_icon","catalog/cart.png","0"),
-("328","0","config","config_logo","catalog/logo.png","0"),
-("327","0","config","config_captcha_page","[\"review\",\"return\",\"contact\"]","1"),
-("326","0","config","config_captcha","","0"),
-("325","0","config","config_return_status_id","2","0"),
-("324","0","config","config_return_id","0","0"),
-("323","0","config","config_affiliate_id","4","0"),
-("321","0","config","config_affiliate_auto","0","0"),
-("318","0","config","config_stock_warning","0","0"),
-("319","0","config","config_stock_checkout","0","0"),
-("320","0","config","config_affiliate_approval","0","0"),
-("317","0","config","config_stock_display","0","0"),
-("316","0","config","config_api_id","1","0"),
-("315","0","config","config_fraud_status_id","2","0"),
-("314","0","config","config_complete_status","[\"3\",\"5\"]","1"),
-("312","0","config","config_order_status_id","1","0"),
-("313","0","config","config_processing_status","[\"2\",\"3\",\"1\",\"12\",\"5\"]","1"),
+("488","0","config","config_seo_url","0","0"),
+("489","0","config","config_robots","abot\ndbot\nebot\nhbot\nkbot\nlbot\nmbot\nnbot\nobot\npbot\nrbot\nsbot\ntbot\nvbot\nybot\nzbot\nbot.\nbot/\n_bot\n.bot\n/bot\n-bot\n:bot\n(bot\ncrawl\nslurp\nspider\nseek\naccoona\nacoon\nadressendeutschland\nah-ha.com\nahoy\naltavista\nananzi\nanthill\nappie\narachnophilia\narale\naraneo\naranha\narchitext\naretha\narks\nasterias\natlocal\natn\natomz\naugurfind\nbackrub\nbannana_bot\nbaypup\nbdfetch\nbig brother\nbiglotron\nbjaaland\nblackwidow\nblaiz\nblog\nblo.\nbloodhound\nboitho\nbooch\nbradley\nbutterfly\ncalif\ncassandra\nccubee\ncfetch\ncharlotte\nchurl\ncienciaficcion\ncmc\ncollective\ncomagent\ncombine\ncomputingsite\ncsci\ncurl\ncusco\ndaumoa\ndeepindex\ndelorie\ndepspid\ndeweb\ndie blinde kuh\ndigger\nditto\ndmoz\ndocomo\ndownload express\ndtaagent\ndwcp\nebiness\nebingbong\ne-collector\nejupiter\nemacs-w3 search engine\nesther\nevliya celebi\nezresult\nfalcon\nfelix ide\nferret\nfetchrover\nfido\nfindlinks\nfireball\nfish search\nfouineur\nfunnelweb\ngazz\ngcreep\ngenieknows\ngetterroboplus\ngeturl\nglx\ngoforit\ngolem\ngrabber\ngrapnel\ngralon\ngriffon\ngromit\ngrub\ngulliver\nhamahakki\nharvest\nhavindex\nhelix\nheritrix\nhku www octopus\nhomerweb\nhtdig\nhtml index\nhtml_analyzer\nhtmlgobble\nhubater\nhyper-decontextualizer\nia_archiver\nibm_planetwide\nichiro\niconsurf\niltrovatore\nimage.kapsi.net\nimagelock\nincywincy\nindexer\ninfobee\ninformant\ningrid\ninktomisearch.com\ninspector web\nintelliagent\ninternet shinchakubin\nip3000\niron33\nisraeli-search\nivia\njack\njakarta\njavabee\njetbot\njumpstation\nkatipo\nkdd-explorer\nkilroy\nknowledge\nkototoi\nkretrieve\nlabelgrabber\nlachesis\nlarbin\nlegs\nlibwww\nlinkalarm\nlink validator\nlinkscan\nlockon\nlwp\nlycos\nmagpie\nmantraagent\nmapoftheinternet\nmarvin/\nmattie\nmediafox\nmediapartners\nmercator\nmerzscope\nmicrosoft url control\nminirank\nmiva\nmj12\nmnogosearch\nmoget\nmonster\nmoose\nmotor\nmultitext\nmuncher\nmuscatferret\nmwd.search\nmyweb\nnajdi\nnameprotect\nnationaldirectory\nnazilla\nncsa beta\nnec-meshexplorer\nnederland.zoek\nnetcarta webmap engine\nnetmechanic\nnetresearchserver\nnetscoop\nnewscan-online\nnhse\nnokia6682/\nnomad\nnoyona\nnutch\nnzexplorer\nobjectssearch\noccam\nomni\nopen text\nopenfind\nopenintelligencedata\norb search\nosis-project\npack rat\npageboy\npagebull\npage_verifier\npanscient\nparasite\npartnersite\npatric\npear.\npegasus\nperegrinator\npgp key agent\nphantom\nphpdig\npicosearch\npiltdownman\npimptrain\npinpoint\npioneer\npiranha\nplumtreewebaccessor\npogodak\npoirot\npompos\npoppelsdorf\npoppi\npopular iconoclast\npsycheclone\npublisher\npython\nrambler\nraven search\nroach\nroad runner\nroadhouse\nrobbie\nrobofox\nrobozilla\nrules\nsalty\nsbider\nscooter\nscoutjet\nscrubby\nsearch.\nsearchprocess\nsemanticdiscovery\nsenrigan\nsg-scout\nshai\'hulud\nshark\nshopwiki\nsidewinder\nsift\nsilk\nsimmany\nsite searcher\nsite valet\nsitetech-rover\nskymob.com\nsleek\nsmartwit\nsna-\nsnappy\nsnooper\nsohu\nspeedfind\nsphere\nsphider\nspinner\nspyder\nsteeler/\nsuke\nsuntek\nsupersnooper\nsurfnomore\nsven\nsygol\nszukacz\ntach black widow\ntarantula\ntempleton\n/teoma\nt-h-u-n-d-e-r-s-t-o-n-e\ntheophrastus\ntitan\ntitin\ntkwww\ntoutatis\nt-rex\ntutorgig\ntwiceler\ntwisted\nucsd\nudmsearch\nurl check\nupdated\nvagabondo\nvalkyrie\nverticrawl\nvictoria\nvision-search\nvolcano\nvoyager/\nvoyager-hc\nw3c_validator\nw3m2\nw3mir\nwalker\nwallpaper\nwanderer\nwauuu\nwavefire\nweb core\nweb hopper\nweb wombat\nwebbandit\nwebcatcher\nwebcopy\nwebfoot\nweblayers\nweblinker\nweblog monitor\nwebmirror\nwebmonkey\nwebquest\nwebreaper\nwebsitepulse\nwebsnarf\nwebstolperer\nwebvac\nwebwalk\nwebwatch\nwebwombat\nwebzinger\nwhizbang\nwhowhere\nwild ferret\nworldlight\nwwwc\nwwwster\nxenu\nxget\nxift\nxirq\nyandex\nyanga\nyeti\nyodao\nzao\nzippp\nzyborg","0"),
+("496","0","config","config_file_ext_allowed","zip\ntxt\npng\njpe\njpeg\njpg\ngif\nbmp\nico\ntiff\ntif\nsvg\nsvgz\nzip\nrar\nmsi\ncab\nmp3\nqt\nmov\npdf\npsd\nai\neps\nps\ndoc","0"),
+("497","0","config","config_file_mime_allowed","text/plain\nimage/png\nimage/jpeg\nimage/gif\nimage/bmp\nimage/tiff\nimage/svg+xml\napplication/zip\n&quot;application/zip&quot;\napplication/x-zip\n&quot;application/x-zip&quot;\napplication/x-zip-compressed\n&quot;application/x-zip-compressed&quot;\napplication/rar\n&quot;application/rar&quot;\napplication/x-rar\n&quot;application/x-rar&quot;\napplication/x-rar-compressed\n&quot;application/x-rar-compressed&quot;\napplication/octet-stream\n&quot;application/octet-stream&quot;\naudio/mpeg\nvideo/quicktime\napplication/pdf","0"),
+("498","0","config","config_error_display","1","0"),
+("499","0","config","config_error_log","1","0"),
+("500","0","config","config_error_filename","error.log","0"),
+("495","0","config","config_file_max_size","300000","0"),
+("406","0","payment_robokassa","payment_robokassa_payment_object","commodity","0"),
+("490","0","config","config_compression","0","0"),
+("491","0","config","config_secure","0","0"),
+("492","0","config","config_password","1","0"),
+("493","0","config","config_shared","0","0"),
+("494","0","config","config_encryption","5cKBww3hD8SxePqCXqG3qVGEelC3XHFhYmyH7cVXzgwVfGWbwdARsy2Qvonv5tMirS5xCtagASkh1qYcNZjyZSADGb3g2IWI4PcuYeb1fHvyEljaa4ccWpqgj7wFNFjH6vC3RnJbVqfGF28Jpj2u95s8fmislxtL3HtW2eMv5qbNRqdRHztX0jtprR1iioayjjVIa78vvIP2ycvTyVLNV0KUVJPTB4dbO2AGzE56Iw8nVRiXrNCim2GXwUrHL0357etwJY74ch49f3Z8OcB5X2JgL5Csj228uQn6KcCol2mkTu6jJm37WYxVaNJhDco1YPd4xHmmw4PXQY1l1a5rN8NTOaMHuqwZbVJ9CvhMBKxT4Pvj9iZFtd5wZDmjY1jeXWyWXTjFAEwkBxWUZYglrFTKk8xPw0u4OsXoiEpYm4mEqSC6rD3dAtuL2IIggiUfQS0Ae6uwwUhfoTYCQ7CB0AG47haZg1mEvOv4eAQuehw4UJbbpqRmuejlXEF498ASUMLznrnzXiSp5WAD6gXbFeh0JcLMrCEP2qjwVxJsItf0khHSTAQFhqJbgvAQ8IEGKx5UPpQrPPHERJSQIiQKR5gyTgWjNxcrYcl3vm3MGeuYvf1sdKZhCFMQifGMaGqGnmmEGqyBn5vZbSQEcTpjGpeISceu3FoAT5arUsyrsiOwpt3ekhTxnthIuxClluxXtT7KYsRyQM25SY3f6SksEUqWozXlg1zuwOvSGdB0AzlMTennumb8N5xlXR3e2tjWGASnrLKAW4jb5CoiTt4OaqGAULLFyzdVxLqQ4U2xnyDFMQr5chbg9sAlUv2G8VGC2ayj6NtLWPQFwtR2bXgbWkQFVR1iEOO7T0oEhSJY4E8OJ4bbBAtO10PGGBwtCoobOklYVnwIDMBnSPbvYSROpo0vajvKCtt46aXSN8b13ZR1VIVMjGcbNWz22fDsOLNeKm8lBZpiSxBlE8tLqCMcIqzU8cONIho4YPcUATivi4BmJznADiOnzIcPcBZhcQZV","0"),
+("487","0","config","config_maintenance","0","0"),
+("486","0","config","config_mail_alert_email","","0"),
+("485","0","config","config_mail_alert","[\"order\"]","1"),
+("482","0","config","config_mail_smtp_password","","0"),
+("484","0","config","config_mail_smtp_timeout","5","0"),
+("483","0","config","config_mail_smtp_port","25","0"),
+("481","0","config","config_mail_smtp_username","","0"),
+("480","0","config","config_mail_smtp_hostname","","0"),
+("479","0","config","config_mail_parameter","","0"),
+("478","0","config","config_mail_protocol","mail","0"),
+("477","0","config","config_ftp_status","0","0"),
+("476","0","config","config_ftp_root","","0"),
+("475","0","config","config_ftp_password","","0"),
+("474","0","config","config_ftp_username","","0"),
+("473","0","config","config_ftp_port","21","0"),
+("472","0","config","config_ftp_hostname","localhost","0"),
+("471","0","config","config_icon","catalog/cart.png","0"),
+("470","0","config","config_logo","catalog/logo.png","0"),
+("469","0","config","config_captcha_page","[\"review\",\"return\",\"contact\"]","1"),
+("468","0","config","config_captcha","","0"),
+("467","0","config","config_return_status_id","2","0"),
+("454","0","config","config_order_status_id","1","0"),
+("465","0","config","config_affiliate_id","4","0"),
+("466","0","config","config_return_id","0","0"),
+("464","0","config","config_affiliate_commission","5","0"),
+("463","0","config","config_affiliate_auto","0","0"),
+("462","0","config","config_affiliate_approval","0","0"),
+("461","0","config","config_stock_checkout","0","0"),
+("460","0","config","config_stock_warning","0","0"),
+("459","0","config","config_stock_display","0","0"),
+("457","0","config","config_fraud_status_id","2","0"),
+("458","0","config","config_api_id","1","0"),
+("456","0","config","config_complete_status","[\"3\",\"5\"]","1"),
 ("95","0","free_checkout","free_checkout_status","1","0"),
 ("96","0","free_checkout","free_checkout_order_status_id","1","0"),
-("97","0","shipping","shipping_sort_order","3","0"),
-("98","0","sub_total","sub_total_sort_order","1","0"),
-("99","0","sub_total","sub_total_status","1","0"),
-("100","0","tax","tax_status","0","0"),
-("101","0","total","total_sort_order","9","0"),
-("102","0","total","total_status","1","0"),
-("103","0","tax","tax_sort_order","5","0"),
+("409","0","payment_robokassa","payment_robokassa_sort_order","","0"),
+("407","0","payment_robokassa","payment_robokassa_geo_zone_id","0","0"),
 ("104","0","free_checkout","free_checkout_sort_order","1","0"),
 ("105","0","cod","cod_sort_order","5","0"),
 ("106","0","cod","cod_total","0.01","0"),
 ("107","0","cod","cod_order_status_id","1","0"),
 ("108","0","cod","cod_geo_zone_id","0","0"),
 ("109","0","cod","cod_status","1","0"),
-("110","0","shipping","shipping_status","1","0"),
-("111","0","shipping","shipping_estimator","1","0"),
-("112","0","coupon","coupon_sort_order","4","0"),
-("113","0","coupon","coupon_status","1","0"),
-("114","0","flat","flat_sort_order","1","0"),
-("115","0","flat","flat_status","1","0"),
-("116","0","flat","flat_geo_zone_id","0","0"),
-("117","0","flat","flat_tax_class_id","9","0"),
-("118","0","flat","flat_cost","5.00","0"),
-("119","0","credit","credit_sort_order","7","0"),
-("120","0","credit","credit_status","1","0"),
-("121","0","reward","reward_sort_order","2","0"),
-("122","0","reward","reward_status","1","0"),
+("408","0","payment_robokassa","payment_robokassa_status","1","0"),
+("403","0","payment_robokassa","payment_robokassa_tax_type","osn","0"),
+("404","0","payment_robokassa","payment_robokassa_tax","none","0"),
+("401","0","payment_robokassa","payment_robokassa_test","1","0"),
 ("123","0","category","category_status","1","0"),
 ("124","0","account","account_status","1","0"),
 ("125","0","affiliate","affiliate_status","1","0"),
@@ -2676,8 +2688,7 @@ INSERT INTO oc_setting VALUES
 ("144","0","theme_default","theme_default_image_cart_height","47","0"),
 ("145","0","theme_default","theme_default_image_cart_width","47","0"),
 ("146","0","theme_default","theme_default_image_location_height","50","0"),
-("147","0","theme_default","theme_default_image_location_width","268","0");
-INSERT INTO oc_setting VALUES
+("147","0","theme_default","theme_default_image_location_width","268","0"),
 ("148","0","theme_default","theme_default_directory","default","0"),
 ("149","0","theme_default","theme_default_status","1","0"),
 ("150","0","dashboard_activity","dashboard_activity_status","1","0"),
@@ -2691,7 +2702,8 @@ INSERT INTO oc_setting VALUES
 ("158","0","dashboard_map","dashboard_map_status","1","0"),
 ("159","0","dashboard_map","dashboard_map_width","6","0"),
 ("160","0","dashboard_online","dashboard_online_status","1","0"),
-("161","0","dashboard_online","dashboard_online_width","3","0"),
+("161","0","dashboard_online","dashboard_online_width","3","0");
+INSERT INTO oc_setting VALUES
 ("162","0","dashboard_order","dashboard_order_sort_order","1","0"),
 ("163","0","dashboard_order","dashboard_order_status","1","0"),
 ("164","0","dashboard_order","dashboard_order_width","3","0"),
@@ -2704,54 +2716,61 @@ INSERT INTO oc_setting VALUES
 ("171","0","dashboard_recent","dashboard_recent_sort_order","8","0"),
 ("172","0","dashboard_activity","dashboard_activity_width","4","0"),
 ("173","0","dashboard_recent","dashboard_recent_width","8","0"),
-("322","0","config","config_affiliate_commission","5","0"),
-("311","0","config","config_checkout_id","5","0"),
-("310","0","config","config_checkout_guest","1","0"),
-("309","0","config","config_cart_weight","1","0"),
-("308","0","config","config_invoice_prefix","INV-2016-00","0"),
-("307","0","config","config_account_id","3","0"),
-("306","0","config","config_login_attempts","5","0"),
-("305","0","config","config_customer_price","0","0"),
-("304","0","config","config_customer_group_display","[\"1\"]","1"),
-("303","0","config","config_customer_group_id","1","0"),
-("302","0","config","config_customer_search","0","0"),
-("301","0","config","config_customer_activity","0","0"),
-("300","0","config","config_customer_online","0","0"),
-("299","0","config","config_tax_customer","shipping","0"),
-("298","0","config","config_tax_default","shipping","0"),
-("297","0","config","config_tax","0","0"),
-("296","0","config","config_voucher_max","1000","0"),
-("280","0","config","config_image","","0"),
-("281","0","config","config_open","","0"),
-("282","0","config","config_comment","","0"),
-("283","0","config","config_country_id","176","0"),
-("284","0","config","config_zone_id","","0"),
-("285","0","config","config_language","ru-ru","0"),
-("286","0","config","config_admin_language","ru-ru","0"),
-("287","0","config","config_currency","RUB","0"),
-("288","0","config","config_currency_auto","1","0"),
-("289","0","config","config_length_class_id","1","0"),
-("290","0","config","config_weight_class_id","1","0"),
-("291","0","config","config_product_count","1","0"),
-("292","0","config","config_limit_admin","20","0"),
-("293","0","config","config_review_status","1","0"),
-("294","0","config","config_review_guest","1","0"),
-("295","0","config","config_voucher_min","1","0"),
-("279","0","config","config_fax","495 888-88-88","0"),
-("276","0","config","config_geocode","","0"),
-("277","0","config","config_email","root@localhost.ru","0"),
-("278","0","config","config_telephone","495 888-88-88","0"),
-("269","0","config","config_meta_description","Мой магазин","0"),
-("270","0","config","config_meta_keyword","","0"),
-("271","0","config","config_theme","theme_default","0"),
-("272","0","config","config_layout_id","1","0"),
-("273","0","config","config_name","Интернет магазин Opencart &quot;Русская сборка&quot;","0"),
-("274","0","config","config_owner","Иванов Иван","0"),
-("275","0","config","config_address","г. Москва, ул. Ленина 10 оф. 32","0"),
-("268","0","config","config_meta_title","Интернет магазин Opencart &quot;Русская сборка&quot;","0"),
-("358","0","config","config_error_filename","error.log","0"),
+("455","0","config","config_processing_status","[\"2\",\"3\",\"1\",\"12\",\"5\"]","1"),
+("453","0","config","config_checkout_id","5","0"),
+("452","0","config","config_checkout_guest","1","0"),
+("451","0","config","config_cart_weight","1","0"),
+("450","0","config","config_invoice_prefix","INV-2016-00","0"),
+("449","0","config","config_account_id","3","0"),
+("448","0","config","config_login_attempts","5","0"),
+("447","0","config","config_customer_price","0","0"),
+("446","0","config","config_customer_group_display","[\"1\"]","1"),
+("445","0","config","config_customer_group_id","1","0"),
+("444","0","config","config_customer_search","0","0"),
+("443","0","config","config_customer_activity","0","0"),
+("442","0","config","config_customer_online","0","0"),
+("441","0","config","config_tax_customer","shipping","0"),
+("440","0","config","config_tax_default","shipping","0"),
+("439","0","config","config_tax","0","0"),
+("438","0","config","config_voucher_max","1000","0"),
+("437","0","config","config_voucher_min","1","0"),
+("436","0","config","config_review_guest","1","0"),
+("435","0","config","config_review_status","1","0"),
+("434","0","config","config_limit_admin","20","0"),
+("433","0","config","config_product_count","1","0"),
+("432","0","config","config_weight_class_id","1","0"),
+("431","0","config","config_length_class_id","1","0"),
+("430","0","config","config_currency_auto","1","0"),
+("429","0","config","config_currency","RUB","0"),
+("428","0","config","config_admin_language","ru-ru","0"),
+("427","0","config","config_language","ru-ru","0"),
+("426","0","config","config_zone_id","","0"),
+("425","0","config","config_country_id","176","0"),
+("424","0","config","config_comment","","0"),
+("423","0","config","config_open","","0"),
+("422","0","config","config_image","","0"),
+("421","0","config","config_fax","495 888-88-88","0"),
+("420","0","config","config_telephone","495 888-88-88","0"),
+("419","0","config","config_email","root@localhost.ru","0"),
+("418","0","config","config_geocode","","0"),
+("417","0","config","config_address","г. Москва, ул. Ленина 10 оф. 32","0"),
+("416","0","config","config_owner","Иванов Иван","0"),
+("415","0","config","config_name","Интернет магазин Opencart &quot;Русская сборка&quot;","0"),
+("413","0","config","config_theme","theme_default","0"),
+("414","0","config","config_layout_id","1","0"),
+("411","0","config","config_meta_description","Мой магазин","0"),
+("412","0","config","config_meta_keyword","","0"),
+("410","0","config","config_meta_title","Интернет магазин Opencart &quot;Русская сборка&quot;","0"),
 ("359","0","information","information_status","1","0"),
-("362","0","breadcrumbs","breadcrumbs_status","1","0");
+("362","0","breadcrumbs","breadcrumbs_status","1","0"),
+("405","0","payment_robokassa","payment_robokassa_payment_method","full_prepayment","0"),
+("402","0","payment_robokassa","payment_robokassa_fiscal","0","0"),
+("400","0","payment_robokassa","payment_robokassa_order_status_id","2","0"),
+("398","0","payment_robokassa","payment_robokassa_test_password_1","","0"),
+("399","0","payment_robokassa","payment_robokassa_test_password_2","","0"),
+("397","0","payment_robokassa","payment_robokassa_password_2","bXdSq8bruB","0"),
+("396","0","payment_robokassa","payment_robokassa_password_1","bXdSq8bruB","0"),
+("395","0","payment_robokassa","payment_robokassa_login","admin","0");
 
 
 
@@ -2913,16 +2932,21 @@ CREATE TABLE `oc_url_alias` (
   PRIMARY KEY (`url_alias_id`),
   KEY `query` (`query`),
   KEY `keyword` (`keyword`)
-) ENGINE=MyISAM AUTO_INCREMENT=916 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=941 DEFAULT CHARSET=utf8;
 
 
 INSERT INTO oc_url_alias VALUES
 ("730","manufacturer_id=8","apple"),
 ("772","information_id=4","about_us"),
 ("887","category_id=59","uslugi"),
-("915","product_id=50","prokachka-mmr"),
+("928","product_id=54","winbattlecup"),
+("934","product_id=55","trenirovka"),
+("935","information_id=7","guaranties"),
+("940","information_id=10","awork"),
+("921","product_id=50","prokachka-mmr"),
 ("898","product_id=51","bust-rejtinga"),
 ("901","category_id=62","dota-forma"),
+("924","product_id=52","kalibrovka"),
 ("828","manufacturer_id=9","canon"),
 ("829","manufacturer_id=5","htc"),
 ("830","manufacturer_id=7","hewlett-packard"),
@@ -3004,7 +3028,7 @@ CREATE TABLE `oc_user_group` (
 
 
 INSERT INTO oc_user_group VALUES
-("1","Administrator","{\"access\":[\"catalog\\/attribute\",\"catalog\\/attribute_group\",\"catalog\\/category\",\"catalog\\/download\",\"catalog\\/filter\",\"catalog\\/information\",\"catalog\\/manufacturer\",\"catalog\\/option\",\"catalog\\/product\",\"catalog\\/recurring\",\"catalog\\/review\",\"common\\/column_left\",\"common\\/filemanager\",\"customer\\/custom_field\",\"customer\\/customer\",\"customer\\/customer_group\",\"design\\/banner\",\"design\\/language\",\"design\\/layout\",\"design\\/menu\",\"design\\/theme\",\"design\\/translation\",\"event\\/compatibility\",\"event\\/theme\",\"extension\\/analytics\\/google_analytics\",\"extension\\/captcha\\/basic_captcha\",\"extension\\/captcha\\/google_captcha\",\"extension\\/dashboard\\/activity\",\"extension\\/dashboard\\/chart\",\"extension\\/dashboard\\/customer\",\"extension\\/dashboard\\/map\",\"extension\\/dashboard\\/online\",\"extension\\/dashboard\\/order\",\"extension\\/dashboard\\/recent\",\"extension\\/dashboard\\/sale\",\"extension\\/event\",\"extension\\/extension\",\"extension\\/extension\\/analytics\",\"extension\\/extension\\/captcha\",\"extension\\/extension\\/dashboard\",\"extension\\/extension\\/feed\",\"extension\\/extension\\/fraud\",\"extension\\/extension\\/menu\",\"extension\\/extension\\/module\",\"extension\\/extension\\/payment\",\"extension\\/extension\\/shipping\",\"extension\\/extension\\/theme\",\"extension\\/extension\\/total\",\"extension\\/feed\\/google_base\",\"extension\\/feed\\/google_sitemap\",\"extension\\/feed\\/openbaypro\",\"extension\\/fraud\\/fraudlabspro\",\"extension\\/fraud\\/ip\",\"extension\\/fraud\\/maxmind\",\"extension\\/installer\",\"extension\\/modification\",\"extension\\/module\\/account\",\"extension\\/module\\/affiliate\",\"extension\\/module\\/amazon_login\",\"extension\\/module\\/amazon_pay\",\"extension\\/module\\/banner\",\"extension\\/module\\/bestseller\",\"extension\\/module\\/carousel\",\"extension\\/module\\/category\",\"extension\\/module\\/divido_calculator\",\"extension\\/module\\/ebay_listing\",\"extension\\/module\\/featured\",\"extension\\/module\\/filter\",\"extension\\/module\\/google_hangouts\",\"extension\\/module\\/html\",\"extension\\/module\\/information\",\"extension\\/module\\/klarna_checkout_module\",\"extension\\/module\\/latest\",\"extension\\/module\\/laybuy_layout\",\"extension\\/module\\/pilibaba_button\",\"extension\\/module\\/pp_button\",\"extension\\/module\\/pp_login\",\"extension\\/module\\/sagepay_direct_cards\",\"extension\\/module\\/sagepay_server_cards\",\"extension\\/module\\/slideshow\",\"extension\\/module\\/special\",\"extension\\/module\\/store\",\"extension\\/openbay\",\"extension\\/openbay\\/amazon\",\"extension\\/openbay\\/amazon_listing\",\"extension\\/openbay\\/amazon_product\",\"extension\\/openbay\\/amazonus\",\"extension\\/openbay\\/amazonus_listing\",\"extension\\/openbay\\/amazonus_product\",\"extension\\/openbay\\/ebay\",\"extension\\/openbay\\/ebay_profile\",\"extension\\/openbay\\/ebay_template\",\"extension\\/openbay\\/etsy\",\"extension\\/openbay\\/etsy_product\",\"extension\\/openbay\\/etsy_shipping\",\"extension\\/openbay\\/etsy_shop\",\"extension\\/openbay\\/fba\",\"extension\\/payment\\/amazon_login_pay\",\"extension\\/payment\\/authorizenet_aim\",\"extension\\/payment\\/authorizenet_sim\",\"extension\\/payment\\/bank_transfer\",\"extension\\/payment\\/bluepay_hosted\",\"extension\\/payment\\/bluepay_redirect\",\"extension\\/payment\\/cardconnect\",\"extension\\/payment\\/cardinity\",\"extension\\/payment\\/cheque\",\"extension\\/payment\\/cod\",\"extension\\/payment\\/divido\",\"extension\\/payment\\/eway\",\"extension\\/payment\\/firstdata\",\"extension\\/payment\\/firstdata_remote\",\"extension\\/payment\\/free_checkout\",\"extension\\/payment\\/g2apay\",\"extension\\/payment\\/globalpay\",\"extension\\/payment\\/globalpay_remote\",\"extension\\/payment\\/klarna_account\",\"extension\\/payment\\/klarna_checkout\",\"extension\\/payment\\/klarna_invoice\",\"extension\\/payment\\/laybuy\",\"extension\\/payment\\/liqpay\",\"extension\\/payment\\/nochex\",\"extension\\/payment\\/paymate\",\"extension\\/payment\\/paypoint\",\"extension\\/payment\\/payza\",\"extension\\/payment\\/perpetual_payments\",\"extension\\/payment\\/pilibaba\",\"extension\\/payment\\/pp_express\",\"extension\\/payment\\/pp_payflow\",\"extension\\/payment\\/pp_payflow_iframe\",\"extension\\/payment\\/pp_pro\",\"extension\\/payment\\/pp_pro_iframe\",\"extension\\/payment\\/pp_standard\",\"extension\\/payment\\/realex\",\"extension\\/payment\\/realex_remote\",\"extension\\/payment\\/sagepay_direct\",\"extension\\/payment\\/sagepay_server\",\"extension\\/payment\\/sagepay_us\",\"extension\\/payment\\/securetrading_pp\",\"extension\\/payment\\/securetrading_ws\",\"extension\\/payment\\/skrill\",\"extension\\/payment\\/twocheckout\",\"extension\\/payment\\/web_payment_software\",\"extension\\/payment\\/worldpay\",\"extension\\/shipping\\/auspost\",\"extension\\/shipping\\/citylink\",\"extension\\/shipping\\/fedex\",\"extension\\/shipping\\/flat\",\"extension\\/shipping\\/free\",\"extension\\/shipping\\/item\",\"extension\\/shipping\\/parcelforce_48\",\"extension\\/shipping\\/pickup\",\"extension\\/shipping\\/royal_mail\",\"extension\\/shipping\\/ups\",\"extension\\/shipping\\/usps\",\"extension\\/shipping\\/weight\",\"extension\\/store\",\"extension\\/theme\\/theme_default\",\"extension\\/total\\/coupon\",\"extension\\/total\\/credit\",\"extension\\/total\\/handling\",\"extension\\/total\\/klarna_fee\",\"extension\\/total\\/low_order_fee\",\"extension\\/total\\/reward\",\"extension\\/total\\/shipping\",\"extension\\/total\\/sub_total\",\"extension\\/total\\/tax\",\"extension\\/total\\/total\",\"extension\\/total\\/voucher\",\"localisation\\/country\",\"localisation\\/currency\",\"localisation\\/geo_zone\",\"localisation\\/language\",\"localisation\\/length_class\",\"localisation\\/location\",\"localisation\\/order_status\",\"localisation\\/return_action\",\"localisation\\/return_reason\",\"localisation\\/return_status\",\"localisation\\/stock_status\",\"localisation\\/tax_class\",\"localisation\\/tax_rate\",\"localisation\\/weight_class\",\"localisation\\/zone\",\"marketing\\/affiliate\",\"marketing\\/contact\",\"marketing\\/coupon\",\"marketing\\/marketing\",\"report\\/affiliate\",\"report\\/affiliate_activity\",\"report\\/affiliate_login\",\"report\\/customer_activity\",\"report\\/customer_credit\",\"report\\/customer_login\",\"report\\/customer_online\",\"report\\/customer_order\",\"report\\/customer_reward\",\"report\\/customer_search\",\"report\\/marketing\",\"report\\/product_purchased\",\"report\\/product_viewed\",\"report\\/sale_coupon\",\"report\\/sale_order\",\"report\\/sale_return\",\"report\\/sale_shipping\",\"report\\/sale_tax\",\"sale\\/order\",\"sale\\/recurring\",\"sale\\/return\",\"sale\\/voucher\",\"sale\\/voucher_theme\",\"setting\\/setting\",\"setting\\/store\",\"startup\\/compatibility\",\"startup\\/error\",\"startup\\/event\",\"startup\\/login\",\"startup\\/permission\",\"startup\\/router\",\"startup\\/sass\",\"startup\\/startup\",\"tool\\/backup\",\"tool\\/log\",\"tool\\/upload\",\"user\\/api\",\"user\\/user\",\"user\\/user_permission\",\"extension\\/module\\/information\",\"extension\\/module\\/special\",\"extension\\/module\\/html\",\"extension\\/module\\/store\",\"extension\\/module\\/slideshow\",\"extension\\/module\\/slidereview\",\"extension\\/module\\/breadcrumbs\"],\"modify\":[\"catalog\\/attribute\",\"catalog\\/attribute_group\",\"catalog\\/category\",\"catalog\\/download\",\"catalog\\/filter\",\"catalog\\/information\",\"catalog\\/manufacturer\",\"catalog\\/option\",\"catalog\\/product\",\"catalog\\/recurring\",\"catalog\\/review\",\"common\\/column_left\",\"common\\/filemanager\",\"customer\\/custom_field\",\"customer\\/customer\",\"customer\\/customer_group\",\"design\\/banner\",\"design\\/language\",\"design\\/layout\",\"design\\/menu\",\"design\\/theme\",\"design\\/translation\",\"event\\/compatibility\",\"event\\/theme\",\"extension\\/analytics\\/google_analytics\",\"extension\\/captcha\\/basic_captcha\",\"extension\\/captcha\\/google_captcha\",\"extension\\/dashboard\\/activity\",\"extension\\/dashboard\\/chart\",\"extension\\/dashboard\\/customer\",\"extension\\/dashboard\\/map\",\"extension\\/dashboard\\/online\",\"extension\\/dashboard\\/order\",\"extension\\/dashboard\\/recent\",\"extension\\/dashboard\\/sale\",\"extension\\/event\",\"extension\\/extension\",\"extension\\/extension\\/analytics\",\"extension\\/extension\\/captcha\",\"extension\\/extension\\/dashboard\",\"extension\\/extension\\/feed\",\"extension\\/extension\\/fraud\",\"extension\\/extension\\/menu\",\"extension\\/extension\\/module\",\"extension\\/extension\\/payment\",\"extension\\/extension\\/shipping\",\"extension\\/extension\\/theme\",\"extension\\/extension\\/total\",\"extension\\/feed\\/google_base\",\"extension\\/feed\\/google_sitemap\",\"extension\\/feed\\/openbaypro\",\"extension\\/fraud\\/fraudlabspro\",\"extension\\/fraud\\/ip\",\"extension\\/fraud\\/maxmind\",\"extension\\/installer\",\"extension\\/modification\",\"extension\\/module\\/account\",\"extension\\/module\\/affiliate\",\"extension\\/module\\/amazon_login\",\"extension\\/module\\/amazon_pay\",\"extension\\/module\\/banner\",\"extension\\/module\\/bestseller\",\"extension\\/module\\/carousel\",\"extension\\/module\\/category\",\"extension\\/module\\/divido_calculator\",\"extension\\/module\\/ebay_listing\",\"extension\\/module\\/featured\",\"extension\\/module\\/filter\",\"extension\\/module\\/google_hangouts\",\"extension\\/module\\/html\",\"extension\\/module\\/information\",\"extension\\/module\\/klarna_checkout_module\",\"extension\\/module\\/latest\",\"extension\\/module\\/laybuy_layout\",\"extension\\/module\\/pilibaba_button\",\"extension\\/module\\/pp_button\",\"extension\\/module\\/pp_login\",\"extension\\/module\\/sagepay_direct_cards\",\"extension\\/module\\/sagepay_server_cards\",\"extension\\/module\\/slideshow\",\"extension\\/module\\/special\",\"extension\\/module\\/store\",\"extension\\/openbay\",\"extension\\/openbay\\/amazon\",\"extension\\/openbay\\/amazon_listing\",\"extension\\/openbay\\/amazon_product\",\"extension\\/openbay\\/amazonus\",\"extension\\/openbay\\/amazonus_listing\",\"extension\\/openbay\\/amazonus_product\",\"extension\\/openbay\\/ebay\",\"extension\\/openbay\\/ebay_profile\",\"extension\\/openbay\\/ebay_template\",\"extension\\/openbay\\/etsy\",\"extension\\/openbay\\/etsy_product\",\"extension\\/openbay\\/etsy_shipping\",\"extension\\/openbay\\/etsy_shop\",\"extension\\/openbay\\/fba\",\"extension\\/payment\\/amazon_login_pay\",\"extension\\/payment\\/authorizenet_aim\",\"extension\\/payment\\/authorizenet_sim\",\"extension\\/payment\\/bank_transfer\",\"extension\\/payment\\/bluepay_hosted\",\"extension\\/payment\\/bluepay_redirect\",\"extension\\/payment\\/cardconnect\",\"extension\\/payment\\/cardinity\",\"extension\\/payment\\/cheque\",\"extension\\/payment\\/cod\",\"extension\\/payment\\/divido\",\"extension\\/payment\\/eway\",\"extension\\/payment\\/firstdata\",\"extension\\/payment\\/firstdata_remote\",\"extension\\/payment\\/free_checkout\",\"extension\\/payment\\/g2apay\",\"extension\\/payment\\/globalpay\",\"extension\\/payment\\/globalpay_remote\",\"extension\\/payment\\/klarna_account\",\"extension\\/payment\\/klarna_checkout\",\"extension\\/payment\\/klarna_invoice\",\"extension\\/payment\\/laybuy\",\"extension\\/payment\\/liqpay\",\"extension\\/payment\\/nochex\",\"extension\\/payment\\/paymate\",\"extension\\/payment\\/paypoint\",\"extension\\/payment\\/payza\",\"extension\\/payment\\/perpetual_payments\",\"extension\\/payment\\/pilibaba\",\"extension\\/payment\\/pp_express\",\"extension\\/payment\\/pp_payflow\",\"extension\\/payment\\/pp_payflow_iframe\",\"extension\\/payment\\/pp_pro\",\"extension\\/payment\\/pp_pro_iframe\",\"extension\\/payment\\/pp_standard\",\"extension\\/payment\\/realex\",\"extension\\/payment\\/realex_remote\",\"extension\\/payment\\/sagepay_direct\",\"extension\\/payment\\/sagepay_server\",\"extension\\/payment\\/sagepay_us\",\"extension\\/payment\\/securetrading_pp\",\"extension\\/payment\\/securetrading_ws\",\"extension\\/payment\\/skrill\",\"extension\\/payment\\/twocheckout\",\"extension\\/payment\\/web_payment_software\",\"extension\\/payment\\/worldpay\",\"extension\\/shipping\\/auspost\",\"extension\\/shipping\\/citylink\",\"extension\\/shipping\\/fedex\",\"extension\\/shipping\\/flat\",\"extension\\/shipping\\/free\",\"extension\\/shipping\\/item\",\"extension\\/shipping\\/parcelforce_48\",\"extension\\/shipping\\/pickup\",\"extension\\/shipping\\/royal_mail\",\"extension\\/shipping\\/ups\",\"extension\\/shipping\\/usps\",\"extension\\/shipping\\/weight\",\"extension\\/store\",\"extension\\/theme\\/theme_default\",\"extension\\/total\\/coupon\",\"extension\\/total\\/credit\",\"extension\\/total\\/handling\",\"extension\\/total\\/klarna_fee\",\"extension\\/total\\/low_order_fee\",\"extension\\/total\\/reward\",\"extension\\/total\\/shipping\",\"extension\\/total\\/sub_total\",\"extension\\/total\\/tax\",\"extension\\/total\\/total\",\"extension\\/total\\/voucher\",\"localisation\\/country\",\"localisation\\/currency\",\"localisation\\/geo_zone\",\"localisation\\/language\",\"localisation\\/length_class\",\"localisation\\/location\",\"localisation\\/order_status\",\"localisation\\/return_action\",\"localisation\\/return_reason\",\"localisation\\/return_status\",\"localisation\\/stock_status\",\"localisation\\/tax_class\",\"localisation\\/tax_rate\",\"localisation\\/weight_class\",\"localisation\\/zone\",\"marketing\\/affiliate\",\"marketing\\/contact\",\"marketing\\/coupon\",\"marketing\\/marketing\",\"report\\/affiliate\",\"report\\/affiliate_activity\",\"report\\/affiliate_login\",\"report\\/customer_activity\",\"report\\/customer_credit\",\"report\\/customer_login\",\"report\\/customer_online\",\"report\\/customer_order\",\"report\\/customer_reward\",\"report\\/customer_search\",\"report\\/marketing\",\"report\\/product_purchased\",\"report\\/product_viewed\",\"report\\/sale_coupon\",\"report\\/sale_order\",\"report\\/sale_return\",\"report\\/sale_shipping\",\"report\\/sale_tax\",\"sale\\/order\",\"sale\\/recurring\",\"sale\\/return\",\"sale\\/voucher\",\"sale\\/voucher_theme\",\"setting\\/setting\",\"setting\\/store\",\"startup\\/compatibility\",\"startup\\/error\",\"startup\\/event\",\"startup\\/login\",\"startup\\/permission\",\"startup\\/router\",\"startup\\/sass\",\"startup\\/startup\",\"tool\\/backup\",\"tool\\/log\",\"tool\\/upload\",\"user\\/api\",\"user\\/user\",\"user\\/user_permission\",\"extension\\/module\\/information\",\"extension\\/module\\/special\",\"extension\\/module\\/html\",\"extension\\/module\\/store\",\"extension\\/module\\/slideshow\",\"extension\\/module\\/slidereview\",\"extension\\/module\\/breadcrumbs\"]}"),
+("1","Administrator","{\"access\":[\"catalog\\/attribute\",\"catalog\\/attribute_group\",\"catalog\\/category\",\"catalog\\/download\",\"catalog\\/filter\",\"catalog\\/information\",\"catalog\\/manufacturer\",\"catalog\\/option\",\"catalog\\/product\",\"catalog\\/recurring\",\"catalog\\/review\",\"common\\/column_left\",\"common\\/filemanager\",\"customer\\/custom_field\",\"customer\\/customer\",\"customer\\/customer_group\",\"design\\/banner\",\"design\\/language\",\"design\\/layout\",\"design\\/menu\",\"design\\/theme\",\"design\\/translation\",\"event\\/compatibility\",\"event\\/theme\",\"extension\\/analytics\\/google_analytics\",\"extension\\/captcha\\/basic_captcha\",\"extension\\/captcha\\/google_captcha\",\"extension\\/dashboard\\/activity\",\"extension\\/dashboard\\/chart\",\"extension\\/dashboard\\/customer\",\"extension\\/dashboard\\/map\",\"extension\\/dashboard\\/online\",\"extension\\/dashboard\\/order\",\"extension\\/dashboard\\/recent\",\"extension\\/dashboard\\/sale\",\"extension\\/event\",\"extension\\/extension\",\"extension\\/extension\\/analytics\",\"extension\\/extension\\/captcha\",\"extension\\/extension\\/dashboard\",\"extension\\/extension\\/feed\",\"extension\\/extension\\/fraud\",\"extension\\/extension\\/module\",\"extension\\/extension\\/payment\",\"extension\\/extension\\/shipping\",\"extension\\/extension\\/theme\",\"extension\\/extension\\/total\",\"extension\\/feed\\/google_base\",\"extension\\/feed\\/google_sitemap\",\"extension\\/fraud\\/ip\",\"extension\\/installer\",\"extension\\/modification (2)\",\"extension\\/modification\",\"extension\\/module\\/account\",\"extension\\/module\\/affiliate\",\"extension\\/module\\/banner\",\"extension\\/module\\/bestseller\",\"extension\\/module\\/breadcrumbs\",\"extension\\/module\\/carousel\",\"extension\\/module\\/category\",\"extension\\/module\\/featured\",\"extension\\/module\\/filter\",\"extension\\/module\\/google_hangouts\",\"extension\\/module\\/html\",\"extension\\/module\\/information\",\"extension\\/module\\/latest\",\"extension\\/module\\/ocmegamenu\",\"extension\\/module\\/pp_button\",\"extension\\/module\\/slidereview\",\"extension\\/module\\/slideshow\",\"extension\\/module\\/sms_alert\",\"extension\\/module\\/special\",\"extension\\/module\\/store\",\"extension\\/openbay\",\"extension\\/payment\\/bank_transfer\",\"extension\\/payment\\/cheque\",\"extension\\/payment\\/cod\",\"extension\\/payment\\/free_checkout\",\"extension\\/payment\\/liqpay\",\"extension\\/payment\\/pp_express\",\"extension\\/payment\\/pp_pro\",\"extension\\/payment\\/pp_standard\",\"extension\\/payment\\/robokassa\",\"extension\\/shipping\\/citylink\",\"extension\\/shipping\\/flat\",\"extension\\/shipping\\/free\",\"extension\\/shipping\\/item\",\"extension\\/shipping\\/pickup\",\"extension\\/shipping\\/weight\",\"extension\\/store\",\"extension\\/theme\\/theme_default\",\"extension\\/total\\/coupon\",\"extension\\/total\\/credit\",\"extension\\/total\\/handling\",\"extension\\/total\\/low_order_fee\",\"extension\\/total\\/reward\",\"extension\\/total\\/shipping\",\"extension\\/total\\/sub_total\",\"extension\\/total\\/tax\",\"extension\\/total\\/total\",\"extension\\/total\\/voucher\",\"localisation\\/country\",\"localisation\\/currency\",\"localisation\\/geo_zone\",\"localisation\\/language\",\"localisation\\/length_class\",\"localisation\\/location\",\"localisation\\/order_status\",\"localisation\\/return_action\",\"localisation\\/return_reason\",\"localisation\\/return_status\",\"localisation\\/stock_status\",\"localisation\\/tax_class\",\"localisation\\/tax_rate\",\"localisation\\/weight_class\",\"localisation\\/zone\",\"marketing\\/affiliate\",\"marketing\\/contact\",\"marketing\\/coupon\",\"marketing\\/marketing\",\"report\\/affiliate\",\"report\\/affiliate_activity\",\"report\\/affiliate_login\",\"report\\/customer_activity\",\"report\\/customer_credit\",\"report\\/customer_login\",\"report\\/customer_online\",\"report\\/customer_order\",\"report\\/customer_reward\",\"report\\/customer_search\",\"report\\/marketing\",\"report\\/product_purchased\",\"report\\/product_viewed\",\"report\\/sale_coupon\",\"report\\/sale_order\",\"report\\/sale_return\",\"report\\/sale_shipping\",\"report\\/sale_tax\",\"sale\\/order\",\"sale\\/recurring\",\"sale\\/return\",\"sale\\/voucher\",\"sale\\/voucher_theme\",\"setting\\/setting\",\"setting\\/store\",\"startup\\/compatibility\",\"startup\\/error\",\"startup\\/event\",\"startup\\/login\",\"startup\\/permission\",\"startup\\/router\",\"startup\\/sass\",\"startup\\/startup\",\"tool\\/backup\",\"tool\\/log\",\"tool\\/upload\",\"user\\/api\",\"user\\/user\",\"user\\/user_permission\"],\"modify\":[\"catalog\\/attribute\",\"catalog\\/attribute_group\",\"catalog\\/category\",\"catalog\\/download\",\"catalog\\/filter\",\"catalog\\/information\",\"catalog\\/manufacturer\",\"catalog\\/option\",\"catalog\\/product\",\"catalog\\/recurring\",\"catalog\\/review\",\"common\\/column_left\",\"common\\/filemanager\",\"customer\\/custom_field\",\"customer\\/customer\",\"customer\\/customer_group\",\"design\\/banner\",\"design\\/language\",\"design\\/layout\",\"design\\/menu\",\"design\\/theme\",\"design\\/translation\",\"event\\/compatibility\",\"event\\/theme\",\"extension\\/analytics\\/google_analytics\",\"extension\\/captcha\\/basic_captcha\",\"extension\\/captcha\\/google_captcha\",\"extension\\/dashboard\\/activity\",\"extension\\/dashboard\\/chart\",\"extension\\/dashboard\\/customer\",\"extension\\/dashboard\\/map\",\"extension\\/dashboard\\/online\",\"extension\\/dashboard\\/order\",\"extension\\/dashboard\\/recent\",\"extension\\/dashboard\\/sale\",\"extension\\/event\",\"extension\\/extension\",\"extension\\/extension\\/analytics\",\"extension\\/extension\\/captcha\",\"extension\\/extension\\/dashboard\",\"extension\\/extension\\/feed\",\"extension\\/extension\\/fraud\",\"extension\\/extension\\/module\",\"extension\\/extension\\/payment\",\"extension\\/extension\\/shipping\",\"extension\\/extension\\/theme\",\"extension\\/extension\\/total\",\"extension\\/feed\\/google_base\",\"extension\\/feed\\/google_sitemap\",\"extension\\/fraud\\/ip\",\"extension\\/installer\",\"extension\\/modification (2)\",\"extension\\/modification\",\"extension\\/module\\/account\",\"extension\\/module\\/affiliate\",\"extension\\/module\\/banner\",\"extension\\/module\\/bestseller\",\"extension\\/module\\/breadcrumbs\",\"extension\\/module\\/carousel\",\"extension\\/module\\/category\",\"extension\\/module\\/featured\",\"extension\\/module\\/filter\",\"extension\\/module\\/google_hangouts\",\"extension\\/module\\/html\",\"extension\\/module\\/information\",\"extension\\/module\\/latest\",\"extension\\/module\\/ocmegamenu\",\"extension\\/module\\/pp_button\",\"extension\\/module\\/slidereview\",\"extension\\/module\\/slideshow\",\"extension\\/module\\/sms_alert\",\"extension\\/module\\/special\",\"extension\\/module\\/store\",\"extension\\/openbay\",\"extension\\/payment\\/bank_transfer\",\"extension\\/payment\\/cheque\",\"extension\\/payment\\/cod\",\"extension\\/payment\\/free_checkout\",\"extension\\/payment\\/liqpay\",\"extension\\/payment\\/pp_express\",\"extension\\/payment\\/pp_pro\",\"extension\\/payment\\/pp_standard\",\"extension\\/payment\\/robokassa\",\"extension\\/shipping\\/citylink\",\"extension\\/shipping\\/flat\",\"extension\\/shipping\\/free\",\"extension\\/shipping\\/item\",\"extension\\/shipping\\/pickup\",\"extension\\/shipping\\/weight\",\"extension\\/store\",\"extension\\/theme\\/theme_default\",\"extension\\/total\\/coupon\",\"extension\\/total\\/credit\",\"extension\\/total\\/handling\",\"extension\\/total\\/low_order_fee\",\"extension\\/total\\/reward\",\"extension\\/total\\/shipping\",\"extension\\/total\\/sub_total\",\"extension\\/total\\/tax\",\"extension\\/total\\/total\",\"extension\\/total\\/voucher\",\"localisation\\/country\",\"localisation\\/currency\",\"localisation\\/geo_zone\",\"localisation\\/language\",\"localisation\\/length_class\",\"localisation\\/location\",\"localisation\\/order_status\",\"localisation\\/return_action\",\"localisation\\/return_reason\",\"localisation\\/return_status\",\"localisation\\/stock_status\",\"localisation\\/tax_class\",\"localisation\\/tax_rate\",\"localisation\\/weight_class\",\"localisation\\/zone\",\"marketing\\/affiliate\",\"marketing\\/contact\",\"marketing\\/coupon\",\"marketing\\/marketing\",\"report\\/affiliate\",\"report\\/affiliate_activity\",\"report\\/affiliate_login\",\"report\\/customer_activity\",\"report\\/customer_credit\",\"report\\/customer_login\",\"report\\/customer_online\",\"report\\/customer_order\",\"report\\/customer_reward\",\"report\\/customer_search\",\"report\\/marketing\",\"report\\/product_purchased\",\"report\\/product_viewed\",\"report\\/sale_coupon\",\"report\\/sale_order\",\"report\\/sale_return\",\"report\\/sale_shipping\",\"report\\/sale_tax\",\"sale\\/order\",\"sale\\/recurring\",\"sale\\/return\",\"sale\\/voucher\",\"sale\\/voucher_theme\",\"setting\\/setting\",\"setting\\/store\",\"startup\\/compatibility\",\"startup\\/error\",\"startup\\/event\",\"startup\\/login\",\"startup\\/permission\",\"startup\\/router\",\"startup\\/sass\",\"startup\\/startup\",\"tool\\/backup\",\"tool\\/log\",\"tool\\/upload\",\"user\\/api\",\"user\\/user\",\"user\\/user_permission\"]}"),
 ("10","Demonstration",""),
 ("11","users","");
 

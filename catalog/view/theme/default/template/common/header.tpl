@@ -77,12 +77,12 @@
                 <li><a href="uslugi/prokachka-mmr">заказать буст рейтинга</a></li>
                 <li><a href="uslugi/kalibrovka">Заказать калибровку</a></li>
                 <li><a href="uslugi/prokachka-mmr">Слить Лоу приорити</a></li>
-                <li><a href="battle-cup.html">Победить Battle Cup</a></li>
-                <li><a href="training.html">Обучение от бустеров</a></li>
+                <li><a href="uslugi/winbattlecup">Победить Battle Cup</a></li>
+                <li><a href="uslugi/trenirovka">Обучение от бустеров</a></li>
               </ul>
             </li>
-            <li><a href="guarantees.html">Гарантии</a></li>
-            <li><a href="job.html">Работа</a></li>
+            <li><a href="guaranties">Гарантии</a></li>
+            <li><a href="awork">Работа</a></li>
           </ul>
         </nav>
       </div>

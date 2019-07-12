@@ -34,7 +34,7 @@ class ControllerInformationInformation extends Controller {
 
 			$data['button_continue'] = $this->language->get('button_continue');
 
-			$data['description'] = html_entity_decode($information_info['description'], ENT_QUOTES, 'UTF-8');
+			$data['description'] =  TemplateLoader::replace($this, html_entity_decode($information_info['description'], ENT_QUOTES, 'UTF-8')); 
 
 			$data['continue'] = $this->url->link('common/home');
 
