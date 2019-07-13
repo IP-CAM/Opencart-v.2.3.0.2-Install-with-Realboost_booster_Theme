@@ -102,7 +102,7 @@
 	  <?php if ($logged) { ?>
 		<div class="login">
 			  
-		  <a class="popup-with-form" href="#login"><img src="<?php echo $img_path; ?>icons/profile.png" alt="profile"><span><?php echo $logged_name;?></span></a>
+		  <a class="no-popup-with-form" href="my-account"><img src="<?php echo $img_path; ?>icons/profile.png" alt="profile"><span><?php echo $logged_name;?></span></a>
 		</div>
 		<div class="cart">
 			  <a href="<?php echo $shopping_cart; ?>"><div class="cart-items">2</div><img src="<?php echo $img_path; ?>icons/cart.png" alt="cart"><span><?php echo $text_shopping_cart; ?></span></a>

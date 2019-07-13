@@ -1426,3 +1426,7 @@
 2019-07-13 20:22:37 - PHP Notice:  Undefined index: menu_type in C:\wamp64\www\boost\catalog\controller\extension\module\ocmegamenu.php on line 29
 2019-07-13 20:23:14 - PHP Notice:  Undefined index: menu_type in C:\wamp64\www\boost\catalog\controller\extension\module\ocmegamenu.php on line 29
 2019-07-13 20:23:14 - PHP Warning:  mysqli::query(): Empty query in C:\wamp64\www\boost\system\library\db\mysqli.php on line 18
+2019-07-13 21:14:22 - PHP Warning:  Invalid argument supplied for foreach() in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\breadcrumbs.tpl on line 14
+2019-07-13 21:34:32 - PHP Warning:  Invalid argument supplied for foreach() in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\breadcrumbs.tpl on line 14
+2019-07-13 21:51:42 - PHP Notice:  Undefined variable: description in C:\wamp64\www\boost\catalog\view\theme\default\template\account\account.tpl on line 18
+2019-07-13 23:34:52 - PHP Notice:  Undefined variable: description in C:\wamp64\www\boost\catalog\view\theme\default\template\account\account.tpl on line 18
