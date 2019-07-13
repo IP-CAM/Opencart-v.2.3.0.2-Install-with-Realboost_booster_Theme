@@ -15,10 +15,10 @@
 
 
 <!-- Вход -->
-<form id="login" class="mfp-hide white-popup-block">
+<form id="login" action = "<?php echo $login;?>" method="post" class="mfp-hide white-popup-block">
   <h1>Войти</h1>
   <fieldset style="border:0;">
-    <input id="text" name="text" type="text" placeholder="Логин" required="">
+    <input id="text" name="email" type="text" placeholder="Логин" required="">
     <input id="password" name="password" type="password" placeholder="Пароль" required="">
     <button type="submit">Войти</button>
   </fieldset>

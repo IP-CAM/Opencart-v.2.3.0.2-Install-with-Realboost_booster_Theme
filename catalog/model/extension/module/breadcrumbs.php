@@ -19,9 +19,41 @@ class ModelExtensionModuleBreadcrumbs extends Controller
             $parts = explode('/', $get['_route_']);
         }else{
             //its not ok cuz links are without seo
-            
+            return "not_implemented";
         }
-        $breadcrumbs[] = $this->url->link('common/home');
+        
+        $breadcrumbs[] = array( 
+            'link' => '',
+            'name' => 'Главная'
+            
+        );
+        //last part
+        $link = '';
+        $name = '';
+        switch ($get['route']){
+            case 'product/product':
+                $pid = $get['product_id'];
+                $this->load->model('catalog/product');
+                $prod = $this->model_catalog_product->getProduct($pid);
+                $name = $prod['name'];
+                $link  = $get['_route_'];
+                break;
+            case 'information/information':
+                $pid = $get['information_id'];
+                $this->load->model('catalog/information');
+                $prod = $this->model_catalog_information->getInformation($pid);
+                $name = $prod['title'];
+                $link  = $get['_route_'];
+                
+                break;
+        }
+        //last bread
+        $breadcrumbs[] = array(
+            'link' => $link,
+            'name' => $name
+            
+        );
+        return  $breadcrumbs;
     }
     
 

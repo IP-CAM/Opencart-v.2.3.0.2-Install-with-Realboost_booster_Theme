@@ -1800,3 +1800,37 @@
 2019-07-12 20:23:34 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
 2019-07-12 20:23:35 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
 2019-07-12 20:23:36 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
+2019-07-12 21:01:00 - PHP Warning:  mysqli::query(): Empty query in C:\wamp64\www\boost\system\library\db\mysqli.php on line 18
+2019-07-12 21:02:22 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
+2019-07-12 21:02:26 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
+2019-07-12 21:02:29 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
+2019-07-12 21:02:46 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
+2019-07-12 21:02:46 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
+2019-07-12 22:16:39 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
+2019-07-12 22:16:41 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
+2019-07-12 22:16:54 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
+2019-07-12 23:09:41 - PHP Warning:  mysqli::query(): Empty query in C:\wamp64\www\boost\system\library\db\mysqli.php on line 18
+2019-07-12 23:17:46 - PHP Notice:  Undefined variable: query in xdebug://debug-eval on line 1
+2019-07-12 23:17:46 - PHP Notice:  Trying to get property 'row' of non-object in xdebug://debug-eval on line 1
+2019-07-12 23:29:03 - PHP Notice:  Undefined variable: link in C:\wamp64\www\boost\catalog\model\extension\module\breadcrumbs.php on line 43
+2019-07-12 23:29:03 - PHP Notice:  Undefined variable: name in C:\wamp64\www\boost\catalog\model\extension\module\breadcrumbs.php on line 44
+2019-07-12 23:31:58 - PHP Notice:  Undefined variable: link in C:\wamp64\www\boost\catalog\model\extension\module\breadcrumbs.php on line 43
+2019-07-12 23:31:58 - PHP Notice:  Undefined variable: name in C:\wamp64\www\boost\catalog\model\extension\module\breadcrumbs.php on line 44
+2019-07-12 23:32:37 - PHP Notice:  Undefined variable: link in C:\wamp64\www\boost\catalog\model\extension\module\breadcrumbs.php on line 43
+2019-07-12 23:32:37 - PHP Notice:  Undefined variable: name in C:\wamp64\www\boost\catalog\model\extension\module\breadcrumbs.php on line 44
+2019-07-12 23:35:56 - PHP Notice:  Undefined variable: breadcrumbs in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\breadcrumbs.tpl on line 9
+2019-07-12 23:39:28 - PHP Notice:  Undefined variable: link in C:\wamp64\www\boost\catalog\model\extension\module\breadcrumbs.php on line 45
+2019-07-12 23:39:28 - PHP Notice:  Undefined variable: name in C:\wamp64\www\boost\catalog\model\extension\module\breadcrumbs.php on line 46
+2019-07-12 23:40:24 - PHP Notice:  Undefined variable: link in C:\wamp64\www\boost\catalog\model\extension\module\breadcrumbs.php on line 45
+2019-07-12 23:40:24 - PHP Notice:  Undefined variable: name in C:\wamp64\www\boost\catalog\model\extension\module\breadcrumbs.php on line 46
+2019-07-12 23:45:08 - PHP Notice:  Undefined index: name in C:\wamp64\www\boost\catalog\model\extension\module\breadcrumbs.php on line 45
+2019-07-12 23:55:58 - PHP Notice:  Undefined variable: login in C:\wamp64\www\boost\catalog\view\theme\default\template\common\footer.tpl on line 18
+2019-07-12 23:56:02 - PHP Notice:  Undefined variable: login in C:\wamp64\www\boost\catalog\view\theme\default\template\common\footer.tpl on line 18
+2019-07-13 0:48:07 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
+2019-07-13 0:48:10 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
+2019-07-13 0:48:12 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
+2019-07-13 0:48:43 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
+2019-07-13 0:57:51 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
+2019-07-13 0:58:26 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
+2019-07-13 1:02:17 - PHP Warning:  Invalid argument supplied for foreach() in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\breadcrumbs.tpl on line 14
+2019-07-13 1:02:22 - PHP Warning:  Invalid argument supplied for foreach() in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\breadcrumbs.tpl on line 14

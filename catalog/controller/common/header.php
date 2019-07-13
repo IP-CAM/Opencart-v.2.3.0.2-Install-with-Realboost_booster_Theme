@@ -48,11 +48,12 @@ class ControllerCommonHeader extends Controller {
 		$this->load->language('common/header');
 
 		$data['text_home'] = $this->language->get('text_home');
-
+		
+		
 		// Wishlist
 		if ($this->customer->isLogged()) {
 			$this->load->model('account/wishlist');
-
+			$data['logged_name']=$this->customer->getFirstName();
 			$data['text_wishlist'] = sprintf($this->language->get('text_wishlist'), $this->model_account_wishlist->getTotalWishlist());
 		} else {
 			$data['text_wishlist'] = sprintf($this->language->get('text_wishlist'), (isset($this->session->data['wishlist']) ? count($this->session->data['wishlist']) : 0));

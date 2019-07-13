@@ -26,7 +26,7 @@ class ControllerExtensionModuleBreadcrumbs extends Controller
             // Load model
             $this->load->model('extension/module/breadcrumbs');
             $this->model_extension_module_breadcrumbs->getText();
-            $this->model_extension_module_breadcrumbs->getSeoParts($this->request->get);
+            $data['breadcrumbs'] = $this->model_extension_module_breadcrumbs->getSeoParts($this->request->get);
             //$data=TemplateLoader::getvars('data');
             $data['text']      = $this->model_extension_module_breadcrumbs->getText();
 
