@@ -1834,3 +1834,14 @@
 2019-07-13 0:58:26 - PHP Notice:  Undefined variable: username in C:\wamp64\www\boost\admin\view\template\common\column_left.tpl on line 5
 2019-07-13 1:02:17 - PHP Warning:  Invalid argument supplied for foreach() in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\breadcrumbs.tpl on line 14
 2019-07-13 1:02:22 - PHP Warning:  Invalid argument supplied for foreach() in C:\wamp64\www\boost\catalog\view\theme\default\template\extension\module\breadcrumbs.tpl on line 14
+2019-07-13 3:14:26 - PHP Notice:  Undefined index: menu_type in C:\wamp64\www\boost\catalog\controller\extension\module\ocmegamenu.php on line 29
+2019-07-13 3:19:25 - PHP Notice:  Undefined index: top_item_position in C:\wamp64\www\boost\admin\controller\extension\module\ocmegamenu.php on line 491
+2019-07-13 3:19:25 - PHP Warning:  Invalid argument supplied for foreach() in C:\wamp64\www\boost\admin\controller\extension\module\ocmegamenu.php on line 493
+2019-07-13 3:19:25 - PHP Notice:  Undefined index: sub_item_position2 in C:\wamp64\www\boost\admin\controller\extension\module\ocmegamenu.php on line 497
+2019-07-13 3:19:25 - PHP Warning:  Invalid argument supplied for foreach() in C:\wamp64\www\boost\admin\controller\extension\module\ocmegamenu.php on line 499
+2019-07-13 3:19:25 - PHP Notice:  Undefined index: sub_item_position3 in C:\wamp64\www\boost\admin\controller\extension\module\ocmegamenu.php on line 503
+2019-07-13 3:19:25 - PHP Warning:  Invalid argument supplied for foreach() in C:\wamp64\www\boost\admin\controller\extension\module\ocmegamenu.php on line 505
+2019-07-13 3:20:16 - PHP Notice:  Undefined index: sub_item_position2 in C:\wamp64\www\boost\admin\controller\extension\module\ocmegamenu.php on line 541
+2019-07-13 3:20:16 - PHP Warning:  Invalid argument supplied for foreach() in C:\wamp64\www\boost\admin\controller\extension\module\ocmegamenu.php on line 543
+2019-07-13 3:20:16 - PHP Notice:  Undefined index: sub_item_position3 in C:\wamp64\www\boost\admin\controller\extension\module\ocmegamenu.php on line 547
+2019-07-13 3:20:16 - PHP Warning:  Invalid argument supplied for foreach() in C:\wamp64\www\boost\admin\controller\extension\module\ocmegamenu.php on line 549

@@ -66,7 +66,7 @@
     <div class="row justify-content-between">
 
       <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-5 my-auto">
-          <a href="index.html" class="logo"><img src="<?php echo $img_path; ?>logo.png" alt="RealBoost"></a>
+          <a href="" class="logo"><img src="<?php echo $img_path; ?>logo.png" alt="RealBoost"></a>
       </div>
 
       <div class="col-lg-6 my-auto dws-hide">
