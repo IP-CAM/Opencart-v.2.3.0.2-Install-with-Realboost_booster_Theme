@@ -473,10 +473,16 @@ class ControllerProductProduct extends Controller {
 			$data['content_top'] = $this->load->controller('common/content_top');
 			$data['content_bottom'] = TemplateLoader::replace($this, $this->load->controller('common/content_bottom'));
 			$data['footer'] = $this->load->controller('common/footer');
-			$data['header'] = $this->load->controller('common/header');
+			
 			$tpl = TemplateLoader::getLayoutProductName($this, $product_id);
 			TemplateLoader::initLinks($this, $data);
 			$tpl = ($tpl)?$tpl:'product/product';
+			
+			if(strpos($tpl,'productordercalibration') ){
+				$this->document->addScript($data['js_path'].'jquery.ddslick.min.js');
+				echo '<script> console.log(` dddd`);</script>';
+			}
+			$data['header'] = $this->load->controller('common/header');
 			//$res = $this->db->query(''); 
 			$this->response->setOutput($this->load->view($tpl, $data));
 		} else {

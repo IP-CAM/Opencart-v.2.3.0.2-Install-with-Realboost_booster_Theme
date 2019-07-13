@@ -114,7 +114,7 @@ $(document).ready(function () {
 		  <a class="popup-with-form" href="#login"><img src="<?php echo $img_path; ?>icons/profile.png" alt="profile"><span><?php echo $logged_name;?></span></a>
 		</div>
 		<div class="cart">
-			  <a href="<?php echo $shopping_cart; ?>"><img src="<?php echo $img_path; ?>icons/cart.png" alt="cart"><span><?php echo $text_shopping_cart; ?></span></a>
+			  <a href="<?php echo $shopping_cart; ?>"><div class="cart-items">2</div><img src="<?php echo $img_path; ?>icons/cart.png" alt="cart"><span><?php echo $text_shopping_cart; ?></span></a>
 			</div>
 	  <?php } else { ?>
 			<div class="login">
@@ -128,10 +128,11 @@ $(document).ready(function () {
       <?php } ?>
       </div>
 
-      <div class="col-2 burger">
+   <div class="col-2 burger">
         <div class="header-menu-container">
           <a href="#"  class="header-menu"><img src="<?php echo $img_path; ?>icons/menu.png" alt="cart"></a>
         </div>
+
       </div>
 
     </div>

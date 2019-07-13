@@ -82,6 +82,7 @@ header {
 .login,
 .cart {
 	display: inline-block;
+	position: relative;
 }
 
 .login a,
@@ -178,9 +179,6 @@ header {
 
 /* slider-banner */
 
-.banner {
-	margin-top: 68px;
-}
 
 .banner h1 {
 	text-transform: uppercase;
@@ -748,6 +746,7 @@ a.left-menu {
 	border-radius: 50%;
 	width: 125px;
 	height: 125px;
+	overflow: hidden;
 }
 .review-img img {
 	width: 100%;
@@ -1622,4 +1621,78 @@ legend {
 	font-size: 28px !important;
 	color: #fff !important;
 	padding: 50px 0 10px!important;
+}
+
+
+.dd-container,
+.dd-select,
+.dd-selected {
+	height: 67px !important;
+	width: 100% !important;
+}
+
+.dd-container label {
+	margin: 0 !important;
+	line-height: 20px;
+	color: #fff!important;
+}
+
+.dd-select {
+ border-radius: 0!important;
+ border: none!important;
+ background: #CECECE!important;
+}
+
+.dd-selected,
+.dd-option {
+	display: flex!important;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	background: #131313!important;
+	padding: 4px 10px!important;
+}
+.dd-option-text {
+	line-height: 20px !important;
+	cursor: pointer;
+	color: #fff !important;
+}
+.dd-option {
+	border-bottom: 1px solid #000!important;
+}
+.dd-option:hover {
+	background: #000!important;
+	transition: 0s;
+}
+
+.dd-option:hover .dd-option-text {
+	color: #ea650a !important;
+}
+
+.dd-options {
+	box-shadow: none!important;
+	border: none !important;
+	height: 192px!important;
+	width: 100% !important;
+}
+.dd-option-image, .dd-selected-image {
+	max-width: 50px !important;
+}
+
+.cart-items {
+	background: rgba(255,255,255,.8);
+	width: 18px;
+	height: 18px;
+	line-height: 18px;
+	text-align: center;
+	border-radius: 50%;
+	font-size: 12px;
+	color: #ea650a;
+	position: absolute;
+	top: 0;
+	left: 20px;
+}
+
+.cart a:hover .cart-items {
+	color: #ea650a;
 }

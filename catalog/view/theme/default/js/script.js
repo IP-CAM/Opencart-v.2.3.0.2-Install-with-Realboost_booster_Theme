@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-
 	$('.popup-with-form').magnificPopup({
 		type: 'inline',
 		preloader: false,
@@ -169,4 +168,9 @@ $('#to-rank').bind('input', function() {
     d5_instance.update({
         from: from
     });
+});
+
+$('#selectRank').ddslick({
+    onSelected: function(selectedData){
+    }   
 });
