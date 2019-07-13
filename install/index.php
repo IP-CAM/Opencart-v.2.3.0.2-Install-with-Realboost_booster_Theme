@@ -1,4 +1,8 @@
 <?php
+
+
+
+
 // Error Reporting
 error_reporting(E_ALL);
 
@@ -25,6 +29,12 @@ define('DIR_CONFIG', DIR_SYSTEM . 'config/');
 define('DIR_IMAGE', str_replace('\\', '/', realpath(DIR_SYSTEM . '../image')) . '/');
 define('DIR_CACHE', DIR_SYSTEM . 'storage/cache/');
 
+//clearing all configs
+if (isset($_GET['clear'])){
+    $oc = DIR_OPENCART;
+    file_put_contents($oc."config.php", "");
+    file_put_contents($oc."admin/config.php", "");
+}
 // Startup
 require_once(DIR_SYSTEM . 'startup.php');
 
