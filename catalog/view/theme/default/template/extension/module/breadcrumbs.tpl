@@ -5,13 +5,20 @@
 
     <h1><?php echo $title; ?></h1>
 	
+    	
+	<?php if ($breadcrumbs){ ?>
     <!-- Хлебные крошки -->
+    
     <div class="bread-crumbs">
       <ul>
-        <li><a href="index.html">Главная</a></li>
-        <li class="active"><a href="#">Заказать буст рейтинга</a></li>
+      	<?php foreach ($breadcrumbs as $crumb){?>
+        <li><a href="<?php echo $crumb['link'] ?>"><?php  echo $crumb['name'];?></a></li>
+        <?php }?>
+        
       </ul>
     </div>
-
+	
+	<?php  } ?>
+  
   </div>
 </div>
