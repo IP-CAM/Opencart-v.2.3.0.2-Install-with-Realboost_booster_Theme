@@ -49,6 +49,7 @@ Allow: /catalog/view/javascript/
 Allow: /catalog/view/theme/*/
 
 
+
 User-agent: Yandex
 Disallow: /*route=account/
 Disallow: /*route=affiliate/
