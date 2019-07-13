@@ -25,8 +25,11 @@ class ControllerExtensionModuleOcmegamenu extends Controller
         $menu_id = $setting['menu'];
         
         $menu = $this->model_extension_module_ocmegamenu->getMenuById($menu_id);
-        
-        $temp['menu_type'] = $menu['menu_type'];
+        if (isset($menu['menu_type'])){
+            $temp['menu_type'] = $menu['menu_type'];
+        } else {
+            return;      
+            }
         
         if($menu) {
             if($menu['status']) {

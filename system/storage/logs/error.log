@@ -1416,3 +1416,13 @@
 2019-07-13 1:46:34 - PHP Warning:  mysqli::query(): Empty query in /home/wavebler/j-web.pro/realboost/system/library/db/mysqli.php on line 18
 2019-07-13 2:10:25 - PHP Warning:  mysqli::query(): Empty query in /home/wavebler/j-web.pro/realboost/system/library/db/mysqli.php on line 18
 2019-07-13 3:06:49 - PHP Notice:  Undefined variable: login in /home/wavebler/j-web.pro/realboost/catalog/view/theme/default/template/common/footer.tpl on line 18
+2019-07-13 20:19:01 - PHP Notice:  Undefined index: menu_type in C:\wamp64\www\boost\catalog\controller\extension\module\ocmegamenu.php on line 29
+2019-07-13 20:21:12 - PHP Notice:  Undefined index: menu_type in C:\wamp64\www\boost\catalog\controller\extension\module\ocmegamenu.php on line 29
+2019-07-13 20:21:30 - PHP Notice:  Undefined index: menu_type in C:\wamp64\www\boost\catalog\controller\extension\module\ocmegamenu.php on line 29
+2019-07-13 20:21:42 - PHP Notice:  Undefined index: menu_type in C:\wamp64\www\boost\catalog\controller\extension\module\ocmegamenu.php on line 29
+2019-07-13 20:21:48 - PHP Notice:  Undefined index: menu_type in C:\wamp64\www\boost\catalog\controller\extension\module\ocmegamenu.php on line 29
+2019-07-13 20:21:55 - PHP Notice:  Undefined index: menu_type in C:\wamp64\www\boost\catalog\controller\extension\module\ocmegamenu.php on line 29
+2019-07-13 20:22:13 - PHP Notice:  Undefined index: menu_type in C:\wamp64\www\boost\catalog\controller\extension\module\ocmegamenu.php on line 29
+2019-07-13 20:22:37 - PHP Notice:  Undefined index: menu_type in C:\wamp64\www\boost\catalog\controller\extension\module\ocmegamenu.php on line 29
+2019-07-13 20:23:14 - PHP Notice:  Undefined index: menu_type in C:\wamp64\www\boost\catalog\controller\extension\module\ocmegamenu.php on line 29
+2019-07-13 20:23:14 - PHP Warning:  mysqli::query(): Empty query in C:\wamp64\www\boost\system\library\db\mysqli.php on line 18

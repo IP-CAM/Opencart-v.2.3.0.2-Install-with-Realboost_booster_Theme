@@ -526,7 +526,7 @@ CREATE TABLE `oc_currency` (
 
 
 INSERT INTO oc_currency VALUES
-("1","Рубль","RUB","","р.","0","1.00000000","1","2019-07-13 03:01:02");
+("1","Рубль","RUB","","р.","0","1.00000000","1","2019-07-13 23:24:51");
 
 
 
@@ -631,7 +631,7 @@ CREATE TABLE `oc_customer` (
 
 
 INSERT INTO oc_customer VALUES
-("1","1","0","1","Client","Client","client@client.com","123543245","","28d56dfc98dd7964e40eac63a7a371e49be2dd94","9gIfkGieD","","","0","0","","46.118.98.36","1","1","1","","","2019-07-13 03:03:01");
+("1","1","0","1","Client","Client","client@client.com","123543245","","524a271ccffa955d5e49b49e8fd7bebb2655e4eb","VQEX9t8VW","","","0","0","[]","46.118.98.36","1","1","1","","","2019-07-13 03:03:01");
 
 
 
@@ -705,11 +705,12 @@ CREATE TABLE `oc_customer_ip` (
   `date_added` datetime NOT NULL,
   PRIMARY KEY (`customer_ip_id`),
   KEY `ip` (`ip`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 
 INSERT INTO oc_customer_ip VALUES
-("1","1","46.118.98.36","2019-07-13 03:04:13");
+("1","1","46.118.98.36","2019-07-13 03:04:13"),
+("2","1","198.16.66.156","2019-07-13 18:03:49");
 
 
 
@@ -725,9 +726,14 @@ CREATE TABLE `oc_customer_login` (
   PRIMARY KEY (`customer_login_id`),
   KEY `email` (`email`),
   KEY `ip` (`ip`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 
+INSERT INTO oc_customer_login VALUES
+("1","jeweller","198.16.74.205","1","2019-07-13 11:09:58","2019-07-13 11:09:58"),
+("2","dragon1myr@gmail.com","198.16.74.205","2","2019-07-13 11:10:15","2019-07-13 11:10:28"),
+("3","dragon1myr@gmail.com","198.16.66.156","1","2019-07-13 18:00:46","2019-07-13 18:00:46"),
+("4","ghjvhv","46.118.98.36","1","2019-07-13 18:02:50","2019-07-13 18:02:50");
 
 
 
@@ -1292,9 +1298,11 @@ CREATE TABLE `oc_megamenu` (
   `name` varchar(255) NOT NULL,
   `menu_type` varchar(255) NOT NULL,
   PRIMARY KEY (`menu_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 
+INSERT INTO oc_megamenu VALUES
+("1","1","TopMenu","horizontal");
 
 
 
@@ -1309,9 +1317,11 @@ CREATE TABLE `oc_megamenu_sub_item` (
   `position` int(11) NOT NULL,
   `link` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`sub_menu_item_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 
+INSERT INTO oc_megamenu_sub_item VALUES
+("2","3","2","1","Заказать Буст Рейтинга","0","uslugi/prokachka-mmr");
 
 
 
@@ -1325,6 +1335,8 @@ CREATE TABLE `oc_megamenu_sub_item_description` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 
+INSERT INTO oc_megamenu_sub_item_description VALUES
+("2","1","Заказать Буст Рейтинга");
 
 
 
@@ -1348,9 +1360,13 @@ CREATE TABLE `oc_megamenu_top_item` (
   `sub_menu_content_columns` int(11) DEFAULT NULL,
   `sub_menu_content` text,
   PRIMARY KEY (`menu_item_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 
+INSERT INTO oc_megamenu_top_item VALUES
+("4","1","1","1","1","0","0","1","Гарантии","guaranties","","left","mega","widget","1","[]"),
+("3","1","1","1","1","1","0","0","Услуги","","","left","mega","widget","1","[]"),
+("5","1","1","1","1","0","0","2","Работа","awork","","left","mega","widget","1","[]");
 
 
 
@@ -1364,6 +1380,10 @@ CREATE TABLE `oc_megamenu_top_item_description` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 
+INSERT INTO oc_megamenu_top_item_description VALUES
+("5","1","Работа"),
+("3","1","Услуги"),
+("4","1","Гарантии");
 
 
 
@@ -1440,7 +1460,7 @@ CREATE TABLE `oc_module` (
   `code` varchar(32) NOT NULL,
   `setting` text NOT NULL,
   PRIMARY KEY (`module_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=45 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=46 DEFAULT CHARSET=utf8;
 
 
 INSERT INTO oc_module VALUES
@@ -1452,7 +1472,8 @@ INSERT INTO oc_module VALUES
 ("36","html-block-гарантии","html","{\"name\":\"html-block-\\u0433\\u0430\\u0440\\u0430\\u043d\\u0442\\u0438\\u0438\",\"module_description\":{\"1\":{\"title\":\"\\u0413\\u0430\\u0440\\u0430\\u043d\\u0442\\u0438\\u0438\",\"description\":\"&lt;!-- Guarantees --&gt;\\r\\n&lt;div class=&quot;guarantees&quot;&gt;\\r\\n  &lt;div class=&quot;container&quot;&gt;\\r\\n\\r\\n    &lt;div class=&quot;guarantees-title def-title&quot;&gt;\\u0413\\u0430\\u0440\\u0430\\u043d\\u0442\\u0438\\u0438&lt;\\/div&gt;\\r\\n\\r\\n    &lt;div class=&quot;row&quot;&gt;\\r\\n\\r\\n      &lt;div class=&quot;col-lg-4 col-md-6 col-sm-12&quot;&gt;\\r\\n        &lt;div class=&quot;guarantees-block&quot;&gt;\\r\\n          &lt;div class=&quot;container-img&quot;&gt;\\r\\n            &lt;img src=&quot;catalog\\/view\\/theme\\/default\\/img\\/guarantees\\/1.png&quot; alt=&quot;#&quot;&gt;\\r\\n          &lt;\\/div&gt;\\r\\n          &lt;p&gt;\\u041c\\u044b \\u043f\\u0440\\u0438\\u043d\\u0438\\u043c\\u0430\\u0435\\u043c \\u043f\\u043b\\u0430\\u0442\\u0435\\u0436\\u0438 \\u0447\\u0435\\u0440\\u0435\\u0437 Robokassa&lt;\\/p&gt;\\r\\n        &lt;\\/div&gt;\\r\\n      &lt;\\/div&gt;\\r\\n\\r\\n      &lt;div class=&quot;col-lg-4 col-md-6 col-sm-12&quot;&gt;\\r\\n        &lt;div class=&quot;guarantees-block&quot;&gt;\\r\\n          &lt;div class=&quot;container-img&quot;&gt;\\r\\n            &lt;img src=&quot;catalog\\/view\\/theme\\/default\\/img\\/guarantees\\/2.png&quot; alt=&quot;#&quot;&gt;\\r\\n          &lt;\\/div&gt;\\r\\n          &lt;p&gt;\\u041c\\u044b \\u043f\\u0440\\u0438\\u043d\\u0438\\u043c\\u0430\\u0435\\u043c \\u043e\\u043f\\u043b\\u0430\\u0442\\u0443 \\u0431\\u043e\\u043b\\u0435\\u0435 \\u0447\\u0435\\u043c 50 \\u0441\\u043f\\u043e\\u0441\\u043e\\u0431\\u0430\\u043c\\u0438&lt;\\/p&gt;\\r\\n        &lt;\\/div&gt;\\r\\n      &lt;\\/div&gt;\\r\\n\\r\\n      &lt;div class=&quot;col-lg-4 col-md-6 col-sm-12&quot;&gt;\\r\\n        &lt;div class=&quot;guarantees-block&quot;&gt;\\r\\n          &lt;div class=&quot;container-img&quot;&gt;\\r\\n            &lt;img src=&quot;catalog\\/view\\/theme\\/default\\/img\\/guarantees\\/3.png&quot; alt=&quot;#&quot;&gt;\\r\\n          &lt;\\/div&gt;\\r\\n          &lt;p&gt;\\u041c\\u044b \\u0430\\u0442\\u0442\\u0435\\u0441\\u0442\\u043e\\u0432\\u0430\\u043d\\u044b WebMoney&lt;\\/p&gt;\\r\\n        &lt;\\/div&gt;\\r\\n      &lt;\\/div&gt;\\r\\n\\r\\n    &lt;\\/div&gt;\\r\\n\\r\\n  &lt;\\/div&gt;\\r\\n&lt;\\/div&gt;\"}},\"status\":\"1\"}"),
 ("37","html-block-orange-block","html","{\"name\":\"html-block-orange-block\",\"module_description\":{\"1\":{\"title\":\"\",\"description\":\"&lt;!-- Orange-text --&gt;\\r\\n&lt;div class=&quot;orange&quot;&gt;\\r\\n  &lt;div class=&quot;container&quot;&gt;\\r\\n\\r\\n    &lt;p class=&quot;orange-text&quot;&gt;\\r\\n      \\u0412\\u0441\\u0435 \\u043d\\u0430\\u0437\\u0432\\u0430\\u043d\\u0438\\u044f \\u043f\\u0440\\u043e\\u0434\\u0443\\u043a\\u0442\\u043e\\u0432, \\u043a\\u043e\\u043c\\u043f\\u0430\\u043d\\u0438\\u0439, \\u043b\\u043e\\u0433\\u043e\\u0442\\u0438\\u043f\\u044b \\u0438 \\u0442\\u043e\\u0432\\u0430\\u0440\\u043d\\u044b\\u0435 \\u0437\\u043d\\u0430\\u043a\\u0438 \\u044f\\u0432\\u043b\\u044f\\u044e\\u0442\\u0441\\u044f \\u0441\\u043e\\u0431\\u0441\\u0442\\u0432\\u0435\\u043d\\u043d\\u043e\\u0441\\u0442\\u044c\\u044e \\u043a\\u043e\\u0440\\u043f\\u043e\\u0440\\u0430\\u0446\\u0438\\u0439 Valve \\u0438 WarGaming, \\u0430 \\u0442\\u0430\\u043a\\u0436\\u0435\\r\\n      \\u0438\\u0445 \\u043b\\u0438\\u0446\\u0435\\u043d\\u0437\\u0438\\u0430\\u0440\\u043e\\u0432. \\u0414\\u0430\\u043d\\u043d\\u044b\\u0439 \\u0441\\u0430\\u0439\\u0442 \\u0444\\u0443\\u043d\\u043a\\u0446\\u0438\\u043e\\u043d\\u0438\\u0440\\u0443\\u0435\\u0442 \\u043a\\u0430\\u043a \\u0442\\u043e\\u0440\\u0433\\u043e\\u0432\\u0430\\u044f \\u043f\\u043b\\u043e\\u0449\\u0430\\u0434\\u043a\\u0430 \\u0438 \\u043d\\u0435 \\u044f\\u0432\\u043b\\u044f\\u0435\\u0442\\u0441\\u044f \\u0441\\u043e\\u0431\\u0441\\u0442\\u0432\\u0435\\u043d\\u043d\\u0438\\u043a\\u043e\\u043c \\r\\n      \\u043f\\u0440\\u043e\\u0434\\u0430\\u0432\\u0430\\u0435\\u043c\\u044b\\u0445 \\u0442\\u043e\\u0432\\u0430\\u0440\\u043e\\u0432\\/\\u0443\\u0441\\u043b\\u0443\\u0433. \\u0412\\u0441\\u0435 \\u043f\\u0440\\u0430\\u0432\\u0430 \\u043f\\u0440\\u0438\\u043d\\u0430\\u0434\\u043b\\u0435\\u0436\\u0430\\u0442 \\u0438\\u0445 \\u0432\\u043b\\u0430\\u0434\\u0435\\u043b\\u044c\\u0446\\u0430\\u043c. \\r\\n    &lt;\\/p&gt;\\r\\n\\r\\n  &lt;\\/div&gt;\\r\\n&lt;\\/div&gt;\"}},\"status\":\"1\"}"),
 ("39","html-block-why-boost","html","{\"name\":\"html-block-why-boost\",\"module_description\":{\"1\":{\"title\":\"html-block-why-boost\",\"description\":\"\\r\\n&lt;!-- why-boost --&gt;\\r\\n&lt;div class=&quot;whyBoost&quot;&gt;\\r\\n  &lt;div class=&quot;container&quot;&gt;\\r\\n\\r\\n    &lt;div class=&quot;def-title whyBoost-title&quot;&gt;\\u0417\\u0430\\u0447\\u0435\\u043c \\u043d\\u0443\\u0436\\u0435\\u043d &lt;br&gt; \\u0431\\u0443\\u0441\\u0442 \\u0440\\u0435\\u0439\\u0442\\u0438\\u043d\\u0433\\u0430 \\u0432 Dota 2&lt;\\/div&gt;\\r\\n    &lt;div class=&quot;row&quot;&gt;\\r\\n\\r\\n      &lt;div class=&quot;col-lg-4 col-md-6&quot;&gt;\\r\\n        &lt;div class=&quot;infoBoost&quot;&gt;\\r\\n          &lt;div class=&quot;infoBoost-title&quot;&gt;\\u042d\\u0442\\u043e \\u043f\\u043e\\u043c\\u043e\\u0436\\u0435\\u0442 \\u0442\\u0435\\u0431\\u0435&lt;\\/div&gt;\\r\\n\\r\\n          &lt;ul&gt;\\r\\n            &lt;li&gt;\\u0418\\u0433\\u0440\\u0430\\u0442\\u044c \\u0441 \\u0430\\u0434\\u0435\\u043a\\u0432\\u0430\\u0442\\u043d\\u044b\\u043c\\u0438 \\u0441\\u043e\\u044e\\u0437\\u043d\\u0438\\u043a\\u0430\\u043c\\u0438&lt;\\/li&gt;\\r\\n            &lt;li&gt;\\u041f\\u043e\\u0432\\u044b\\u0441\\u0438\\u0442\\u044c \\u0441\\u0442\\u0430\\u0442\\u0438\\u0441\\u0442\\u0438\\u043a\\u0443 \\u0430\\u043a\\u043a\\u0430\\u0443\\u043d\\u0442\\u0430&lt;\\/li&gt;\\r\\n            &lt;li&gt;\\u041f\\u043e\\u043b\\u0443\\u0447\\u0430\\u0442\\u044c \\u0443\\u0434\\u043e\\u0432\\u043e\\u043b\\u044c\\u0441\\u0442\\u0432\\u0438\\u0435 \\u043e\\u0442 \\u0438\\u0433\\u0440\\u044b&lt;\\/li&gt;\\r\\n          &lt;\\/ul&gt;\\r\\n        &lt;\\/div&gt;\\r\\n      &lt;\\/div&gt;\\r\\n\\r\\n      &lt;div class=&quot;col-lg-4 col-md-6&quot;&gt;\\r\\n        &lt;div class=&quot;infoBoost&quot;&gt;\\r\\n          &lt;div class=&quot;infoBoost-title&quot;&gt;\\u042d\\u0442\\u043e \\u0431\\u0435\\u0437\\u043e\\u043f\\u0430\\u0441\\u043d\\u043e&lt;\\/div&gt;\\r\\n\\r\\n          &lt;ul&gt;\\r\\n            &lt;li&gt;\\u0412\\u0441\\u0435 \\u0431\\u0443\\u0441\\u0442\\u0435\\u0440\\u044b \\u043f\\u0440\\u043e\\u0448\\u043b\\u0438 \\u043f\\u0440\\u043e\\u0432\\u0435\\u0440\\u043a\\u0443&lt;\\/li&gt;\\r\\n            &lt;li&gt;\\u0420\\u0430\\u0431\\u043e\\u0442\\u0430\\u0435\\u043c \\u0430\\u043d\\u043e\\u043d\\u0438\\u043c\\u043d\\u043e&lt;\\/li&gt;\\r\\n            &lt;li&gt;\\u0411\\u0430\\u043d \\u043d\\u0435\\u0432\\u043e\\u0437\\u043c\\u043e\\u0436\\u0435\\u043d, \\u0438\\u0441\\u043f\\u043e\\u043b\\u044c\\u0437\\u0443\\u0435\\u043c VPN&lt;\\/li&gt;\\r\\n          &lt;\\/ul&gt;\\r\\n        &lt;\\/div&gt;\\r\\n      &lt;\\/div&gt;\\r\\n\\r\\n      &lt;div class=&quot;col-lg-4 col-md-12&quot;&gt;\\r\\n        &lt;div class=&quot;infoBoost&quot;&gt;\\r\\n          &lt;div class=&quot;infoBoost-title&quot;&gt;\\u041f\\u043e\\u0447\\u0435\\u043c\\u0443 \\u043c\\u044b&lt;\\/div&gt;\\r\\n\\r\\n          &lt;ul&gt;\\r\\n            &lt;li&gt;\\u0420\\u0430\\u0431\\u043e\\u0442\\u0430\\u0435\\u043c \\u0441 2015 \\u0433\\u043e\\u0434\\u0430&lt;\\/li&gt;\\r\\n            &lt;li&gt;\\u041a\\u043e\\u043c\\u0430\\u043d\\u0434\\u0430 \\u0422\\u041e\\u041f-500 \\u0411\\u0443\\u0441\\u0442\\u0435\\u0440\\u043e\\u0432&lt;\\/li&gt;\\r\\n            &lt;li&gt;\\u041e\\u043d\\u043b\\u0430\\u0439\\u043d \\u043a\\u043e\\u043d\\u0442\\u0440\\u043e\\u043b\\u044c \\u0438 \\u0447\\u0430\\u0442 \\u043d\\u0430 \\u0437\\u0430\\u043a\\u0430\\u0437\\u0435&lt;\\/li&gt;\\r\\n          &lt;\\/ul&gt;\\r\\n        &lt;\\/div&gt;\\r\\n      &lt;\\/div&gt;\\r\\n\\r\\n    &lt;\\/div&gt;\\r\\n  &lt;\\/div&gt;\\r\\n&lt;\\/div&gt;\\r\\n\"}},\"status\":\"1\"}"),
-("40","html-block-security","html","{\"name\":\"html-block-security\",\"module_description\":{\"1\":{\"title\":\"html-block-security\",\"description\":\"&lt;!-- security --&gt;\\r\\n&lt;div class=&quot;security&quot;&gt;\\r\\n  &lt;div class=&quot;container&quot;&gt;\\r\\n    &lt;div class=&quot;def-title&quot;&gt;\\u0412\\u0430\\u0448 \\u0430\\u043a\\u043a\\u0430\\u0443\\u043d\\u0442 \\u0432 \\u0431\\u0435\\u0437\\u043e\\u043f\\u0430\\u0441\\u043d\\u043e\\u0441\\u0442\\u0438!&lt;\\/div&gt;\\r\\n    &lt;div class=&quot;row&quot;&gt;\\r\\n\\r\\n      &lt;div class=&quot;col-lg-6 col-md-12&quot;&gt;\\r\\n        &lt;div class=&quot;security-block&quot;&gt;\\r\\n\\r\\n          &lt;div class=&quot;security-block_left&quot;&gt;\\r\\n            &lt;img src=&quot;img\\/icons\\/people.png&quot; alt=&quot;people&quot;&gt;\\r\\n          &lt;\\/div&gt;\\r\\n\\r\\n          &lt;div class=&quot;security-block_right&quot;&gt;\\r\\n            &lt;div class=&quot;security-block_title&quot;&gt;\\u0421\\u0435\\u043c\\u0435\\u0439\\u043d\\u044b\\u0439 \\u043f\\u0440\\u043e\\u0441\\u043c\\u043e\\u0442\\u0440&lt;\\/div&gt;\\r\\n            &lt;div class=&quot;security-block_descr&quot;&gt;\\r\\n              \\u041e\\u0431\\u0435\\u0441\\u043f\\u0435\\u0447\\u0438\\u0432\\u0430\\u0435\\u0442 \\u043e\\u0441\\u043d\\u043e\\u0432\\u043d\\u0443\\u044e \\u0431\\u0435\\u0437\\u043e\\u043f\\u0430\\u0441\\u043d\\u043e\\u0441\\u0442\\u044c\\r\\n              \\u0430\\u043a\\u043a\\u0430\\u0443\\u043d\\u0442\\u0430. \\u041d\\u0435 \\u0438\\u043c\\u0435\\u044f \\u043f\\u0438\\u043d \\u043a\\u043e\\u0434\\u0430 \\u0438 \\u0434\\u043e\\u0441\\u0442\\u0443\\u043f\\u0430 \\u043a\\r\\n              \\u043f\\u043e\\u0447\\u0442\\u0435, \\u043d\\u0438\\u043a\\u0442\\u043e \\u043d\\u0435 \\u0441\\u043c\\u043e\\u0436\\u0435\\u0442 \\u043f\\u043e\\u043b\\u0443\\u0447\\u0438\\u0442\\u044c \\u0434\\u043e\\u0441\\u0442\\u0443\\u043f \\u043a\\r\\n              \\u0438\\u0437\\u043c\\u0435\\u043d\\u0435\\u043d\\u0438\\u044e \\u0434\\u0430\\u043d\\u043d\\u044b\\u0445 \\u0412\\u0430\\u0448\\u0435\\u0433\\u043e \\u0430\\u043a\\u043a\\u0430\\u0443\\u043d\\u0442\\u0430.\\r\\n            &lt;\\/div&gt;\\r\\n          &lt;\\/div&gt;\\r\\n\\r\\n        &lt;\\/div&gt;\\r\\n      &lt;\\/div&gt;\\r\\n\\r\\n      &lt;div class=&quot;col-lg-6 col-md-12&quot;&gt;\\r\\n        &lt;div class=&quot;security-block&quot;&gt;\\r\\n\\r\\n          &lt;div class=&quot;security-block_left&quot;&gt;\\r\\n            &lt;img src=&quot;img\\/icons\\/eye.png&quot; alt=&quot;eye&quot;&gt;\\r\\n          &lt;\\/div&gt;\\r\\n\\r\\n          &lt;div class=&quot;security-block_right&quot;&gt;\\r\\n            &lt;div class=&quot;security-block_title&quot;&gt;\\u041b\\u0435\\u043d\\u0442\\u0430 \\u0430\\u043a\\u0442\\u0438\\u0432\\u043d\\u043e\\u0441\\u0442\\u0438&lt;\\/div&gt;\\r\\n            &lt;div class=&quot;security-block_descr&quot;&gt;\\r\\n              \\u041f\\u043e\\u0437\\u0432\\u043e\\u043b\\u044f\\u0435\\u0442 \\u0441\\u043c\\u043e\\u0442\\u0440\\u0435\\u0442\\u044c \\u0437\\u0430 \\u0432\\u0441\\u0435\\u043c\\u0438 \\u0441\\u043e\\u0431\\u044b\\u0442\\u0438\\u044f\\u043c\\u0438 \\u043d\\u0430\\r\\n              \\u0430\\u043a\\u043a\\u0430\\u0443\\u043d\\u0442\\u0435 \\u0432 \\u0440\\u0435\\u0436\\u0438\\u043c\\u0435 \\u043e\\u043d\\u043b\\u0430\\u0439\\u043d. \\u0412\\u044b \\u043c\\u043e\\u0436\\u0435\\u0442\\u0435 \\u043f\\u043e\\u0441\\u043c\\u043e\\u0442\\u0440\\u0435\\u0442\\u044c\\r\\n              \\u043f\\u043e\\u0431\\u0435\\u0434\\u044b, \\u043f\\u043e\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u044f. \\u042d\\u0442\\u043e \\u0432\\u043e\\u0437\\u043c\\u043e\\u0436\\u043d\\u043e \\u0431\\u043b\\u0430\\u0433\\u043e\\u0434\\u0440\\u044f \\u0442\\u043e\\u043c\\u0443,\\r\\n              \\u0447\\u0442\\u043e \\u043c\\u044b \\u0438\\u0441\\u043f\\u043e\\u043b\\u044c\\u0437\\u0443\\u0435\\u043c CRM \\u0441\\u0438\\u0441\\u0442\\u0435\\u043c\\u0443 \\u0434\\u043b\\u044f \\u0440\\u0430\\u0431\\u043e\\u0442\\u044b \\u0431\\u0443\\u0441\\u0442\\u0435\\u0440\\u043e\\u0432.\\r\\n            &lt;\\/div&gt;\\r\\n          &lt;\\/div&gt;\\r\\n\\r\\n        &lt;\\/div&gt;\\r\\n      &lt;\\/div&gt;\\r\\n\\r\\n    &lt;\\/div&gt;\\r\\n  &lt;\\/div&gt;\\r\\n&lt;\\/div&gt;\\r\\n\\r\\n\"}},\"status\":\"1\"}");
+("40","html-block-security","html","{\"name\":\"html-block-security\",\"module_description\":{\"1\":{\"title\":\"html-block-security\",\"description\":\"&lt;!-- security --&gt;\\r\\n&lt;div class=&quot;security&quot;&gt;\\r\\n  &lt;div class=&quot;container&quot;&gt;\\r\\n    &lt;div class=&quot;def-title&quot;&gt;\\u0412\\u0430\\u0448 \\u0430\\u043a\\u043a\\u0430\\u0443\\u043d\\u0442 \\u0432 \\u0431\\u0435\\u0437\\u043e\\u043f\\u0430\\u0441\\u043d\\u043e\\u0441\\u0442\\u0438!&lt;\\/div&gt;\\r\\n    &lt;div class=&quot;row&quot;&gt;\\r\\n\\r\\n      &lt;div class=&quot;col-lg-6 col-md-12&quot;&gt;\\r\\n        &lt;div class=&quot;security-block&quot;&gt;\\r\\n\\r\\n          &lt;div class=&quot;security-block_left&quot;&gt;\\r\\n            &lt;img src=&quot;img\\/icons\\/people.png&quot; alt=&quot;people&quot;&gt;\\r\\n          &lt;\\/div&gt;\\r\\n\\r\\n          &lt;div class=&quot;security-block_right&quot;&gt;\\r\\n            &lt;div class=&quot;security-block_title&quot;&gt;\\u0421\\u0435\\u043c\\u0435\\u0439\\u043d\\u044b\\u0439 \\u043f\\u0440\\u043e\\u0441\\u043c\\u043e\\u0442\\u0440&lt;\\/div&gt;\\r\\n            &lt;div class=&quot;security-block_descr&quot;&gt;\\r\\n              \\u041e\\u0431\\u0435\\u0441\\u043f\\u0435\\u0447\\u0438\\u0432\\u0430\\u0435\\u0442 \\u043e\\u0441\\u043d\\u043e\\u0432\\u043d\\u0443\\u044e \\u0431\\u0435\\u0437\\u043e\\u043f\\u0430\\u0441\\u043d\\u043e\\u0441\\u0442\\u044c\\r\\n              \\u0430\\u043a\\u043a\\u0430\\u0443\\u043d\\u0442\\u0430. \\u041d\\u0435 \\u0438\\u043c\\u0435\\u044f \\u043f\\u0438\\u043d \\u043a\\u043e\\u0434\\u0430 \\u0438 \\u0434\\u043e\\u0441\\u0442\\u0443\\u043f\\u0430 \\u043a\\r\\n              \\u043f\\u043e\\u0447\\u0442\\u0435, \\u043d\\u0438\\u043a\\u0442\\u043e \\u043d\\u0435 \\u0441\\u043c\\u043e\\u0436\\u0435\\u0442 \\u043f\\u043e\\u043b\\u0443\\u0447\\u0438\\u0442\\u044c \\u0434\\u043e\\u0441\\u0442\\u0443\\u043f \\u043a\\r\\n              \\u0438\\u0437\\u043c\\u0435\\u043d\\u0435\\u043d\\u0438\\u044e \\u0434\\u0430\\u043d\\u043d\\u044b\\u0445 \\u0412\\u0430\\u0448\\u0435\\u0433\\u043e \\u0430\\u043a\\u043a\\u0430\\u0443\\u043d\\u0442\\u0430.\\r\\n            &lt;\\/div&gt;\\r\\n          &lt;\\/div&gt;\\r\\n\\r\\n        &lt;\\/div&gt;\\r\\n      &lt;\\/div&gt;\\r\\n\\r\\n      &lt;div class=&quot;col-lg-6 col-md-12&quot;&gt;\\r\\n        &lt;div class=&quot;security-block&quot;&gt;\\r\\n\\r\\n          &lt;div class=&quot;security-block_left&quot;&gt;\\r\\n            &lt;img src=&quot;img\\/icons\\/eye.png&quot; alt=&quot;eye&quot;&gt;\\r\\n          &lt;\\/div&gt;\\r\\n\\r\\n          &lt;div class=&quot;security-block_right&quot;&gt;\\r\\n            &lt;div class=&quot;security-block_title&quot;&gt;\\u041b\\u0435\\u043d\\u0442\\u0430 \\u0430\\u043a\\u0442\\u0438\\u0432\\u043d\\u043e\\u0441\\u0442\\u0438&lt;\\/div&gt;\\r\\n            &lt;div class=&quot;security-block_descr&quot;&gt;\\r\\n              \\u041f\\u043e\\u0437\\u0432\\u043e\\u043b\\u044f\\u0435\\u0442 \\u0441\\u043c\\u043e\\u0442\\u0440\\u0435\\u0442\\u044c \\u0437\\u0430 \\u0432\\u0441\\u0435\\u043c\\u0438 \\u0441\\u043e\\u0431\\u044b\\u0442\\u0438\\u044f\\u043c\\u0438 \\u043d\\u0430\\r\\n              \\u0430\\u043a\\u043a\\u0430\\u0443\\u043d\\u0442\\u0435 \\u0432 \\u0440\\u0435\\u0436\\u0438\\u043c\\u0435 \\u043e\\u043d\\u043b\\u0430\\u0439\\u043d. \\u0412\\u044b \\u043c\\u043e\\u0436\\u0435\\u0442\\u0435 \\u043f\\u043e\\u0441\\u043c\\u043e\\u0442\\u0440\\u0435\\u0442\\u044c\\r\\n              \\u043f\\u043e\\u0431\\u0435\\u0434\\u044b, \\u043f\\u043e\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u044f. \\u042d\\u0442\\u043e \\u0432\\u043e\\u0437\\u043c\\u043e\\u0436\\u043d\\u043e \\u0431\\u043b\\u0430\\u0433\\u043e\\u0434\\u0440\\u044f \\u0442\\u043e\\u043c\\u0443,\\r\\n              \\u0447\\u0442\\u043e \\u043c\\u044b \\u0438\\u0441\\u043f\\u043e\\u043b\\u044c\\u0437\\u0443\\u0435\\u043c CRM \\u0441\\u0438\\u0441\\u0442\\u0435\\u043c\\u0443 \\u0434\\u043b\\u044f \\u0440\\u0430\\u0431\\u043e\\u0442\\u044b \\u0431\\u0443\\u0441\\u0442\\u0435\\u0440\\u043e\\u0432.\\r\\n            &lt;\\/div&gt;\\r\\n          &lt;\\/div&gt;\\r\\n\\r\\n        &lt;\\/div&gt;\\r\\n      &lt;\\/div&gt;\\r\\n\\r\\n    &lt;\\/div&gt;\\r\\n  &lt;\\/div&gt;\\r\\n&lt;\\/div&gt;\\r\\n\\r\\n\"}},\"status\":\"1\"}"),
+("45","MainMenu","ocmegamenu","{\"name\":\"MainMenu\",\"status\":\"1\",\"menu\":\"No menus\",\"effect\":\"none\",\"menu_height\":\"40px\",\"menu_bg\":\"FFFFFF\",\"menu_text_color\":\"FFFFFF\",\"menu_pd_top\":\"0px\",\"menu_pd_right\":\"0px\",\"menu_pd_bottom\":\"0px\",\"menu_pd_left\":\"0px\",\"item_bg\":\"FFFFFF\",\"item_bg_hover\":\"FFFFFF\",\"item_font_color\":\"FFFFFF\",\"item_font_size\":\"14px\",\"item_font_transform\":\"none\",\"item_font_weight\":\"400\",\"item_font_color_hover\":\"FFFFFF\",\"item_font_weight_hover\":\"400\",\"item_show\":\"5\",\"mega_menu_bg\":\"FFFFFF\",\"mega_text_color\":\"FFFFFF\",\"mega_menu_width\":\"100%\",\"mega_menu_pd_top\":\"0px\",\"mega_menu_pd_right\":\"0px\",\"mega_menu_pd_bottom\":\"0px\",\"mega_menu_pd_left\":\"0px\",\"second_item_bg\":\"FFFFFF\",\"second_item_bg_hover\":\"FFFFFF\",\"second_item_font_color\":\"FFFFFF\",\"second_item_font_size\":\"12px\",\"second_item_font_transform\":\"none\",\"second_item_font_weight\":\"400\",\"second_item_font_color_hover\":\"FFFFFF\",\"second_item_font_weight_hover\":\"400\",\"third_item_bg\":\"FFFFFF\",\"third_item_bg_hover\":\"FFFFFF\",\"third_item_font_color\":\"FFFFFF\",\"third_item_font_size\":\"11px\",\"third_item_font_transform\":\"none\",\"third_item_font_weight\":\"400\",\"third_item_font_color_hover\":\"FFFFFF\",\"third_item_font_weight_hover\":\"400\"}");
 
 
 
@@ -2124,10 +2145,10 @@ CREATE TABLE `oc_product` (
 
 
 INSERT INTO oc_product VALUES
-("50","mmrboost","","","","","","","","1","7","","0","1","0.0000","0","0","2019-07-06","0.00000000","1","0.00000000","0.00000000","0.00000000","1","1","1","1","1","53","2019-07-06 13:41:04","2019-07-11 14:26:02"),
+("50","mmrboost","","","","","","","","1","7","","0","1","0.0000","0","0","2019-07-06","0.00000000","1","0.00000000","0.00000000","0.00000000","1","1","1","1","1","61","2019-07-06 13:41:04","2019-07-11 14:26:02"),
 ("51","mmrlowprior","","","","","","","","1","7","","0","1","0.0000","0","0","2019-07-08","0.00000000","1","0.00000000","0.00000000","0.00000000","1","1","1","1","1","0","2019-07-08 22:01:31","2019-07-08 22:04:51"),
-("52","calibration","","","","","","","","1","7","","0","1","1350.0000","0","0","2019-07-12","0.00000000","1","0.00000000","0.00000000","0.00000000","1","1","1","1","1","57","2019-07-12 04:34:24","2019-07-13 01:21:38"),
-("55","тренировка","","","","","","","","1","7","","0","1","0.0000","0","0","2019-07-12","0.00000000","1","0.00000000","0.00000000","0.00000000","1","1","1","1","1","11","2019-07-12 05:41:29","2019-07-12 05:43:05"),
+("52","calibration","","","","","","","","1","7","","0","1","1350.0000","0","0","2019-07-12","0.00000000","1","0.00000000","0.00000000","0.00000000","1","1","1","1","1","61","2019-07-12 04:34:24","2019-07-13 01:21:38"),
+("55","тренировка","","","","","","","","1","7","","0","1","0.0000","0","0","2019-07-12","0.00000000","1","0.00000000","0.00000000","0.00000000","1","1","1","1","1","16","2019-07-12 05:41:29","2019-07-12 05:43:05"),
 ("54","выиграть кубок","","","","","","","","1","7","","0","1","0.0000","0","0","2019-07-12","0.00000000","1","0.00000000","0.00000000","0.00000000","1","1","1","1","1","12","2019-07-12 05:12:37","2019-07-12 05:13:01");
 
 

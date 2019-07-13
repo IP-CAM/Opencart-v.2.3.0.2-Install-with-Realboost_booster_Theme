@@ -18,7 +18,18 @@ $(document).ready(function() {
 		}
 	});
 
+	
+	
+	/* catch module_header_menu*/
+	$('.dws-menu a').each(function () {
+		if (this.href == window.location) {
+			$(this).addClass('active');
+		}
+	});
+	
+	
 
+	
 $(".header-menu").click(function(e){
 			e.preventDefault();
 			$("#menu").toggleClass("show");
