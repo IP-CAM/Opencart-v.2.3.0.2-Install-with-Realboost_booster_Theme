@@ -72,67 +72,41 @@
       <div class="col-lg-6 my-auto dws-hide">
         <nav class="dws-menu">
           <ul>
-          	<?php if (isset($menu['items'])){
-          	    foreach ($menu['items'] as $value) {?>
-                    <li><a <?php echo ($value['has_link'])?'href="'.$value['link'].'"':'';?>><?php echo $value['title'];?>   <?php echo (!empty($value['sub_items']))?'<img src="'.$img_path.'icons/bottom-arrow.png" alt="arrow"> ':'';?></a>
-                      <?php if (!empty($value['sub_items'])){?>
-                      <ul>
-                      	<?php foreach($value['sub_items'] as $val){?>
-                      		
-                        	<li><a href="<?php echo $val['link'];?>"><?php echo $val['title'];?></a></li>
-                       		<?php  if(!empty($val['sub_items'])){?>
-                       		    <?php foreach($val['sub_items'] as $val){?>
-                       		    	<li><a href="<?php echo $val['link'];?>"><?php echo $val['title'];?></a></li>
-                       		    <?php }?>
-                       		<?php } ?>
-                        <?php }?>
-                        
-                      </ul>
-                      <?php }?>
-                      
-                    </li>
-            	<?php }
-          	}?>
-           
+            <li><a href="#">Услуги <img src="<?php echo $img_path; ?>icons/bottom-arrow.png" alt="arrow"></a>
+              <ul>
+                <li><a href="uslugi/prokachka-mmr">заказать буст рейтинга</a></li>
+                <li><a href="uslugi/kalibrovka">Заказать калибровку</a></li>
+                <li><a href="uslugi/prokachka-mmr">Слить Лоу приорити</a></li>
+                <li><a href="uslugi/winbattlecup">Победить Battle Cup</a></li>
+                <li><a href="uslugi/trenirovka">Обучение от бустеров</a></li>
+              </ul>
+            </li>
+            <li><a href="guaranties">Гарантии</a></li>
+            <li><a href="awork">Работа</a></li>
           </ul>
         </nav>
       </div>
-<script>
-$(document).ready(function () {
-	$('.dws-menu a').each(function () {
-		if (this.href == window.location) {
-			$(this).addClass('active');
-		}
-	});
-});
-</script>
 
       <div class="col-xl-3 col-lg-2 col-md-5 col-sm-3 col-4 my-auto between">
-	  <?php if ($logged) { ?>
-		<div class="login">
-			  
-		  <a class="popup-with-form" href="#login"><img src="<?php echo $img_path; ?>icons/profile.png" alt="profile"><span><?php echo $logged_name;?></span></a>
-		</div>
-		<div class="cart">
-			  <a href="<?php echo $shopping_cart; ?>"><div class="cart-items">2</div><img src="<?php echo $img_path; ?>icons/cart.png" alt="cart"><span><?php echo $text_shopping_cart; ?></span></a>
-			</div>
-	  <?php } else { ?>
-			<div class="login">
-			  
-			  <a class="popup-with-form" href="#login"><img src="<?php echo $img_path; ?>icons/profile.png" alt="profile"><span>Войти</span></a>
-			</div>
+	  
 
-			<div class="cart">
-			  <a href="#"><img src="<?php echo $img_path; ?>icons/cart.png" alt="cart"><span>Корзина</span></a>
-			</div>
-      <?php } ?>
+
+	  <?php if ($logo) { ?>
+        <div class="login">
+          
+          <a class="popup-with-form" href="#login"><img src="<?php echo $img_path; ?>icons/profile.png" alt="profile"><span>Войти</span></a>
+        </div>
+
+        <div class="cart">
+          <a href="#"><div class="cart-items">2</div><img src="<?php echo $img_path; ?>icons/cart.png" alt="cart"><span>Корзина</span></a>
+        </div>
+      <?php } ?>  
       </div>
-
-   <div class="col-2 burger">
+	
+      <div class="col-2 burger">
         <div class="header-menu-container">
           <a href="#"  class="header-menu"><img src="<?php echo $img_path; ?>icons/menu.png" alt="cart"></a>
         </div>
-
       </div>
 
     </div>
