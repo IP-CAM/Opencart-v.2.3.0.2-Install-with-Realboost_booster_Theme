@@ -1,6 +1,13 @@
 <?php
 class ControllerCheckoutCart extends Controller {
+    private  function filter_arrays($a){
+       return $a!=false;
+    }
+    
 	public function index() {
+	    //$this->load->controller('checkout/checkout');
+	    if (!isset($this->response->get['nooo'])){
+	        $this->response->redirect($this->url->link('checkout/checkout'));}
 		$this->load->language('checkout/cart');
 
 		$this->document->setTitle($this->language->get('heading_title'));
@@ -306,7 +313,7 @@ class ControllerCheckoutCart extends Controller {
 			}
             
 			if (isset($this->request->post['option'])) {
-				$option = array_filter($this->request->post['option']);
+				$option = array_filter($this->request->post['option'],array($this,'filter_arrays'));
 			} else {
 				$option = array();
 			}
@@ -314,7 +321,7 @@ class ControllerCheckoutCart extends Controller {
 			$product_options = $this->model_catalog_product->getProductOptions($this->request->post['product_id']);
 
 			foreach ($product_options as $product_option) {
-				if ($product_option['required'] && empty($option[$product_option['product_option_id']])) {
+				if ($product_option['required'] && ($option[$product_option['product_option_id']]===false)) {
 					$json['error']['option'][$product_option['product_option_id']] = sprintf($this->language->get('error_required'), $product_option['name']);
 				}
 			}

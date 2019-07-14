@@ -12,7 +12,7 @@
     <div class="bread-crumbs">
       <ul>
       	<?php foreach ($breadcrumbs as $crumb){?>
-        <li><a href="<?php echo $crumb['link'] ?>"><?php  echo $crumb['name'];?></a></li>
+        <li><a href="<?php echo $crumb['href'] ?>"><?php  echo $crumb['text'];?></a></li>
         <?php }?>
         
       </ul>

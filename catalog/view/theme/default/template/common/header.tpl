@@ -114,7 +114,7 @@
 			</div>
 
 			<div class="cart">
-			  <a href="#"><img src="<?php echo $img_path; ?>icons/cart.png" alt="cart"><span>Корзина</span></a>
+			  <a href="<?php echo $shopping_cart; ?>"><img src="<?php echo $img_path; ?>icons/cart.png" alt="cart"><span>Корзина</span></a>
 			</div>
       <?php } ?>
       </div>

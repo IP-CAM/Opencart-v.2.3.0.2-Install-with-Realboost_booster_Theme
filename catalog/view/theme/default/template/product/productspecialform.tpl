@@ -53,53 +53,60 @@
     <div class="container">
       <div class="boost-calculator">
         <div class="boost-calculator-title">Калькулятор</div>
-        <form>
-          <div class="row">
-    		<div class="offset-lg-3 col-lg-2 offset-md-0 col-md-3">
-              <label for="from-rank" class="calculator-subtitle">Текущий ММР</label>
-              <input type="number" id="from-rank" value="0" min="0" max="7000" step="100" required="">
-            </div>
-    
-            <div class="col-lg-2 col-md-6">
-              <div class="add-mmr">+ 0 MMR</div>
-              <input type="text" id="boost-rank-slider" name="my_range" value="" />
-            </div>
-    
-            <div class="col-lg-2 col-md-3">
-              <div class="calculator-subtitle">Конечный ММР</div>
-              <input type="number" id="to-rank" value="0" min="0" max="7000" step="100" required="">
-            </div>
-          </div>
-    
-            <div class="boost-calculator-bottom">
+        <form id="product">
               <div class="row">
-                
-                <div class="offset-lg-2 col-lg-6">
-                <?php foreach($options as $option): 
-                    if ($option['name']=='boost_opt'):
-                    foreach($option['product_option_value']as $val):?>
-                	
-                          <label class="container"><?php echo $val['name'];?><span class="percent"> (<?php echo str_replace('р.',$val['price_prefix'], $val['price']);?>)</span>
-                            <input type="checkbox" class="party-mmr">
-                            <span class="checkmark"></span>
-                          </label>
-                      <?php endforeach; 
-                	 endif;
-    			 endforeach;?>
+        		<div class="offset-lg-3 col-lg-2 offset-md-0 col-md-3">
+                  <label for="from-rank" class="calculator-subtitle">Текущий ММР</label>
+                  <input type="number"  id="from-rank" value="0" min="0" max="7000" step="100" required="">
+                  <input type="hidden" name="option[array_current_mmr_id]"  id="from-rank-hidden" value="" />
+                </div>
+        
+                <div class="col-lg-2 col-md-6">
+                  <div class="add-mmr">+ 0 MMR</div>
+                  <input type="text" id="boost-rank-slider" name="my_range" value="" />
                   
+                </div>
+        
+                <div class="col-lg-2 col-md-3">
+                  <div class="calculator-subtitle">Конечный ММР</div>
+                  <input type="number" id="to-rank" value="0" min="0" max="7000" step="100" required="">
+                  <input type="hidden" name="option[array_current_mmr_id]"  id="to-rank-hidden" value="" />
+                </div>
               </div>
-    
+        
+                <div class="boost-calculator-bottom">
+             <div class="row">
+                    
+                        <div class="offset-lg-2 col-lg-6">
+                        <?php foreach($options as $option): 
+                            if ($option['name']=='boost_opt'):
+                            foreach($option['product_option_value']as $val):?>
+                        	
+                                  <label class="container"><?php echo $val['name'];?>
+                                  <span class="percent"> (<?php echo str_replace('р.',$val['price_prefix'], $val['price']);?>)</span>
+                                    <input type="checkbox" class="option_class" name = "option[<?php echo $option['product_option_id']?>][]" value="<?php echo $val['product_option_value_id'];?>">
+                                    <span class="checkmark"></span>
+                                  </label>
+                              <?php endforeach; 
+                        	 endif;
+            			 endforeach;?>
+                          
+                      </div>
             
-            <div class="col-lg-4">
-              <div class="price"><span>100</span> руб.</div>
-              <div class="term">Сроки <span>2-3</span> дня</div>
-            </div>
-    
-            <div class="col-lg-12">
-              <a href="#" class="button">Подготовить аккаунт</a>
-            </div>
-    
-            </div>
+                    
+                    <div class="col-lg-4">
+                      <div class="price"><span>100</span> руб.</div>
+                      <div class="term">Сроки <span>2-3</span> дня</div>
+                    </div>
+            
+                    <div class="col-lg-12">
+                    	<input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
+                    	
+                     		 <a id = "button-cart" class="button">Подготовить аккаунт</a>
+                      
+                    </div>
+        
+                </div>
     
     
         </form>
@@ -207,7 +214,61 @@
 
  
 </div>
+<script>
+$('#button-cart').on('click', function() {
+	$.ajax({
+		url: 'index.php?route=checkout/cart/add',
+		type: 'post',
+		data: $('#product input[type=\'text\'], #product input[type=\'hidden\'], #product input[type=\'radio\']:checked,  #product input[type=\'number\'], #product input[type=\'checkbox\']:checked, #product select, #product textarea'),
+		dataType: 'json',
+		beforeSend: function() {
+			$('#button-cart').button('loading');
+			console.log( this.data );
+		},
+		complete: function() {
+			$('#button-cart').button('reset');
+		},
+		success: function(json) {
+			$('.alert, .text-danger').remove();
+			$('.form-group').removeClass('has-error');
 
+			if (json['error']) {
+				if (json['error']['option']) {
+					for (i in json['error']['option']) {
+						var element = $('#input-option' + i.replace('_', '-'));
+
+						if (element.parent().hasClass('input-group')) {
+							element.parent().after('<div class="text-danger">' + json['error']['option'][i] + '</div>');
+						} else {
+							element.after('<div class="text-danger">' + json['error']['option'][i] + '</div>');
+						}
+					}
+				}
+
+				if (json['error']['recurring']) {
+					$('select[name=\'recurring_id\']').after('<div class="text-danger">' + json['error']['recurring'] + '</div>');
+				}
+
+				// Highlight any found errors
+				$('.text-danger').parent().addClass('has-error');
+			}
+
+			if (json['success']) {
+				$('.breadcrumb').after('<div class="alert alert-success">' + json['success'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
+
+				$('#cart > button').html('<span id="cart-total"><i class="fa fa-shopping-cart"></i> ' + json['total'] + '</span>');
+
+				$('html, body').animate({ scrollTop: 0 }, 'slow');
+
+				$('#cart > ul').load('index.php?route=common/cart/info ul li');
+			}
+		},
+        error: function(xhr, ajaxOptions, thrownError) {
+            alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+        }
+	});
+});
+//--></script>
 <?php echo $content_bottom; ?>
 <?php echo $column_right; ?>
  
@@ -218,12 +279,18 @@
 			 $opt[$val['name']]=$val;
 			 $opt[$val['name']]['key'] = $key;
 		 }
-   		 if ($option['name']=='ваш рейтинг'){  ?>	
+   		 if ($option['name']=='ваш рейтинг'){  
+   		   //  $opt['val-id'] =  $option['product_option_id'];?>	
    		 	var array_current_mmr = <?php echo  str_replace('\u0440.','',json_encode($opt));?>;
-	<?php }?>
-  		<?php if ($option['name']=='желаемый рейтинг'){  ?>	
+   		 	document.getElementById('from-rank-hidden').setAttribute('name', 'option[<?php echo $option['product_option_id'];?>]');
+   		 document.getElementById('from-rank-hidden').setAttribute('value', 89);
+   		     
+   		     <?php }?>
+  		<?php if ($option['name']=='желаемый рейтинг'){  
+  		    $opt['val-id'] =  $option['product_option_id'];?>	
  		var array_preferable_mmr = <?php echo   str_replace('\u0440.','',json_encode($opt));?>;
-	 		
+ 		document.getElementById('to-rank-hidden').setAttribute('name', 'option[<?php echo $option['product_option_id'];?>]');
+ 		document.getElementById('to-rank-hidden').setAttribute('value', 17);
 	  <?php }?>
 	<?php endforeach;?>
 </script>

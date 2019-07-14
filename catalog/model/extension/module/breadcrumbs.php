@@ -11,23 +11,34 @@
 class ModelExtensionModuleBreadcrumbs extends Controller
 {
     
+    
     public function getSeoParts($get,$controller=''){
+     
         
        
         if (isset($get['_route_'])){
             //its ok we have links through seo link
             $parts = explode('/', $get['_route_']);
         }else{
+            $handler = str_replace('/','_',$get['route']);
             //its not ok cuz links are without seo
-            return "not_implemented";
+            //standard breadcrumbs behavior
+            try {
+                if (method_exists($this, $handler)){
+                    return call_user_func(array($this, $handler),array());}
+            } catch (Exception $e) {
+                return "error";
+            }
+            
+            
         }
         
         $breadcrumbs[] = array( 
-            'link' => '',
-            'name' => 'Главная'
+            'href' => '',
+            'text' => 'Главная'
             
         );
-        //last part
+        //last part 
         $link = '';
         $name = '';
         switch ($get['route']){
@@ -46,11 +57,22 @@ class ModelExtensionModuleBreadcrumbs extends Controller
                 $link  = $get['_route_'];
                 
                 break;
+            case 'account/account':
+                //$pid = $get['information_id'];
+                $this->load->model('catalog/information');
+                $prod = $this->customer;
+                $this->load->language('account/account');
+                
+                $name = $this->language->get('heading_title');
+                $link  = $get['_route_'];
+                
+                
+                break;
         }
         //last bread
         $breadcrumbs[] = array(
-            'link' => $link,
-            'name' => $name
+            'href' => $link,
+            'text' => $name
             
         );
         return  $breadcrumbs;
@@ -61,5 +83,29 @@ class ModelExtensionModuleBreadcrumbs extends Controller
     {
         return 'Text from model';
     }
+    
+    
+    //Handlers for a standart behavior
+    
+    
+    public function account_account(array $params=array()){
+        
+        $this->load->language('account/account');
+        
+        $breadcrumbs = array();
+        
+        $breadcrumbs[] = array(
+            'text' => 'Главная',
+            'href' => $this->url->link('common/home')
+        );
+        
+        $breadcrumbs[] = array(
+            'text' => $this->language->get('text_account'),
+            'href' => $this->url->link('account/account', '', true)
+        );
+        return  $breadcrumbs;
+    }
+    
+    
 
 }

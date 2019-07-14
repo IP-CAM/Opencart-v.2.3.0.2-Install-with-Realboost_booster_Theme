@@ -134,6 +134,8 @@ $d5.ionRangeSlider({
         console.clear();
         var preferable = array_preferable_mmr[mmr]["price"];
         var current = array_current_mmr[fromInput]["price"];
+        document.getElementById('from-rank-hidden').setAttribute('value', array_current_mmr[fromInput]["product_option_value_id"]);
+        document.getElementById('to-rank-hidden').setAttribute('value', array_preferable_mmr[mmr]["product_option_value_id"]);
         var price = Number(preferable) + Number(current);
         $('.price > span').text(price);
     },
@@ -143,6 +145,8 @@ $d5.ionRangeSlider({
         console.clear();
         var preferable = array_preferable_mmr[mmr]["price"];
         var current = array_current_mmr[fromInput]["price"];
+        document.getElementById('from-rank-hidden').setAttribute('value', array_current_mmr[fromInput]["product_option_value_id"]);
+        document.getElementById('to-rank-hidden').setAttribute('value', array_preferable_mmr[mmr]["product_option_value_id"]);
         var price = Number(preferable) + Number(current);
         $('.price > span').text(price);
     }
@@ -185,3 +189,7 @@ $('#selectRank').ddslick({
     onSelected: function(selectedData){
     }   
 });
+
+var FunctionThatSendsPostQueries = function(type,body,link){
+	
+}
