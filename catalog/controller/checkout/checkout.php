@@ -94,6 +94,7 @@ class ControllerCheckoutCheckout extends Controller {
 		$data['header'] = $this->load->controller('common/header');
 		
 		$data['cartisnotempty'] = true;
+		//TODO Данные решистрации контроллер
 		$data['registerr'] = array(
 		    'login' => false,
 		    'telephone' => false,
