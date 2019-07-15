@@ -1,6 +1,6 @@
 <?php
 require 'config.php';
-
+//
 
 //ENTER THE RELEVANT INFO BELOW
 $mysqlUserName      = DB_USERNAME;
