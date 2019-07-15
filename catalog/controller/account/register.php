@@ -40,8 +40,6 @@ class ControllerAccountRegister extends Controller {
 			}
 
 			$this->response->redirect($this->url->link('account/success'));
-		}else{
-		    return serialize($this->error);
 		}
 
 		$data['breadcrumbs'] = array();

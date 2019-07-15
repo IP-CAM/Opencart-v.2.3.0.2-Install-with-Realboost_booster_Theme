@@ -5,6 +5,27 @@
 
 /* Header */
 
+label {
+	color: #fff!important;
+ font-size: 16px!important;
+ font-family: OpenSans!important;
+}
+
+legend {
+	color: #fff;
+	font-family: GothamPro;
+	font-size: 30px;
+	padding: 50px 0 20px;
+}
+
+.breadcrumb {
+	background-color: #2A2A2A!important;
+}
+
+a {
+	color: #fff;
+}
+
 header {
  background-color: #000;
  position: fixed;
@@ -71,7 +92,6 @@ header {
 	color: #fff;
 	font-size: 17px;
 	font-family: GothamPro;
-	text-transform: uppercase;
 }
 
 .dws-menu li:hover > ul {
@@ -82,7 +102,6 @@ header {
 .login,
 .cart {
 	display: inline-block;
-	position: relative;
 }
 
 .login a,
@@ -125,7 +144,6 @@ header {
 
 .bread-banner {
 	background: url(../img/banner.jpg) no-repeat center bottom;
-	margin-top: 90px;
 	padding: 60px 0 60px
 }
 
@@ -179,6 +197,9 @@ header {
 
 /* slider-banner */
 
+.banner {
+	margin-top: 68px;
+}
 
 .banner h1 {
 	text-transform: uppercase;
@@ -1342,6 +1363,12 @@ margin: 50px 0 10px;
 	width: 300px;
 	display: block;
 	margin: 40px auto 0;
+	color: #fff;
+}
+
+.boost-calculator a.button:hover {
+	color: #fff;
+	cursor: pointer;
 }
 
 .boost-calculator .price {
@@ -1437,39 +1464,6 @@ label.container > span.percent {
 	color: #ea640a;
 }
 
-
-
-.boost-calculator-bottom {
-	margin-top: 100px;
-}
-
-.header-substrate {
-	height: 90px;
-}
-
-.notFound {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	height: 100vh;
-}
-
-.notFound .title {
- font-family: GothamPro-black;
- color: #ea640a;
- font-size: 80px;
- text-transform: uppercase;
-}
-
-.notFound .subtitle {
-	 font-family: GothamPro;
-	 text-transform: uppercase;
-	 font-size: 16px;
-	 color: #c30400;
-}
-
-
 .boost-calculator-bottom {
 	margin-top: 100px;
 }
@@ -1489,9 +1483,11 @@ label.container > span.percent {
 
 .well h2 {
 	font-size: 30px!important;
+	margin: 50px 0;
 }
 .well > p {
 	margin-bottom: 20px;
+	font-size: 16px;
 }
 .well > p > strong {
 	font-size: 22px;
@@ -1553,14 +1549,6 @@ select.form-control {
 	color: #ea650a;
 }
 
-.buttons .pull-right {
-	color: #515050;
-	font-size: 14px;
-}
-.buttons .pull-right > a > b {
-	font-weight: normal;
-	text-decoration: underline;
-}
 .container > ul.breadcrumb > li {
 	margin-right: 10px;
 }
@@ -1607,20 +1595,6 @@ select.form-control {
 .pull-left > a.btn {
 	color: #fff;
 	margin-bottom: 10px;
-}
-
-label {
-	color: #fff;
-}
-
-.form-group > a {
-	color: #fff!important;
-}
-
-legend {
-	font-size: 28px !important;
-	color: #fff !important;
-	padding: 50px 0 10px!important;
 }
 
 
@@ -1695,4 +1669,45 @@ legend {
 
 .cart a:hover .cart-items {
 	color: #ea650a;
+}
+aside#column-right {
+	padding: 50px 0;
+	border-right: 10px solid black;
+}
+
+
+aside#column-right,
+aside#column-right + #content {
+	margin-top: 70px;
+	background: #0a0a0a;
+	padding-bottom: 50px;
+}
+
+
+aside#column-right + #content > h1 {
+	margin-top: 70px;
+}
+
+.list-group-item {
+	padding: 12px 15px 12px 30px!important;
+}
+
+.buttons .pull-right label.container {
+	font-size: 14px!important;
+	color: #515050!important;
+	padding-left: 20px!important;
+	display: inline!important;
+}
+
+.buttons .pull-right label.container > a > b {
+	font-weight: normal;
+	color: #AAAAAA;
+}
+.buttons .pull-right label.container > a > b:hover {
+	color: #fff;
+	text-decoration: underline;
+}
+
+.buttons .pull-right label.container span.checkmark {
+	margin-top: 2px;
 }
