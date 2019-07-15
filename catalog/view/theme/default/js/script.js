@@ -190,47 +190,6 @@ $('#selectRank').ddslick({
     }   
 });
 
-
-
-/**
- * функция перезаписывает поведение  ссылки, в опенкарт часто необходимо передавать параметры ввиде POST
- * с помощью этой ф-ии можно переопределять поведение ссылки
- * @param url    адрес на который переходим
- * @param data   данные в виде массива,  
- * @param redirect переопределять ли стандартное поведение
- * @param meth  POST   GET
- * @returns ничего не возвращаем просто переходим на страницу
- */
-function postData(url = '', data = {val1:"sdca",val2:"sadfa"},redirect = true,meth = 'POST') {
-	if (!redirect){
-	event.preventDefault();}
-	out = function(obj) {
-		var str = [];
-		for (var p in obj)
-		if (obj.hasOwnProperty(p)) 
-		{
-		  str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
-		}
-		  return str.join("&");
-	}
-	otherdata = $(event.currentTarget).closest('form').serialize();
-	//parent = value.form;
+var FunctionThatSendsPostQueries = function(type,body,link){
 	
-	
-		  // Значения по умолчанию обозначены знаком *
-	    return fetch(url, {
-	        method: meth, // *GET, POST, PUT, DELETE, etc.
-	        mode: 'cors', // no-cors, cors, *same-origin
-	        cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-	        credentials: 'same-origin', // include, *same-origin, omit
-	        headers: {
-	            //'Content-Type': 'application/json',
-	             'Content-Type': 'application/x-www-form-urlencoded',
-	        },
-	        redirect: 'follow', // manual, *follow, error
-	        referrer: 'no-referrer', // no-referrer, *client
-	        body: out(data)+'&'+otherdata, // тип данных в body должен соответвовать значению заголовка "Content-Type"
-	    })
-	    .then(function(response) {/*window.location.href = url*/ }); // парсит JSON ответ в Javascript объект
-	}
-
+}

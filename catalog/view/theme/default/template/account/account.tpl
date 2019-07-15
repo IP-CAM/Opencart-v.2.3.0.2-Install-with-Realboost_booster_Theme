@@ -1,4 +1,5 @@
 <?php echo $header; ?>
+<?php echo $content_top; ?>
 
 <div class="container">
   <div class="row"><?php echo $column_left; ?>
@@ -13,7 +14,7 @@
   </div>
 </div>
  
- <?php echo $content_top; ?>
+
 <?php /* echo $heading_title;  */?>
 <?php /* echo $description;  */?>
 <?php echo $content_bottom; ?>
