@@ -229,6 +229,7 @@ $('#button-cart').on('click', function() {
 			$('#button-cart').button('reset');
 		},
 		success: function(json) {
+			window.location.href = 'checkout/checkout';
 			$('.alert, .text-danger').remove();
 			$('.form-group').removeClass('has-error');
 

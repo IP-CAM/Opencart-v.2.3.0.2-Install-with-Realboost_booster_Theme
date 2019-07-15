@@ -28,13 +28,9 @@
                 <div class="step-descr">Рассчитайте стоимость</div>
               </div>
         
-              <div class="step">
-                <div class="step-title"><span>2</span>Шаг</div>
-                <div class="step-descr">Подготовьте аккаунт</div>
-              </div>
-        
+                    
               <div class="step active">
-                <div class="step-title"><span>3</span>Шаг</div>
+                <div class="step-title"><span>2</span>Шаг</div>
                 <div class="step-descr">Введите данные</div>
               </div>
         
@@ -60,10 +56,10 @@
                       </div>
         
                       <div class="col-lg-6 col-md-6">
-                        <input id="text" <?php echo ($registerr['telephone'])?'readonly value = "jvkfhdb"':'';?> name="telephone" type="text" placeholder="Телефон" required="">
+                        <input id="text" name="telephone" type="text" placeholder="Телефон" required="">
                       </div>
-        
-                      <div class="col-lg-6 col-md-6">
+        			  
+        			  <div class="col-lg-6 col-md-6">
                         <label for="log">Логин от аккаунта Steam</label>
                         <input id="log" name="stlog" type="text"  required="">
                       </div>
@@ -88,7 +84,7 @@
                       </div>
         
                       <div class="col-lg-6 col-md-6">
-                        <button type="submit">Я все сделал</button>
+                        <button type="submit" onclick="postData('index.php?route=checkout/confirm',{},true);">Я все сделал</button>
                       </div>
         
                     </div>
