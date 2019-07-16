@@ -30,70 +30,70 @@ $(document).ready(function() {
 	
 
 	
-$(".header-menu").click(function(e){
-			e.preventDefault();
-			$("#menu").toggleClass("show");
-		});
-		$("#menu a").click(function(event){
-			if($(this).next('ul').length){
-				$(this).next().toggle('fast');
-				$(this).children('i:last-child').toggleClass('fa-caret-down fa-caret-left');
-			}
-});
+	$(".header-menu").click(function(e){
+				e.preventDefault();
+				$("#menu").toggleClass("show");
+			});
+			$("#menu a").click(function(event){
+				if($(this).next('ul').length){
+					$(this).next().toggle('fast');
+					$(this).children('i:last-child').toggleClass('fa-caret-down fa-caret-left');
+				}
+	});
 
-$(document).on('click','.milk-shadow',function(){
-	$(".header-menu").click();
-});
-
-
-$('.banner').slick({
-  autoplay: true,
-  autoplaySpeed: 10000,
-  dots: true,
-  infinite: true,
-  speed: 500,
-  fade: true,
-  cssEase: 'linear',
-  prevArrow: $('.prev'),
-		nextArrow: $('.next')
-});
+	$(document).on('click','.milk-shadow',function(){
+		$(".header-menu").click();
+	});
 
 
-$('.review-slider').slick({
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  prevArrow: $('.review-prev'),
-		nextArrow: $('.review-next'),
-  responsive: [
-    {
-      breakpoint: 992,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
+	$('.banner').slick({
+	  autoplay: true,
+	  autoplaySpeed: 10000,
+	  dots: true,
+	  infinite: true,
+	  speed: 500,
+	  fade: true,
+	  cssEase: 'linear',
+	  prevArrow: $('.prev'),
+			nextArrow: $('.next')
+	});
 
-  ]
-});
+
+	$('.review-slider').slick({
+	  dots: true,
+	  infinite: true,
+	  speed: 500,
+	  slidesToShow: 3,
+	  slidesToScroll: 1,
+	  prevArrow: $('.review-prev'),
+			nextArrow: $('.review-next'),
+	  responsive: [
+	    {
+	      breakpoint: 992,
+	      settings: {
+	        slidesToShow: 2,
+	        slidesToScroll: 1,
+	        infinite: true,
+	        dots: true
+	      }
+	    },
+	    {
+	      breakpoint: 768,
+	      settings: {
+	        slidesToShow: 1,
+	        slidesToScroll: 1
+	      }
+	    },
+	    {
+	      breakpoint: 480,
+	      settings: {
+	        slidesToShow: 1,
+	        slidesToScroll: 1
+	      }
+	    }
+	
+	  ]
+	});
 
 });
 
@@ -190,6 +190,67 @@ $('#selectRank').ddslick({
     }   
 });
 
-var FunctionThatSendsPostQueries = function(type,body,link){
+
+ 
+/**
+ * функция перезаписывает поведение  ссылки, в опенкарт часто необходимо передавать параметры ввиде POST
+ * с помощью этой ф-ии можно переопределять поведение ссылки
+ * @param url    адрес на который переходим
+ * @param data   данные в виде массива,  
+ * @param redirect переопределять ли стандартное поведение
+ * @param meth  POST   GET
+ * @param okhandler(xhr) функция - обработчик  положительного ответа
+ * @param notok(xhr) ф-я обработчик плохого ответа
+ * @returns ничего не возвращаем просто переходим на страницу
+ */
+function postData(url = '', 
+				data = {val1:"sdca",val2:"sadfa"},
+				redirect = true,
+				meth = 'POST',
+				okhandler = function(status){
+					//alert(status);
+				}, 
+				notok = function(status){
+					//alert(status);
+				}
+			){
+		if(!redirect){
+		event.preventDefault();}
+		out = function(obj) {
+			var str = [];
+			for (var p in obj)
+			if (obj.hasOwnProperty(p)) 
+			{
+			  str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+			}
+			  return str.join("&");
+		}
+		otherdata = $(event.currentTarget).closest('form').serialize();
+		//parent = value.form;
+		
+		
+			  // Значения по умолчанию обозначены знаком *
+	
+	
+	//var data = "mykey=val1&mykey2=val2";
+
+	var xhr = new XMLHttpRequest();
+	xhr.withCredentials = true;
+
+	xhr.open(meth, url);
+	
+	xhr.onreadystatechange = function (aEvt) {
+		  if (xhr.readyState == 4) {
+		     if(xhr.status == 200)//
+		    	 okhandler(xhr);
+		     else//
+		         notok(xhr);
+		  }
+		};
+	
+	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+	xhr.send(out(data)+'&'+otherdata);
+	
 	
 }

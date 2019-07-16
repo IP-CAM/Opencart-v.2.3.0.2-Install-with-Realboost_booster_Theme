@@ -405,4 +405,22 @@ class Cart {
 
 		return false;
 	}
+
+	/**
+	 * fix_patch_realboost возвращает кол-во товаров в корзине
+	 * @param int $prod_id
+	 */
+	public function getProductCount($prod_id){
+	    $product_total = 0;
+	    
+	    $products = $this->getProducts();
+	    
+	    foreach ($products as $product) {
+	        if ($product['product_id'] == $prod_id){
+	           return $product['quantity'];}
+	    }
+	    
+	    return false;
+	    
+	}
 }

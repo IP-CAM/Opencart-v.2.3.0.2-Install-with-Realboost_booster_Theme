@@ -543,7 +543,7 @@ $.ajax({
 	url: '<?php echo $catalog; ?>index.php?route=api/login',
 	type: 'post',
 	dataType: 'json',
-	data: 'key=<?php echo $api_key; ?>',
+	data: 'key=dF5RSIAsOp8O2s6f6OOQaJRunOOTkraL3beDMtxv0Q7nZcFWJCFagDbe2cS7is135nxFfXp1uPAJbDVrGcIdIavl2kJIFTJa2AhizYev8MTBDsKd4XTLQzdFs0A6D4tTBVrFUxAwC8SKjAc0gMoum5Hnb2JIRycJcH4tM3B54rE2bKw0RQ7pHanJvMJ44m3IcrWYTmQtOPS7UeweGtGTxZ1LLCqPbBbjgfW7OPEjhcwLDpXGRf6qDb2AIkyUhoVR',
 	crossDomain: true,
 	success: function(json) {
 		$('.alert').remove();

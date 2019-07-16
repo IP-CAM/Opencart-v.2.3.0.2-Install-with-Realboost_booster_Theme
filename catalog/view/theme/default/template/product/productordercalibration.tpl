@@ -20,6 +20,25 @@
  
 <div class="content">
 
+ 
+<script>
+	battleCupErrorHandlerOk = function(resp){
+		rrf =  resp.response;
+		rrf = JSON.parse(rrf);
+		if (rrf.success){
+			
+			alert("ok computer");//товар удачно оформлен
+			
+			
+			}
+		
+		}
+	battleCupErrorHandlerError = function(resp){
+		alert("  Not Ok computer");
+		}
+
+	data =  {product_id:<?php echo $product_id;?>,fname:'confirmbattlecup'}
+</script>
 
 
 <!-- checkout -->

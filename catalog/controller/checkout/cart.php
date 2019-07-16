@@ -347,10 +347,28 @@ class ControllerCheckoutCart extends Controller {
 			}
 
 			if (!$json) {
-				$this->cart->add($this->request->post['product_id'], $quantity, $option, $recurring_id);
+			     //realbost_fix	товаров всегда 1 шт!!!,  это  нужно для перенаправления 
+			     /* $this->cart->add($this->request->post['product_id'], $quantity, $option, $recurring_id); */
+			    
+			    if ($this->cart->countProducts()<1){
+			        $this->cart->add($this->request->post['product_id'], 1, $option, $recurring_id);
+			    }else{
+			        $this->cart->clear();
+			        $this->cart->add($this->request->post['product_id'], 1, $option, $recurring_id);
+			    }
 
 				$json['success'] = sprintf($this->language->get('text_success'), $this->url->link('product/product', 'product_id=' . $this->request->post['product_id']), $product_info['name'], $this->url->link('checkout/cart'));
-
+                
+				
+				//fix_realboost контроллер, оформляющий заказ
+				$data['post'] = $this->request->post;
+				$fname = $data['post']['fname'];
+				switch ($fname){
+				    case 'confirmbattlecup':
+				        $res = $this->load->controller('checkout/confirm/confirmbattlecup',$data);
+				        break;
+				}
+				
 				// Unset all shipping and payment methods
 				unset($this->session->data['shipping_method']);
 				unset($this->session->data['shipping_methods']);
@@ -423,6 +441,9 @@ class ControllerCheckoutCart extends Controller {
 			}
 
 			$this->session->data['success'] = $this->language->get('text_remove');
+			
+			
+			
 
 			unset($this->session->data['shipping_method']);
 			unset($this->session->data['shipping_methods']);

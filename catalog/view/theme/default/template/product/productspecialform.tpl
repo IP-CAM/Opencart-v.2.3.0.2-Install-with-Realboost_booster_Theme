@@ -229,6 +229,7 @@ $('#button-cart').on('click', function() {
 			$('#button-cart').button('reset');
 		},
 		success: function(json) {
+			window.location.href = 'checkout/checkout';
 			$('.alert, .text-danger').remove();
 			$('.form-group').removeClass('has-error');
 
@@ -280,17 +281,17 @@ $('#button-cart').on('click', function() {
 			 $opt[$val['name']]['key'] = $key;
 		 }
    		 if ($option['name']=='ваш рейтинг'){  
-   		   //  $opt['val-id'] =  $option['product_option_id'];?>	
-   		 	var array_current_mmr = <?php echo  str_replace('\u0440.','',json_encode($opt));?>;
-   		 	document.getElementById('from-rank-hidden').setAttribute('name', 'option[<?php echo $option['product_option_id'];?>]');
-   		 document.getElementById('from-rank-hidden').setAttribute('value', 89);
+   		     $opt['val-id'] =  $option['product_option_id'];?>	
+   		 	var array_current_mmr = <?php echo  str_replace(array('\u0440.','null'),array('','""'),json_encode($opt));?>;
+   		 //document.getElementById('from-rank-hidden').setAttribute('name', 'option[<?php echo $option['product_option_id'];?>]');
+   		 //document.getElementById('from-rank-hidden').setAttribute('value', 89);
    		     
    		     <?php }?>
   		<?php if ($option['name']=='желаемый рейтинг'){  
   		    $opt['val-id'] =  $option['product_option_id'];?>	
- 		var array_preferable_mmr = <?php echo   str_replace('\u0440.','',json_encode($opt));?>;
- 		document.getElementById('to-rank-hidden').setAttribute('name', 'option[<?php echo $option['product_option_id'];?>]');
- 		document.getElementById('to-rank-hidden').setAttribute('value', 17);
+ 		var array_preferable_mmr = <?php echo   str_replace(array('\u0440.','null'),array('','""'),json_encode($opt));?>;
+ 		//document.getElementById('to-rank-hidden').setAttribute('name', 'option[<?php echo $option['product_option_id'];?>]');
+ 		//document.getElementById('to-rank-hidden').setAttribute('value', 17);
 	  <?php }?>
 	<?php endforeach;?>
 </script>

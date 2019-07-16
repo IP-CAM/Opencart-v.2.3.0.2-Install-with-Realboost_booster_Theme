@@ -20,7 +20,24 @@
 <?php echo $content_bottom; ?>
 <?php echo $column_right; ?>
  
+<script>
+	battleCupErrorHandlerOk = function(resp){
+		rrf =  resp.response;
+		rrf = JSON.parse(rrf);
+		if (rrf.success){
+			
+			alert("ok computer");//товар удачно оформлен
+			
+			
+			}
+		
+		}
+	battleCupErrorHandlerError = function(resp){
+		alert("  Not Ok computer");
+		}
 
+	data =  {product_id:<?php echo $product_id;?>,fname:'confirmbattlecup'}
+</script>
 <div class="content">
 
 
@@ -48,21 +65,21 @@
             <div class="row">
 
               <div class="col-lg-3 col-md-3 col-sm-6 col-6 my-auto">
-                <input type="radio" id="test1" name="radio-group" checked>
+                <input type="radio" id="test1" name="radio-group1" checked>
                 <label for="test1"><img src="<?php  echo $img_path; ?>icons/rang1.png" alt="icon-rang"></label>
               </div>
 
               <div class="col-lg-3 col-md-3 col-sm-6 col-6 my-auto">
-                <input type="radio" id="test2" name="radio-group" checked>
+                <input type="radio" id="test2" name="radio-group2" checked>
                 <label for="test2"><img src="<?php  echo $img_path; ?>icons/rang2.png" alt="icon-rang"></label>
               </div>
 
-              <div class="col-lg-3 col-md-3 col-sm-6 col-6 my-auto">
+              <div class="col-lg-3 col-md-3 col-sm-6 col-6 my-auto3">
                 <input type="radio" id="test3" name="radio-group" checked >
                 <label for="test3"><img src="<?php  echo $img_path; ?>icons/rang3.png" alt="icon-rang"></label>
               </div>
 
-              <div class="col-lg-3 col-md-3 col-sm-6 col-6 my-auto">
+              <div class="col-lg-3 col-md-3 col-sm-6 col-6 my-auto4">
                 <input type="radio" id="test4" name="radio-group" checked>
                 <label for="test4">Другой</label>
               </div>
@@ -82,9 +99,9 @@
 
             </div>
 
-            <div class="checkout-discount"><span>850 руб.</span></div>
+            <div class="checkout-discount"><span><?php echo $price;?></span></div>
 
-            <button type="submit">Я все сделал</button>
+            <button type="submit" onclick="postData('index.php?route=checkout/cart/add',data,false,'POST',battleCupErrorHandlerOk,battleCupErrorHandlerError);">Я все сделал</button>
 
           </form>
 

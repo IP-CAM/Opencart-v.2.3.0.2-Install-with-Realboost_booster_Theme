@@ -26,14 +26,30 @@
 </form>
 
 <!-- Регистрация -->
-<form id="register" class="mfp-hide white-popup-block">
+<form id="register" class="mfp-hide white-popup-block" >
   <h1>Регистрация</h1>
   <fieldset style="border:0;">
-    <input id="text" name="text" type="text" placeholder="Логин" required="">
+    <input id="text" name="firstname" type="text" placeholder="Логин" required="">
     <input id="password" name="password" type="password" placeholder="Пароль" required="">
-    <input id="password" name="password" type="password" placeholder="Подтвердите пароль" required="">
+    <input id="password" name="confirm" type="password" placeholder="Пароль" required="">
     <input id="email" name="email" type="email" placeholder="E-mail" required="">
-    <button type="submit">Зарегистрироваться</button>
+    
+    
+    <script>
+    var valls = {
+    		lastname:'not supported',
+    		telephone: 'not provided',
+    		address_1: 'not_providedd',
+    		city:'not_provided',
+    		country_id : 176,
+    		postcode : 'unkn',
+    		zone_id : 46,
+    		agree : true,
+    	    }
+    </script>
+    <button type="submit" onclick="postData('index.php?route=account/register',valls,true);">Зарегистрироваться</button>
+    
+    
   </fieldset>
 </form>
 
