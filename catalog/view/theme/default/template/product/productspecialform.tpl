@@ -33,13 +33,10 @@
             <div class="step-descr">Рассчитайте стоимость</div>
           </div>
     
-          <div class="step">
-            <div class="step-title"><span>2</span>Шаг</div>
-            <div class="step-descr">Подготовьте аккаунт</div>
-          </div>
+          
     
           <div class="step">
-            <div class="step-title"><span>3</span>Шаг</div>
+            <div class="step-title"><span>2</span>Шаг</div>
             <div class="step-descr">Введите данные</div>
           </div>
     
@@ -102,7 +99,7 @@
                     <div class="col-lg-12">
                     	<input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
                     	
-                     		 <a id = "button-cart" class="button">Подготовить аккаунт</a>
+                     	<a id = "button-cart" class="button"  >Подготовить аккаунт</a>
                       
                     </div>
         

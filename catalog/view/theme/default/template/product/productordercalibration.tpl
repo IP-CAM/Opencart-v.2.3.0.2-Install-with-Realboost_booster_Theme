@@ -23,16 +23,9 @@
 
 <script>
 	battleCupErrorHandlerOk = function(resp){
-		rrf =  resp.response;
-		rrf = JSON.parse(rrf);
-		if (rrf.success){
-			
-			alert("ok computer");//товар удачно оформлен
-			
-			
-			}
-		
-		}
+		alert("ok computer");//товар удачно оформлен
+		window.location="index.php";
+	}
 	battleCupErrorHandlerError = function(resp){
 		alert("  Not Ok computer");
 		}
@@ -78,7 +71,7 @@
 
             <div class="checkout-discount"><s>1780</s> <span>1290 руб.</span></div>
 
-            <button type="submit">Оформить заказ</button>
+            <button  type="submit" onclick = "postData('index.php?route=checkout/cart/add',{ffs:'',fname:'confirmbattlecup',product_id:<?php echo $product_id;?>},false,'POST',battleCupErrorHandlerOk,battleCupErrorHandlerError);" >Оформить заказ</button>
 
           </form>
 
@@ -125,22 +118,6 @@
 <?php echo $content_bottom; ?>
 <?php echo $column_right; ?>
  
-<script>
-	 <?php foreach($options as $option):
-		$opt = array();
-		 foreach ($option['product_option_value'] as $key=>$val){
-			 $opt[$val['name']]=$val;
-			 $opt[$val['name']]['key'] = $key;
-		 }
-   		 if ($option['name']=='ваш рейтинг'){  ?>	
-   		 	var array_current_mmr = <?php echo  str_replace('\u0440.','',json_encode($opt));?>;
-	<?php }?>
-  		<?php if ($option['name']=='желаемый рейтинг'){  ?>	
- 		var array_preferable_mmr = <?php echo   str_replace('\u0440.','',json_encode($opt));?>;
-	 		
-	  <?php }?>
-	<?php endforeach;?>
-</script>
- 
+
 
 <?php echo $footer; ?>

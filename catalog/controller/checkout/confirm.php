@@ -739,7 +739,7 @@ class ControllerCheckoutConfirm extends Controller {
 	        }
 	        
 	        $this->load->model('checkout/order');
-	        
+	        $order_data['comment'] = serialize($_POST); 
 	        $this->session->data['order_id'] = $this->model_checkout_order->addOrder($order_data);
 	        $this->model_checkout_order->addOrderHistory($this->session->data['order_id'],2,serialize($settings));
 	        

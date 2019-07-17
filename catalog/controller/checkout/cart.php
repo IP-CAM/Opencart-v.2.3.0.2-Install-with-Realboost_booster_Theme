@@ -359,7 +359,7 @@ class ControllerCheckoutCart extends Controller {
 
 				$json['success'] = sprintf($this->language->get('text_success'), $this->url->link('product/product', 'product_id=' . $this->request->post['product_id']), $product_info['name'], $this->url->link('checkout/cart'));
                 
-				
+				// TODO: cart.php Redirect with order trough form
 				//fix_realboost контроллер, оформляющий заказ
 				$data['post'] = $this->request->post;
 				$fname = (isset($data['post']['fname']))?$data['post']['fname']:'';

@@ -22,15 +22,8 @@
  
 <script>
 	battleCupErrorHandlerOk = function(resp){
-		rrf =  resp.response;
-		rrf = JSON.parse(rrf);
-		if (rrf.success){
-			
 			alert("ok computer");//товар удачно оформлен
-			
-			
-			}
-		
+			window.location = 'index.php';
 		}
 	battleCupErrorHandlerError = function(resp){
 		alert("  Not Ok computer");
@@ -94,7 +87,7 @@
               </div>
             </div>
 
-            <button type="submit">Перейте к оплате</button>
+            <button type="submit" onclick = "postData('index.php?route=checkout/cart/add',{ffs:'',fname:'confirmbattlecup',product_id:<?php echo $product_id;?>},false,'POST',battleCupErrorHandlerOk,battleCupErrorHandlerError);">Перейте к оплате</button>
 
           </form>
 

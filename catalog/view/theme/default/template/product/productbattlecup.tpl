@@ -22,13 +22,8 @@
  
 <script>
 	battleCupErrorHandlerOk = function(resp){
-		rrf =  resp.response;
-		rrf = JSON.parse(rrf);
-		if (rrf.success){
-			
-			//товар удачно был добавлен, запускаем оформление заказа
-			
-			}
+		alert("  Ok computer");
+		
 		
 		}
 	battleCupErrorHandlerError = function(resp){
