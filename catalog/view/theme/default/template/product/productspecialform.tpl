@@ -33,10 +33,6 @@
             <div class="step-descr">Рассчитайте стоимость</div>
           </div>
     
-          <div class="step">
-            <div class="step-title"><span>2</span>Шаг</div>
-            <div class="step-descr">Подготовьте аккаунт</div>
-          </div>
     
           <div class="step">
             <div class="step-title"><span>3</span>Шаг</div>
@@ -283,15 +279,15 @@ $('#button-cart').on('click', function() {
    		 if ($option['name']=='ваш рейтинг'){  
    		     $opt['val-id'] =  $option['product_option_id'];?>	
    		 	var array_current_mmr = <?php echo  str_replace(array('\u0440.','null'),array('','""'),json_encode($opt));?>;
-   		 //document.getElementById('from-rank-hidden').setAttribute('name', 'option[<?php echo $option['product_option_id'];?>]');
-   		 //document.getElementById('from-rank-hidden').setAttribute('value', 89);
+   		 document.getElementById('from-rank-hidden').setAttribute('name', 'option[<?php echo $option['product_option_id'];?>]');
+   		 document.getElementById('from-rank-hidden').setAttribute('value', 89);
    		     
    		     <?php }?>
   		<?php if ($option['name']=='желаемый рейтинг'){  
   		    $opt['val-id'] =  $option['product_option_id'];?>	
  		var array_preferable_mmr = <?php echo   str_replace(array('\u0440.','null'),array('','""'),json_encode($opt));?>;
- 		//document.getElementById('to-rank-hidden').setAttribute('name', 'option[<?php echo $option['product_option_id'];?>]');
- 		//document.getElementById('to-rank-hidden').setAttribute('value', 17);
+ 		document.getElementById('to-rank-hidden').setAttribute('name', 'option[<?php echo $option['product_option_id'];?>]');
+ 		document.getElementById('to-rank-hidden').setAttribute('value', 17);
 	  <?php }?>
 	<?php endforeach;?>
 </script>

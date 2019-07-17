@@ -1,11 +1,6 @@
 <?php
 require 'config.php';
-<<<<<<< HEAD
-//sdffsd
-//ascSADF
-=======
 //acasdzcdwcds11
->>>>>>> csacds
 
 //ENTER THE RELEVANT INFO BELOW
 $mysqlUserName      = DB_USERNAME;

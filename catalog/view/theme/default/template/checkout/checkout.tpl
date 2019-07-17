@@ -84,7 +84,7 @@
                       </div>
         
                       <div class="col-lg-6 col-md-6">
-                        <button type="submit" onclick="postData('index.php?route=checkout/confirm',{},true);">Я все сделал</button>
+                        <button type="submit" onclick="postData('index.php?route=checkout/confirm',{ffs:'confirm'},false,'POST',function(ddd){alert('ok Computer');window.location = 'index.php';});">Я все сделал</button>
                       </div>
         
                     </div>

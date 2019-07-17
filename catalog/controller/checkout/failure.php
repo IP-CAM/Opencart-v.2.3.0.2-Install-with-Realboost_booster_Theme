@@ -26,7 +26,7 @@ class ControllerCheckoutFailure extends Controller {
 			'text' => $this->language->get('text_failure'),
 			'href' => $this->url->link('checkout/failure')
 		);
-
+        
 		$data['heading_title'] = $this->language->get('heading_title');
 
 		$data['text_message'] = sprintf($this->language->get('text_message'), $this->url->link('information/contact'));
