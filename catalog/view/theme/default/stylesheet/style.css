@@ -197,10 +197,6 @@ header {
 
 /* slider-banner */
 
-.banner {
-	margin-top: 68px;
-}
-
 .banner h1 {
 	text-transform: uppercase;
 }
@@ -1710,4 +1706,15 @@ aside#column-right + #content > h1 {
 
 .buttons .pull-right label.container span.checkmark {
 	margin-top: 2px;
+}
+
+.alert-danger {
+ position: absolute;
+ left: 200px;
+ top: 10px;
+ right: 200px;
+}
+
+.container {
+	position: relative;
 }
