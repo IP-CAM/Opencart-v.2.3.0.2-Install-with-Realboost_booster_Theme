@@ -41,6 +41,7 @@
 <link rel="stylesheet" href="<?php echo $css_path; ?>ion.rangeSlider.css">
 <script src="<?php echo $js_path; ?>ion.rangeSlider.min.js"></script>
 
+<script src="<?php echo $js_path; ?>axios/axios.min.js"></script>
 <!-- template scripts -->
 
 <?php foreach ($styles as $style) { ?>

@@ -362,12 +362,17 @@ class ControllerCheckoutCart extends Controller {
 				
 				//fix_realboost контроллер, оформляющий заказ
 				$data['post'] = $this->request->post;
-				$fname = $data['post']['fname'];
+				$fname = (isset($data['post']['fname']))?$data['post']['fname']:'';
 				switch ($fname){
 				    case 'confirmbattlecup':
 				        $res = $this->load->controller('checkout/confirm/confirmbattlecup',$data);
 				        break;
+				    case 'formstep1':
+				        $data['succeededdata']=true;
+				        $this->response->setOutput(json_encode($data));
+				        break;
 				}
+				
 				
 				// Unset all shipping and payment methods
 				unset($this->session->data['shipping_method']);

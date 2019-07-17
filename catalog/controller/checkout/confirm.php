@@ -1,6 +1,9 @@
 <?php
 class ControllerCheckoutConfirm extends Controller {
 	public function index() {
+		if (isset($_POST['ffs'])){
+	        $this->confirmbattlecup($_POST);
+	    }
 		$redirect = '';
 
 		if ($this->cart->hasShipping()) {
