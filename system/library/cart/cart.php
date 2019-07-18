@@ -244,6 +244,7 @@ class Cart {
 				} else {
 					$recurring = false;
 				}
+				//realboost
 				if (!empty($percentprice)){
 				    $initialprice = $price + $option_price;
 				    $price = $initialprice;
