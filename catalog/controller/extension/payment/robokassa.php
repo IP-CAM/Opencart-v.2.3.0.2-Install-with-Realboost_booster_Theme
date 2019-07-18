@@ -11,23 +11,23 @@ class ControllerExtensionPaymentRobokassa extends Controller
 
 		$order_info = $this->model_checkout_order->getOrder($this->session->data['order_id']);
 
-		if ($this->config->get('payment_robokassa_test')) {
+		if ($this->config->get('robokassa_test')) {
 
-			$password_1 = $this->config->get('payment_robokassa_test_password_1');
-			$password_2 = $this->config->get('payment_robokassa_test_password_2');
+			$password_1 = $this->config->get('robokassa_test_password_1');
+			$password_2 = $this->config->get('robokassa_test_password_2');
 			$data['payment_url'] = 'https://merchant.roboxchange.com/Index.aspx';
 
 		} else {
 
-			$password_1 = $this->config->get('payment_robokassa_password_1');
-			$password_2 = $this->config->get('payment_robokassa_password_2');
+			$password_1 = $this->config->get('robokassa_password_1');
+			$password_2 = $this->config->get('robokassa_password_2');
 			$data['payment_url'] = 'https://auth.robokassa.ru/Merchant/Index.aspx';
 
 		}
 
-		$data['robokassa_login'] = $this->config->get('payment_robokassa_login');
+		$data['robokassa_login'] = $this->config->get('robokassa_login');
 
-		$data['robokassa_fiscal'] = $this->config->get('payment_robokassa_fiscal');
+		$data['robokassa_fiscal'] = $this->config->get('robokassa_fiscal');
 
 		$data['inv_id'] = $this->session->data['order_id'];
 
@@ -40,12 +40,12 @@ class ControllerExtensionPaymentRobokassa extends Controller
 		$data['out_summ'] = $this->currency->format($rur_order_total, $rur_code, $order_info['currency_value'], FALSE);
 
 
-		if ($this->config->get('payment_robokassa_fiscal')) {
+		if ($this->config->get('robokassa_fiscal')) {
 
-			$tax_type = $this->config->get('payment_robokassa_tax_type');
-			$tax = $this->config->get('payment_robokassa_tax');
-			$payment_method = $this->config->get('payment_robokassa_payment_method');
-			$payment_object = $this->config->get('payment_robokassa_payment_object');
+			$tax_type = $this->config->get('robokassa_tax_type');
+			$tax = $this->config->get('robokassa_tax');
+			$payment_method = $this->config->get('robokassa_payment_method');
+			$payment_object = $this->config->get('robokassa_payment_object');
 
 			$receipt = [];
 
@@ -98,7 +98,7 @@ class ControllerExtensionPaymentRobokassa extends Controller
 
 		}
 
-		if ($this->config->get('payment_robokassa_test')) {
+		if ($this->config->get('robokassa_test')) {
 			$data['robokassa_test'] = '1';
 		} else {
 			$data['robokassa_test'] = '0';
@@ -112,10 +112,10 @@ class ControllerExtensionPaymentRobokassa extends Controller
 	{
 
 
-		if ($this->config->get('payment_robokassa_test')) {
-			$password_1 = $this->config->get('payment_robokassa_test_password_1');
+		if ($this->config->get('robokassa_test')) {
+			$password_1 = $this->config->get('robokassa_test_password_1');
 		} else {
-			$password_1 = $this->config->get('payment_robokassa_password_1');
+			$password_1 = $this->config->get('robokassa_password_1');
 		}
 
 
@@ -162,10 +162,10 @@ class ControllerExtensionPaymentRobokassa extends Controller
 	public function result()
 	{
 
-		if ($this->config->get('payment_robokassa_test')) {
-			$password_2 = $this->config->get('payment_robokassa_test_password_2');
+		if ($this->config->get('robokassa_test')) {
+			$password_2 = $this->config->get('robokassa_test_password_2');
 		} else {
-			$password_2 = $this->config->get('payment_robokassa_password_2');
+			$password_2 = $this->config->get('robokassa_password_2');
 		}
 
 		$out_summ = $this->request->post['OutSum'];
@@ -180,7 +180,7 @@ class ControllerExtensionPaymentRobokassa extends Controller
 			$this->load->model('checkout/order');
 
 			$order_info = $this->model_checkout_order->getOrder($order_id);
-			$new_order_status_id = $this->config->get('payment_robokassa_order_status_id');
+			$new_order_status_id = $this->config->get('robokassa_order_status_id');
 
 			if ($order_info['order_status_id'] == 0) {
 				$this->model_checkout_order->addOrderHistory($order_id, $new_order_status_id);
@@ -189,7 +189,7 @@ class ControllerExtensionPaymentRobokassa extends Controller
 			if ($order_info['order_status_id'] != $new_order_status_id) {
 				$this->model_checkout_order->addOrderHistory($order_id, $new_order_status_id);
 
-				if ($this->config->get('payment_robokassa_test')) {
+				if ($this->config->get('robokassa_test')) {
 					$this->log->write('ROBOKASSA в заказе: ' . $order_id . '. Статус заказа успешно изменен');
 				}
 
@@ -199,7 +199,7 @@ class ControllerExtensionPaymentRobokassa extends Controller
 			return true;
 		} else {
 
-			if ($this->config->get('payment_robokassa_test')) {
+			if ($this->config->get('robokassa_test')) {
 				$this->log->write('ROBOKASSA ошибка в заказе: ' . $order_id . '. Контрольные суммы не совпадают');
 			}
 

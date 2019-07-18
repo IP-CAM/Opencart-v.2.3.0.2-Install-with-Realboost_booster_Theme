@@ -1,0 +1,45 @@
+.media-left, .media-right, .media-body {
+    display: table-cell;
+    vertical-align: top;
+}
+.media-left, .media > .pull-left {
+    padding-right: 10px;
+}
+.media {
+    background-color: #fff;
+    border: 1px solid #d3d8db;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    margin-top: -15px !important;
+    padding: 20px;
+    position: relative;
+}
+.media, .media-body {
+    overflow: hidden;
+}
+
+.media blockquote {
+    border-left: 1px solid #ecedf1;
+    font-size: 17.5px;
+    margin: 0 0 20px;
+    padding: 10px 20px;
+}
+.media-body blockquote p {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.media + .defaultForm .form-group input[type=checkbox]{
+    margin-top: 12px;
+}
+
+.media + .defaultForm .form-group .checkbox label{
+   line-height: 35px
+}
+
+.media + .defaultForm .form-group:nth-child(11) > div, .media + .defaultForm .form-group:nth-child(12) > div{
+    height: 300px;
+    overflow-y: scroll;
+}
+

@@ -50,17 +50,23 @@
 
                <select id="selectRank">
 
-                 <option value="0" data-imagesrc="<?php echo $img_path; ?>rank-icon/rank1_0.png">Herald[0]</option>
-                 <option value="0" data-imagesrc="<?php echo $img_path; ?>rank-icon/rank1_1.png">Herald[1]</option>
-                 <option value="0" data-imagesrc="<?php echo $img_path; ?>rank-icon/rank1_2.png">Herald[2]</option>
-                 <option value="0" data-imagesrc="<?php echo $img_path; ?>rank-icon/rank1_3.png">Herald[3]</option>
-                 <option value="0" data-imagesrc="<?php echo $img_path; ?>rank-icon/rank1_4.png">Herald[4]</option>
-                 <option value="0" data-imagesrc="<?php echo $img_path; ?>rank-icon/rank1_5.png">Herald[5]</option>
-                 <option value="0" data-imagesrc="<?php echo $img_path; ?>rank-icon/rank2_0.png">Guardian[0]</option>
-                 <option value="0" data-imagesrc="<?php echo $img_path; ?>rank-icon/rank2_1.png">Guardian[1]</option>
+                <?php if ($options) { ?>
+                	 <?php foreach ($options as $option) {?>
+                	 	 <?php if ($option['type'] == 'radio') { ?>
+                	 	 
+                	 	 	 <?php foreach ($option['product_option_value'] as $option_value) { 
+                	 	 	     $val=$option['product_option_id'];?>
+                	 	 	 
+                	 	 	 	 <option value="<?php echo $option_value['product_option_value_id']; ?>" name="option[<?php echo $option['product_option_id']; ?>]"  data-imagesrc="<?php echo $option_value['image'];?>"><?php echo $option_value['name'];?></option> 
+                	 	 	 <?php }?>
+                	 	 <?php }?>
+                	 <?php }?>
+                	
+                
+                <?php }?>
 
                </select> 
-
+				
               </div>
 
               <div class="col-lg-6 col-md-6">
@@ -68,10 +74,15 @@
                 <input id="text" name="text" type="text" placeholder="6" required="">
               </div>
             </div>
-
-            <div class="checkout-discount"><s>1780</s> <span>1290 руб.</span></div>
-
-            <button  type="submit" onclick = "postData('index.php?route=checkout/cart/add',{ffs:'',fname:'confirmbattlecup',product_id:<?php echo $product_id;?>},false,'POST',battleCupErrorHandlerOk,battleCupErrorHandlerError);" >Оформить заказ</button>
+	
+            <div class="checkout-discount"><s><?php echo $price;?></s> <span><?php echo $price;?></span></div>
+			<script>
+				var ffs1 = function(){
+                	var element = document.querySelector('.dd-selected-value');
+                	element.setAttribute('name', 'option[<?php echo $val; ?>]');}
+                	 		
+            </script>
+            <button  type="submit" onclick = "ffs1();postData('index.php?route=checkout/cart/add',{ffs:'',fname:'confirmbattlecup',product_id:<?php echo $product_id;?>},false,'POST',battleCupErrorHandlerOk,battleCupErrorHandlerError);" >Оформить заказ</button>
 
           </form>
 

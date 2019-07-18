@@ -3,7 +3,7 @@ class ControllerExtensionPaymentRobokassa extends Controller {
 	private $error = array();
 	
 	public function index() {
-		$this->load->language('extension/payment/robokassa');
+		$data  = $this->load->language('extension/payment/robokassa');
 		
 		$this->document->setTitle($this->language->get('heading_title'));
 		
@@ -14,7 +14,7 @@ class ControllerExtensionPaymentRobokassa extends Controller {
 			$this->model_setting_setting->editSetting('payment_robokassa', $this->request->post);
 			$this->session->data['success'] = $this->language->get('text_success');
 			
-			$this->response->redirect($this->url->link('marketplace/extension', 'token=' . $this->session->data['token'].'&type=payment', true));
+			$this->response->redirect($this->url->link('extension/extension', 'token=' . $this->session->data['token'].'&type=payment', true));
 		}
 		
 		if (isset($this->error['warning'])) {
@@ -50,7 +50,7 @@ class ControllerExtensionPaymentRobokassa extends Controller {
 
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('text_payment'),
-			'href' => $this->url->link('marketplace/extension', 'token=' . $this->session->data['token'].'&type=payment', true)
+			'href' => $this->url->link('extension/extension', 'token=' . $this->session->data['token'].'&type=payment', true)
 		);
 
 		$data['breadcrumbs'][] = array(
@@ -87,7 +87,7 @@ class ControllerExtensionPaymentRobokassa extends Controller {
 		$data['help_fiscal'] = $this->language->get('help_fiscal');
 		$data['action'] = $this->url->link('extension/payment/robokassa', 'token=' . $this->session->data['token'], true);
 		
-		$data['cancel'] = $this->url->link('marketplace/extension', 'token=' . $this->session->data['token'].'&type=payment', true);
+		$data['cancel'] = $this->url->link('extension/extension', 'token=' . $this->session->data['token'].'&type=payment', true);
 
 		if (isset($this->request->post['payment_robokassa_login'])) {
 			$data['payment_robokassa_login'] = $this->request->post['payment_robokassa_login'];
