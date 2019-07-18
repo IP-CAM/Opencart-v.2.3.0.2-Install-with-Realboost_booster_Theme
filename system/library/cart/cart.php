@@ -61,7 +61,7 @@ class Cart {
 									$option_price += $option_value_query->row['price'];
 								} elseif ($option_value_query->row['price_prefix'] == '-') {
 									$option_price -= $option_value_query->row['price'];
-									//realboost внедряем  %
+									//realboost внедряем  % 
 								} elseif ($option_value_query->row['price_prefix'] == '%') {
 								   
 								    $percentprice[] = $option_value_query->row['price'];
@@ -111,7 +111,7 @@ class Cart {
 									} elseif ($option_value_query->row['price_prefix'] == '-') {
 										$option_price -= $option_value_query->row['price'];
 									} 
-									//realboost внедряем  %
+									//realboost внедряем  % 
     								elseif ($option_value_query->row['price_prefix'] == '%') {
     								    $percentprice[] = $option_value_query->row['price'];
     								}
@@ -244,7 +244,7 @@ class Cart {
 				} else {
 					$recurring = false;
 				}
-				//realboost
+				//realboost переучет %
 				if (!empty($percentprice)){
 				    $initialprice = $price + $option_price;
 				    $price = $initialprice;
