@@ -25,12 +25,24 @@
 	battleCupErrorHandlerOk = function(resp){
 		alert("ok computer");//товар удачно оформлен
 		window.location="index.php";
-	}
+	};
 	battleCupErrorHandlerError = function(resp){
 		alert("  Not Ok computer");
-		}
+		};
 
-	data =  {product_id:<?php echo $product_id;?>,fname:'confirmbattlecup'}
+	data =  {product_id:<?php echo $product_id;?>,fname:'confirmbattlecup'};
+
+
+
+
+
+
+	var i =100;
+	var getPrice = function(){document.querySelector('.price span').innerHTML};
+	var setPrice = function(val){document.querySelector('.price span').innerHTML = val};
+	alert(price());
+	alert(price());
+	
 </script>
 
 

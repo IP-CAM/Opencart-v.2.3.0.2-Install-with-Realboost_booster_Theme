@@ -15,9 +15,16 @@
 </div>
  <?php echo $content_top; ?>
 
- 
- 
- 
+<script>
+var getPrice = function(){return document.querySelector('.price span').innerHTML;};
+var setPrice = function(val){document.querySelector('.price span').innerHTML = val};
+var NormalizedPrice = {
+		Price:0
+		
+}
+
+</script>
+
  <div class="content">
     
     <!-- Шаги -->
@@ -78,12 +85,37 @@
                         <?php foreach($options as $option): 
                             if ($option['name']=='boost_opt'):
                             foreach($option['product_option_value']as $val):?>
-                        	
-                                  <label class="container"><?php echo $val['name'];?>
-                                  <span class="percent"> (<?php echo str_replace('р.',$val['price_prefix'], $val['price']);?>)</span>
-                                    <input type="checkbox" class="option_class" name = "option[<?php echo $option['product_option_id']?>][]" value="<?php echo $val['product_option_value_id'];?>">
-                                    <span class="checkmark"></span>
+                        		 <label class="container"><?php echo $val['name'];?>
+                        			 <span class="percent"> (<?php echo str_replace('р.',$val['price_prefix'], $val['price']);?>)</span>
+                                    	<input type="checkbox" class="option-<?php echo $val['option_value_id'];?>" name = "option[<?php echo $option['product_option_id']?>][]" value="<?php echo $val['product_option_value_id'];?>">
+                        			  <span class="checkmark"></span>
                                   </label>
+                               <script>
+                               
+                        			document.querySelector('.option-<?php echo $val['option_value_id'];?>').onchange = function(){
+                            			let isset  = document.querySelector('.option-<?php echo $val['option_value_id'];?>').checked;
+                            			let type = '<?php echo $val['price_prefix'];?>';
+                            			let amount  = <?php echo str_replace('р.','', $val['price']);?>;
+                            			switch (type) {
+                            			  case '+':
+                            				  if (isset){
+                              				  	setPrice(Number(getPrice())+Number(amount));}
+                                  			  else {
+                                  				setPrice(Number(getPrice())-Number(amount));}
+                            			    break;
+                            			  case '%':
+                                			  if (isset){
+                            				  	setPrice(Number(getPrice())+Number(NormalizedPrice.Price*amount/100));}
+                                			  else {
+                                				  setPrice(Number(getPrice())-Number(NormalizedPrice.Price*amount/100));}
+                                			  break;
+                            			  default:
+                            			    //alert('нет-нет, выполнится вариант выше')
+                            			}
+                            			
+                            		};
+                        			console.log(`<?php echo serialize($val);?>`);
+                        		</script>
                               <?php endforeach; 
                         	 endif;
             			 endforeach;?>

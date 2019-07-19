@@ -137,6 +137,7 @@ $d5.ionRangeSlider({
         document.getElementById('from-rank-hidden').setAttribute('value', array_current_mmr[fromInput]["product_option_value_id"]);
         document.getElementById('to-rank-hidden').setAttribute('value', array_preferable_mmr[mmr]["product_option_value_id"]);
         var price = Number(preferable) + Number(current);
+		NormalizedPrice.Price=price;
         $('.price > span').text(price);
     },
     onUpdate: function (data) {
@@ -148,6 +149,7 @@ $d5.ionRangeSlider({
         document.getElementById('from-rank-hidden').setAttribute('value', array_current_mmr[fromInput]["product_option_value_id"]);
         document.getElementById('to-rank-hidden').setAttribute('value', array_preferable_mmr[mmr]["product_option_value_id"]);
         var price = Number(preferable) + Number(current);
+		NormalizedPrice.Price=price;
         $('.price > span').text(price);
     }
 });
