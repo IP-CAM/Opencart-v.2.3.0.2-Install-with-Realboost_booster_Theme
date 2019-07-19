@@ -57,7 +57,7 @@
                 	 	 	 <?php foreach ($option['product_option_value'] as $option_value) { 
                 	 	 	     $val=$option['product_option_id'];?>
                 	 	 	 
-                	 	 	 	 <option value="<?php echo $option_value['product_option_value_id']; ?>" name="option[<?php echo $option['product_option_id']; ?>]"  data-imagesrc="<?php echo $option_value['image'];?>"><?php echo $option_value['name'];?></option> 
+                	 	 	 	 <option  value="<?php echo $option_value['product_option_value_id']; ?>" name="option[<?php echo $option['product_option_id']; ?>]"  data-imagesrc="<?php echo $option_value['image'];?>"><?php echo $option_value['name'];?></option> 
                 	 	 	 <?php }?>
                 	 	 <?php }?>
                 	 <?php }?>
@@ -71,18 +71,52 @@
 
               <div class="col-lg-6 col-md-6">
                 <label for="text">MMR в прошлом сезоне</label>
-                <input id="text" name="text" type="text" placeholder="6" required="">
+                <input class = "textval" id="text" name="text" type="text" placeholder="6" required="">
               </div>
             </div>
 	
-            <div class="checkout-discount"><s><?php echo $price;?></s> <span><?php echo $price;?></span></div>
+            <div class="checkout-discount"><s><?php echo $price;?></s> <span><?php echo $price;?></span> р.</div>
 			<script>
 				var ffs1 = function(){
                 	var element = document.querySelector('.dd-selected-value');
-                	element.setAttribute('name', 'option[<?php echo $val; ?>]');}
-                	 		
+                	element.setAttribute('name', 'option[<?php echo $val; ?>]');
+                	};
+            	var getDataArr = function(){
+                	return {
+                    	ffs:'',
+                    	fname:'confirmbattlecup',
+                    	product_id:<?php echo $product_id;?>,
+                    	'forcomment[myval]':'hello',
+                    	'forcomment[rang]':document.querySelector('.dd-selected-text').innerHTML,
+                    	'forcomment[rangvalue]':document.querySelector('.textval').value,
+                    	};
+                	};
+                 var setPriceValue=function(value){
+                	 document.querySelector('.checkout-discount').innerHTML = value;
+                     };
+                 var getPriceValue=function(){
+                	 const rx = /\d*/gm;
+                	 const str = document.querySelector('.checkout-discount span').innerHTML;
+                	 var arr = rx.exec(str);
+                	 return arr[0];}
+                 
+
+                <?php foreach($options as $option):
+             		$opt = array();
+             		 foreach ($option['product_option_value'] as $key=>$val){
+             			 $opt[$val['name']]=$val;
+             			 $opt[$val['name']]['key'] = $key;
+             		 }
+                		 if ($option['name']=='Калибровка'){  
+                		   //  $opt['val-id'] =  $option['product_option_id'];?>	
+                	var option_change = <?php echo  str_replace('\u0440.','',json_encode($opt));?>;
+                	       		     
+                		     <?php }?>
+               		
+             	<?php endforeach;?>
+                 		
             </script>
-            <button  type="submit" onclick = "ffs1();postData('index.php?route=checkout/cart/add',{ffs:'',fname:'confirmbattlecup',product_id:<?php echo $product_id;?>},false,'POST',battleCupErrorHandlerOk,battleCupErrorHandlerError);" >Оформить заказ</button>
+            <button  type="submit" onclick = "ffs1();postData('index.php?route=checkout/cart/add',getDataArr(),false,'POST',battleCupErrorHandlerOk,battleCupErrorHandlerError);" >Оформить заказ</button>
 
           </form>
 

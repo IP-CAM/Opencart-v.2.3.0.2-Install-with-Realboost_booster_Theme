@@ -29,7 +29,24 @@
 		alert("  Not Ok computer");
 		}
 
-	data =  {product_id:<?php echo $product_id;?>,fname:'confirmbattlecup'}
+	
+
+	var getDataArr = function(){
+    	ss= {
+        	ffs:'',
+        	fname:'confirmbattlecup',
+        	product_id:<?php echo $product_id;?>,
+        	'forcomment[vk]':document.querySelector('#text').value,
+        	'forcomment[email]':document.querySelector('#email').value,
+        	'forcomment[email1]':function(){
+            	return document.querySelector('#option-306').selectedOptions[0].innerHTML;
+            }(),
+        	};
+    	alert(ss);
+    	return ss;
+    	};
+    	
+	
 </script>
 
 
@@ -69,12 +86,21 @@
           <div class="checkout-title">Оформление заказа</div>
 
           <form>
-            <label>Выберите формат тренировки:</label><br>
-            <select>
-              <option>Тест1</option>
-              <option>Тест2</option>
-              <option>Тест3</option>
-            </select>
+          
+          <?php if ($options) { ?>
+          		<?php foreach ($options as $option) {?>
+            		<?php if ($option['type'] == 'radio') { ?>
+            		<label><?php echo $option['name'];?></label><br>
+            		<script>var optval = '<?php echo 'option['.$option['product_option_id'];?>]';</script>
+            			<select id = "<?php echo 'option-'.$option['product_option_id'];?>" name="option[<?php echo $option['product_option_id']; ?>]" >
+                			<?php foreach ($option['product_option_value'] as $option_value) { 
+                			    $val=$option['product_option_id'];?>
+                			    <option value="<?php echo $option_value['product_option_value_id']; ?>" ><?php echo $option_value['name'];?></option>
+                			<?php }?>
+            			</select>
+            		<?php }?>
+            	<?php }?>
+            <?php }?>
             <div class="row">
               <div class="col-lg-6 col-md-6">
                 <label for="text">Вконтакте</label>
@@ -86,8 +112,8 @@
                 <input id="email" name="email" type="email" placeholder="name@site.ru" required="">
               </div>
             </div>
-
-            <button type="submit" onclick = "postData('index.php?route=checkout/cart/add',{ffs:'',fname:'confirmbattlecup',product_id:<?php echo $product_id;?>},false,'POST',battleCupErrorHandlerOk,battleCupErrorHandlerError);">Перейте к оплате</button>
+			<div class="checkout-discount"><span><?php echo $price; ?></span></div>
+            <button type="submit" onclick = "postData('index.php?route=checkout/cart/add',getDataArr(),false,'POST',battleCupErrorHandlerOk,battleCupErrorHandlerError);">Перейте к оплате</button>
 
           </form>
 

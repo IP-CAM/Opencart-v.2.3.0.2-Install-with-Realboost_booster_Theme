@@ -24,13 +24,14 @@
 <link rel="stylesheet" type="text/css" href="<?php echo $css_path; ?>common-style.css">
 <link rel="stylesheet" href="<?php echo $css_path; ?>media.css">
 <link rel="stylesheet" href="<?php echo $css_path; ?>animate.css">
-
+<link rel="stylesheet" href="<?php echo $css_path; ?>odometer.min.css">
 <script src="<?php echo $js_path; ?>jquery.min.js"></script>
 <script src="<?php echo $js_path; ?>bootstrap.min.js"></script>
 
 <link rel="stylesheet" href="<?php echo $css_path; ?>magnific-popup.css">
 <script src="<?php echo $js_path; ?>js/jquery.magnific-popup.js"></script>
 <script src="<?php echo $js_path; ?>wow.min.js"></script>
+<script src="<?php echo $js_path; ?>odometer.min.js"></script>
 <script>
     new WOW().init();
 </script>
