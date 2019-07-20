@@ -37,7 +37,7 @@ class ControllerExtensionPaymentW1 extends Controller {
     parent::__construct($registry);
     
     $currentLanguage = $this->language->get('code');
-    include_once $_SERVER['DOCUMENT_ROOT'].'/walletone/Classes/W1Client.php';
+    include_once DIR_SYSTEM.'/walletone/Classes/W1Client.php';
     $this->client = \WalletOne\Classes\W1Client::init()->run($currentLanguage);
     
     $this->logger = \Logger::getLogger(__CLASS__);

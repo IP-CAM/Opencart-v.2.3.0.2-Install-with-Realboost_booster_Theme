@@ -47,7 +47,7 @@
                             <div class="media">
                                 <div class="media-left">
                                   <a href="#">
-                                    <img class="media-object" src="walletone/img/w1_logo.png" alt="Wallet One Единая касса">
+                                    <img class="media-object" src="/walletone/img/w1_logo.png" alt="Wallet One Единая касса">
                                   </a>
                                   <p>Универсальный платежный агрегатор, предлагающий более 100 способов приема платежей.</p>
                                   <ul class="list-characteristic">

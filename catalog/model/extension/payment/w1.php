@@ -9,7 +9,7 @@ class ModelExtensionPaymentW1 extends Model {
    */
   public function getMethod($address) {
     $currentLanguage = $this->language->get('code');
-    include_once $_SERVER['DOCUMENT_ROOT'].'/walletone/Classes/W1Client.php';
+    include_once DIR_SYSTEM.'/walletone/Classes/W1Client.php';
     $client = \WalletOne\Classes\W1Client::init()->run($currentLanguage);
     
     if ($this->config->get('w1_status')) {
